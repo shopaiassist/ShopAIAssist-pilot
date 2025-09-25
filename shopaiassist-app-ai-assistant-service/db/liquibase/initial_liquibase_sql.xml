@@ -1,0 +1,286 @@
+<!-- liquibase formatted sql changesets for the AI ASSISTANT DB for the asset Id: 208767-->
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.13.xsd">
+
+    <!-- 1. Create target schema -->
+    <changeSet id="1" author="DevOps">
+        <sql>
+            CREATE SCHEMA IF NOT EXISTS ct_ai_assistantdb;
+        </sql>
+    </changeSet>
+
+    <!-- 2. Create needed types -->
+    <changeSet id="2" author="DevOps">
+        <sql>
+            CREATE TYPE ct_ai_assistantdb.tp_user_account_type AS ENUM ('internal', 'external');
+            CREATE TYPE ct_ai_assistantdb.tp_message_sender AS ENUM ('ai', 'user');
+            CREATE TYPE ct_ai_assistantdb.tp_message_type AS ENUM ('text','files');
+            CREATE TYPE ct_ai_assistantdb.tp_feedback_symbol AS ENUM ('positive','negative');
+            CREATE TYPE ct_ai_assistantdb.tp_orchestration_type AS ENUM ('skill-routing','agentic');
+        </sql>
+    </changeSet>
+
+    <!-- 3. Create extension and partman schema -->
+    <changeSet id="3" author="DevOps">
+        <sql>
+            CREATE EXTENSION IF NOT EXISTS pgcrypto;
+            CREATE SCHEMA partman;
+            CREATE EXTENSION IF NOT EXISTS pg_partman SCHEMA partman;
+        </sql>
+    </changeSet>
+
+    <!-- 4. Create table tb_organization -->
+    <changeSet id="4" author="DevOps">
+        <sql>
+            CREATE TABLE IF NOT EXISTS ct_ai_assistantdb.tb_organization (
+                org_id SMALLINT PRIMARY KEY NOT NULL,
+                org_name VARCHAR(50) NOT NULL,
+                created_timestamp TIMESTAMPTZ DEFAULT now() NOT NULL
+            );
+        </sql>
+    </changeSet>
+
+    <!-- 5. Insert sample rows into tb_organization -->
+    <changeSet id="5" author="DevOps">
+        <sql>
+            INSERT INTO ct_ai_assistantdb.tb_organization (org_id, org_name)
+            VALUES (1, 'Shopaiassist');
+        </sql>
+    </changeSet>
+
+    <!-- 6. Create table tb_skills -->
+    <changeSet id="6" author="DevOps">
+        <sql>
+            CREATE TABLE IF NOT EXISTS ct_ai_assistantdb.tb_skills (
+                skill_id SMALLINT PRIMARY KEY NOT NULL,
+                skill_name VARCHAR(50) NOT NULL,
+                created_timestamp TIMESTAMPTZ DEFAULT now() NOT NULL
+            );
+        </sql>
+    </changeSet>
+
+    <!-- 7. Insert sample rows into tb_skills -->
+    <changeSet id="7" author="DevOps">
+        <sql>
+            INSERT INTO ct_ai_assistantdb.tb_skills (skill_id, skill_name)
+            VALUES (1, 'Product Support'), (2, 'Tax &amp; Trade Research');
+        </sql>
+    </changeSet>
+
+    <!-- 8. Create table tb_org_allowed_skills -->
+    <changeSet id="8" author="DevOps">
+        <sql>
+            CREATE TABLE IF NOT EXISTS ct_ai_assistantdb.tb_org_allowed_skills (
+                org_id SMALLINT NOT NULL,
+                skill_id SMALLINT NOT NULL,
+                is_enabled BOOLEAN NOT NULL,
+                PRIMARY KEY (org_id, skill_id),
+                FOREIGN KEY (org_id) REFERENCES ct_ai_assistantdb.tb_organization(org_id),
+                FOREIGN KEY (skill_id) REFERENCES ct_ai_assistantdb.tb_skills(skill_id),
+                created_timestamp TIMESTAMPTZ DEFAULT now() NOT NULL,
+                last_updated_timestamp TIMESTAMPTZ DEFAULT now() NOT NULL
+            );
+        </sql>
+    </changeSet>
+
+    <!-- 9. Insert sample rows into tb_org_allowed_skills -->
+    <changeSet id="9" author="DevOps">
+        <sql>
+            INSERT INTO ct_ai_assistantdb.tb_org_allowed_skills (org_id, skill_id, is_enabled)
+            VALUES (1, 1, true), (2, 2, true);
+        </sql>
+    </changeSet>
+
+    <!-- 10. Create table tb_chats -->
+    <changeSet id="10" author="DevOps">
+        <sql>
+            CREATE TABLE IF NOT EXISTS ct_ai_assistantdb.tb_chats(
+                chat_id UUID DEFAULT gen_random_uuid() NOT NULL,
+                created_timestamp TIMESTAMPTZ DEFAULT now() NOT NULL,
+                PRIMARY KEY (chat_id, last_updated_timestamp),
+                chat_title TEXT NOT NULL,
+                user_id VARCHAR(200) NOT NULL,
+                email_address VARCHAR(250) NOT NULL,
+                org_id SMALLINT REFERENCES ct_ai_assistantdb.tb_organization(org_id) NOT NULL,
+                tenant_id VARCHAR(200) NOT NULL,
+                last_updated_timestamp TIMESTAMPTZ DEFAULT now() NOT NULL
+            )
+            PARTITION BY RANGE (last_updated_timestamp);
+        </sql>
+    </changeSet>
+
+    <!-- 11. Create table tb_chat_messages -->
+    <changeSet id="11" author="DevOps">
+        <sql>
+            CREATE TABLE IF NOT EXISTS ct_ai_assistantdb.tb_chat_messages (
+                user_query_id UUID DEFAULT gen_random_uuid() NOT NULL,
+                created_timestamp TIMESTAMPTZ DEFAULT now() NOT NULL,
+                PRIMARY KEY (user_query_id, created_timestamp),
+                chat_id UUID NOT NULL,
+                account_type ct_ai_assistantdb.tp_user_account_type,
+                bot_response_id UUID,
+                sender ct_ai_assistantdb.tp_message_sender NOT NULL,
+                message_type ct_ai_assistantdb.tp_message_type NOT NULL,
+                user_query TEXT,
+                user_id VARCHAR(250) NOT NULL,
+                email_address VARCHAR(250) NOT NULL,
+                tenant_id VARCHAR(200) NOT NULL,
+                org_id SMALLINT REFERENCES ct_ai_assistantdb.tb_organization(org_id) NOT NULL,
+                product_entry VARCHAR(500),
+                products JSONB,
+                product_line JSONB,
+                sources JSONB,
+                reformulated_query TEXT,
+                intent JSONB,
+                retrieved_urls JSONB,
+                orchestration_type ct_ai_assistantdb.tp_orchestration_type,
+                open_ticket BOOLEAN,
+                ai_response TEXT
+            )
+            PARTITION BY RANGE (created_timestamp);
+        </sql>
+    </changeSet>
+
+    <!-- 12. Create table tb_chat_log -->
+    <changeSet id="12" author="DevOps">
+        <sql>
+            CREATE TABLE IF NOT EXISTS ct_ai_assistantdb.tb_chat_log (
+                chat_log_id UUID DEFAULT gen_random_uuid() NOT NULL,
+                created_timestamp TIMESTAMPTZ DEFAULT now(),
+                PRIMARY KEY (chat_log_id, created_timestamp),
+                chat_id  UUID  NOT NULL,
+                user_query_id UUID NOT NULL,
+                tenant_id VARCHAR(200) NOT NULL,
+                user_id VARCHAR(250) NOT NULL,
+                email_address VARCHAR(250) NOT NULL,
+                org_id SMALLINT REFERENCES ct_ai_assistantdb.tb_organization(org_id) NOT NULL,
+                bot_response_id UUID,
+                predefined_answer  TEXT,
+                all_retrieved_urls JSONB,
+                orchestration_type ct_ai_assistantdb.tp_orchestration_type,
+                total_tokens BIGINT,
+                time_to_resolve_intent BIGINT,
+                time_to_start_streaming BIGINT,
+                time_to_stream_final_response BIGINT,
+                overall_retrieval_time BIGINT,
+                llm_reranker_time BIGINT
+            )
+            PARTITION BY RANGE (created_timestamp);
+        </sql>
+    </changeSet>
+
+    <!-- 13. Create table tb_ticket -->
+    <changeSet id="13" author="DevOps">
+        <sql>
+            CREATE TABLE IF NOT EXISTS ct_ai_assistantdb.tb_ticket (
+                ticket_id UUID DEFAULT gen_random_uuid() NOT NULL,
+                created_timestamp TIMESTAMPTZ DEFAULT now() NOT NULL,
+                PRIMARY KEY (ticket_id, created_timestamp),
+                chat_id  UUID  NOT NULL,
+                user_query_id UUID NOT NULL,
+                bot_response_id UUID,
+                user_id VARCHAR(250) NOT NULL,
+                email_address VARCHAR(250) NOT NULL,
+                org_id SMALLINT REFERENCES ct_ai_assistantdb.tb_organization(org_id) NOT NULL,
+                tenant_id VARCHAR(200) NOT NULL,
+                ticket_subject TEXT,
+                ticket_description TEXT,
+                ticket_product VARCHAR(500),
+                ticket_number VARCHAR(500)
+            )
+            PARTITION BY RANGE (created_timestamp);
+        </sql>
+    </changeSet>
+
+    <!-- 14. Create table tb_feedback -->
+    <changeSet id="14" author="DevOps">
+        <sql>
+            CREATE TABLE IF NOT EXISTS ct_ai_assistantdb.tb_feedback (
+                feedback_id UUID DEFAULT gen_random_uuid() NOT NULL,
+                created_timestamp TIMESTAMPTZ DEFAULT now() NOT NULL,
+                PRIMARY KEY (feedback_id, created_timestamp),
+                chat_id  UUID  NOT NULL,
+                user_query_id UUID NOT NULL,
+                bot_response_id UUID,
+                user_id VARCHAR(250) NOT NULL,
+                email_address VARCHAR(250) NOT NULL,
+                org_id SMALLINT REFERENCES ct_ai_assistantdb.tb_organization(org_id) NOT NULL,
+                tenant_id VARCHAR(200) NOT NULL,
+                feedback_symbol ct_ai_assistantdb.tp_feedback_symbol,
+                comments TEXT
+            )
+            PARTITION BY RANGE (created_timestamp);
+        </sql>
+    </changeSet>
+
+    <!-- 15. Create indexes -->
+    <changeSet id="15" author="DevOps">
+        <sql>
+            CREATE INDEX tb_chats_multi_idx 
+                ON ct_ai_assistantdb.tb_chats (last_updated_timestamp, org_id, tenant_id, user_id, chat_id);
+
+            CREATE INDEX tb_chat_messages_multi_idx
+                ON ct_ai_assistantdb.tb_chat_messages (created_timestamp, org_id, tenant_id, user_id, chat_id);
+
+            CREATE INDEX tb_chat_log_multi_idx
+                ON ct_ai_assistantdb.tb_chat_log (created_timestamp, org_id, tenant_id, user_id, chat_id);
+
+            CREATE INDEX tb_ticket_multi_idx
+                ON ct_ai_assistantdb.tb_ticket (created_timestamp, org_id, tenant_id, user_id, chat_id);
+
+            CREATE INDEX tb_feedback_multi_idx
+                ON ct_ai_assistantdb.tb_feedback (created_timestamp, org_id, tenant_id, user_id, chat_id);
+        </sql>
+    </changeSet>
+
+
+    <!-- 16. Create monthly partitions using partman -->
+    <changeSet id="16" author="DevOps">
+        <sql>
+            SELECT partman.create_parent(
+                p_parent_table => 'ct_ai_assistantdb.tb_chats',
+                p_control => 'last_updated_timestamp',
+                p_type => 'range',
+                p_interval => '1 month',
+                p_premake => 24
+            );
+
+            SELECT partman.create_parent(
+                p_parent_table => 'ct_ai_assistantdb.tb_chat_messages',
+                p_control => 'created_timestamp',
+                p_type => 'range',
+                p_interval => '1 month',
+                p_premake => 24
+            );
+
+            SELECT partman.create_parent(
+                p_parent_table => 'ct_ai_assistantdb.tb_chat_log',
+                p_control => 'created_timestamp',
+                p_type => 'range',
+                p_interval => '1 month',
+                p_premake => 24
+            );
+
+            SELECT partman.create_parent(
+                p_parent_table => 'ct_ai_assistantdb.tb_ticket',
+                p_control => 'created_timestamp',
+                p_type => 'range',
+                p_interval => '1 month',
+                p_premake => 24
+            );
+
+            SELECT partman.create_parent(
+                p_parent_table => 'ct_ai_assistantdb.tb_feedback',
+                p_control => 'created_timestamp',
+                p_type => 'range',
+                p_interval => '1 month',
+                p_premake => 24
+            );
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

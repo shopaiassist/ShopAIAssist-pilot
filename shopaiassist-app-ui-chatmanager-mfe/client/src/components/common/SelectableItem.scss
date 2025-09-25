@@ -1,0 +1,31 @@
+@import "../../utils/styles/imports";
+
+.selectable-item {
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+   width: 100%;
+   padding: 0.5rem;
+   border: $saf-line-width-thick solid $saf-color-background-subtle;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   overflow: hidden;
+   color: $saf-color-interactive-on-tertiary-default;
+   &:hover {
+      background-color: $saf-color-blue-100;
+      border: $saf-line-width-thick solid #004070;
+      border-radius: $saf-border-radius-xs;
+      cursor: pointer;
+   }
+}
+.selectable-item-selected {
+   border: $saf-line-width-thick solid $saf-color-blue-500;
+   color: $saf-color-interactive-on-tertiary-active;
+   border-radius: $saf-border-radius-xs;
+}
+
+.selectable-icon {
+   width: 1.5rem;
+   display: flex;
+   justify-content: center;
+}

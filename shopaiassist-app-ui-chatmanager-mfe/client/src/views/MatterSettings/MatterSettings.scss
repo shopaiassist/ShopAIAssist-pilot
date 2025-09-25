@@ -1,0 +1,26 @@
+@import "../../utils/styles/imports";
+
+@mixin flex-col-with-gap {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.matter-settings-container {
+    padding: $saf-spacing-6;
+    
+    .matter-settings-fields {
+        @include flex-col-with-gap;
+        padding: $saf-spacing-6 0;
+        max-width: rem-calc(450);
+    }
+
+    .matter-settings-bottom {
+        @include flex-col-with-gap;
+        padding-top: $saf-spacing-6;
+    }
+
+    & saf-button {
+        width: fit-content;
+    }
+}

@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChatActionsDialog Tests render should render delete chat 1`] = `
+<div
+  class="chat-actions-dialog"
+  dialogtitle="Delete chat?"
+  isfooter="true"
+>
+  <div
+    class="chat-actions-dialog-body"
+  >
+    <span
+      appearance="error"
+    >
+      Any files within this chat will be lost. This can’t be undone.
+    </span>
+  </div>
+  <div
+    class="delete-dialog-footer"
+    slot="footer"
+  >
+    <button
+      appearance="secondary"
+      data-testid="chat-dialog-cancel"
+    >
+      Cancel
+    </button>
+    <button
+      appearance="primary"
+      data-testid="chat-dialog-action"
+    >
+      Delete chat
+    </button>
+  </div>
+</div>
+`;
+
+exports[`ChatActionsDialog Tests render should render update chat name 1`] = `
+<div
+  class="chat-actions-dialog"
+  dialogtitle="Rename chat"
+  isfooter="true"
+>
+  <div
+    class="chat-actions-dialog-body"
+  >
+    <div
+      class="chat-rename-field"
+    >
+      <span
+        appearance="heading-md"
+      >
+        * indicates required field
+      </span>
+      <textarea
+        data-testid="chat-name-field"
+        label="Name*"
+        maxlength="128"
+      >
+        fakeChat
+      </textarea>
+    </div>
+  </div>
+  <div
+    class="delete-dialog-footer"
+    slot="footer"
+  >
+    <button
+      appearance="secondary"
+      data-testid="chat-dialog-cancel"
+    >
+      Cancel
+    </button>
+    <button
+      appearance="primary"
+      data-testid="chat-dialog-action"
+    >
+      Rename chat
+    </button>
+  </div>
+</div>
+`;

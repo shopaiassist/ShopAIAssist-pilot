@@ -1,0 +1,13 @@
+@import "../../utils/styles/imports";
+
+.chat-or-folder-menu {
+   position: relative;
+
+   .chat-or-folder-saf-menu {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      width: fit-content;
+      z-index: map-get($z-index-map, "default");
+   }
+}

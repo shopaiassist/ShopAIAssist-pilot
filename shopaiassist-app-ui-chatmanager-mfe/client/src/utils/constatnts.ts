@@ -1,0 +1,5 @@
+export const GENERATE_CHAT_NAME_WAIT_TIME = 2000;
+
+export const CHAT_OR_FOLDER_NAME_DISPLAY_LENGTH = 30;
+
+export const TYPEWRITER_DELAY = 80;

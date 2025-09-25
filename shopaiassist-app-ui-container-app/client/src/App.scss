@@ -1,0 +1,123 @@
+@use '@/core-styles/dist/scss/index.scss';
+@use '@/core-styles/dist/wijmo.css';
+@import "./utils/styles/imports";
+
+$header-height: 3.75rem;
+$matters-header-height: 3.688rem; // TODO: This probably shouldn't be kept here
+
+html {
+  overflow: hidden;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+
+  .olympus-main-header {
+    padding: var(--saf-spacing-2) var(--saf-spacing-4);
+    border-radius: 12px 12px 0px 0px;
+    
+
+
+    @media (max-width: $screen-xs) {
+      padding: 0.5rem 0.75rem 0.5rem 1rem;
+    }
+
+    .product-name {
+      font: var(--saf-logo-type-default);
+      color: var(--saf-color-orange-400);
+      margin-left: var(--saf-spacing-4);
+      text-decoration: none;
+    }
+  }
+
+  .olympus-main-header-minimized {
+    overflow: hidden;
+    padding: var(--saf-spacing-3) var(--saf-spacing-4);
+    border: 1px solid var(--saf-color-line-strong);
+
+  }
+
+  .logo-header {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .olympus-root-container {
+    position: relative;
+    width: 100vw;
+    border-radius: 12px 12px 0px 0px;
+    border: none;
+    margin-top: 0px;
+  }
+
+  .olympus-root-container-minimized {
+    width: 100vw;
+    border-radius: 12px 12px 0px 0px;
+    overflow: hidden;
+    position:absolute;
+    bottom: 0;
+    padding-top: 134px;
+  }
+
+  .olympus-main-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+
+    @media (min-width: $screen-xs) {
+      height: calc(100vh - $header-height);
+    }
+  }
+
+ .olympus-main-container-minimized {
+    display: none;
+  }
+
+  .olympus-right-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  .olympus-right-container-hidden {
+    display: none;
+  }
+
+  .olympus-content-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: scroll;
+    padding: 1.5rem 2.5rem;
+  }
+
+  .olympus-timeout-modal {
+    &::part(control) {
+      max-width: 34.25rem;
+      box-sizing: border-box;
+    }
+
+    .modal-buttons {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: flex-end;
+    }
+  }
+
+  .header-menu {
+    z-index: 1500;
+  }
+
+  // DELETEME: This is a temporary fix for the breadcrumb item font size
+  .breadcrumb-item {
+    &::part(control) {
+      font-size: 1rem;
+    }
+  }
+}

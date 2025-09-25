@@ -1,0 +1,474 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SecondarySideNav render should render admin tree 1`] = `
+<div
+  aria-label="Secondary navigation"
+  class="olympus-side-nav secondary-side-nav expanded"
+  id="secondary-side-nav"
+  state="open"
+>
+  <header
+    class="header"
+  >
+    <span
+      appearance="body-strong-md"
+      style="padding-left: 0.75rem;"
+    >
+      Admin settings
+    </span>
+    <button
+      appearance="tertiary"
+      aria-label="Close secondary navigation"
+    >
+      <div
+        icon-name="close"
+        size="16"
+      />
+    </button>
+  </header>
+  <div
+    class="secondary-nav-container"
+  >
+    <div
+      class="nav-group"
+    >
+      <div
+        class="nav-menu-item"
+        id="permissions-nav-item"
+        target="_blank"
+      >
+        <div
+          class="nav-item-content"
+        >
+          <span
+            appearance="body-default-md"
+          >
+            User permissions
+          </span>
+        </div>
+      </div>
+      <div
+        class="nav-menu-item"
+        id="analytics-nav-item"
+        target="_blank"
+      >
+        <div
+          class="nav-item-content"
+        >
+          <span
+            appearance="body-default-md"
+          >
+            Usage analytics
+          </span>
+        </div>
+      </div>
+      <div
+        class="nav-menu-item"
+        id="integrations-nav-item"
+        target="_blank"
+      >
+        <div
+          class="nav-item-content"
+        >
+          <span
+            appearance="body-default-md"
+          >
+            Integrations
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SecondarySideNav render should render legal tree 1`] = `
+<div
+  aria-label="Secondary navigation"
+  class="olympus-side-nav secondary-side-nav expanded"
+  id="secondary-side-nav"
+  state="open"
+>
+  <header
+    class="header"
+  >
+    <span
+      appearance="body-strong-md"
+      style="padding-left: 0.75rem;"
+    >
+      Legal information
+    </span>
+    <button
+      appearance="tertiary"
+      aria-label="Close secondary navigation"
+    >
+      <div
+        icon-name="close"
+        size="16"
+      />
+    </button>
+  </header>
+  <div
+    class="secondary-nav-container"
+  >
+    <div
+      class="nav-group"
+    >
+      <div
+        class="nav-menu-item"
+        id="terms-nav-item"
+        target="_blank"
+        url="https://www.example.com/en/terms-of-use.html"
+      >
+        <div
+          class="nav-item-content"
+        >
+          <span
+            appearance="body-default-md"
+          >
+            Terms of use
+          </span>
+          <div
+            style="position: absolute; right: 0.5rem;"
+          >
+            <div
+              appearance="light"
+              icon-name="external-link"
+              size="16"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="nav-menu-item"
+        id="privacy-nav-item"
+        target="_blank"
+        url="https://www.example.com/en/privacy-statement.html"
+      >
+        <div
+          class="nav-item-content"
+        >
+          <span
+            appearance="body-default-md"
+          >
+            Privacy
+          </span>
+          <div
+            style="position: absolute; right: 0.5rem;"
+          >
+            <div
+              appearance="light"
+              icon-name="external-link"
+              size="16"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="nav-menu-item"
+        id="cookie-settings-nav-item"
+        target="_blank"
+      >
+        <div
+          class="nav-item-content"
+        >
+          <span
+            appearance="body-default-md"
+          >
+            Cookie Settings
+          </span>
+        </div>
+      </div>
+      <div
+        class="nav-menu-item"
+        id="cookie-policy-nav-item"
+        target="_blank"
+        url="https://www.example.com/en/privacy-statement.html#CookieIBA"
+      >
+        <div
+          class="nav-item-content"
+        >
+          <span
+            appearance="body-default-md"
+          >
+            Cookie Policy
+          </span>
+          <div
+            style="position: absolute; right: 0.5rem;"
+          >
+            <div
+              appearance="light"
+              icon-name="external-link"
+              size="16"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="nav-menu-item"
+        id="do-not-sell-nav-item"
+        target="_blank"
+        url="/redirect/ccpa-dsar"
+      >
+        <div
+          class="nav-item-content"
+        >
+          <span
+            appearance="body-default-md"
+          >
+            Do not sell or share my personal information and limit the use of my sensitive personal information
+          </span>
+          <div
+            style="position: absolute; right: 0.5rem;"
+          >
+            <div
+              appearance="light"
+              icon-name="external-link"
+              size="16"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SecondarySideNav render should render manage tree 1`] = `
+<div
+  aria-label="Secondary navigation"
+  class="olympus-side-nav secondary-side-nav expanded"
+  id="secondary-side-nav"
+  state="open"
+>
+  <header
+    class="header"
+  >
+    <span
+      appearance="body-strong-md"
+      style="padding-left: 0.75rem;"
+    >
+      Manage ShopAIAssist
+    </span>
+    <button
+      appearance="tertiary"
+      aria-label="Close secondary navigation"
+    >
+      <div
+        icon-name="close"
+        size="16"
+      />
+    </button>
+  </header>
+  <div
+    class="secondary-nav-container"
+  >
+    <div
+      class="nav-group"
+    >
+      <div
+        class="nav-menu-item"
+        id="favorites-nav-item"
+        target="_blank"
+      >
+        <div
+          class="nav-item-content"
+        >
+          <span
+            appearance="body-default-md"
+          >
+            Favorites
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SecondarySideNav render should render support tree 1`] = `
+<div
+  aria-label="Secondary navigation"
+  class="olympus-side-nav secondary-side-nav expanded"
+  id="secondary-side-nav"
+  state="open"
+>
+  <header
+    class="header"
+  >
+    <span
+      appearance="body-strong-md"
+      style="padding-left: 0.75rem;"
+    >
+      Support
+    </span>
+    <button
+      appearance="tertiary"
+      aria-label="Close secondary navigation"
+    >
+      <div
+        icon-name="close"
+        size="16"
+      />
+    </button>
+  </header>
+  <div
+    class="secondary-nav-container"
+  >
+    <div
+      class="nav-group"
+    >
+      <div
+        class="support-info"
+      >
+        <span
+          appearance="body-strong-sm"
+        >
+          Customer support hours
+        </span>
+        <div
+          class="help-menu-item"
+        >
+          <span
+            appearance="body-default-sm"
+          >
+            Mon-Fri 7 AM - 10 PM ET
+          </span>
+          <br />
+          <span
+            appearance="body-default-sm"
+          >
+            Sat-Sun 8 AM - 5 PM ET
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="nav-group"
+    >
+      <div
+        class="nav-menu-item"
+        id="live-chat-nav-item"
+        target="_blank"
+      >
+        <div
+          appearance="light"
+          icon-name="comments"
+          size="16"
+          slot="start"
+          style="align-items: center;"
+        />
+        <div
+          class="nav-item-content"
+        >
+          <span
+            appearance="body-default-md"
+          >
+            Live chat support
+          </span>
+        </div>
+      </div>
+      <div
+        class="nav-menu-item"
+        id="phone-nav-item"
+        target="_blank"
+        url="tel:8332273898"
+      >
+        <div
+          class="nav-item-content"
+        >
+          <span
+            appearance="body-default-md"
+          >
+            Call (833) 227-3898
+          </span>
+          <div
+            style="position: absolute; right: 0.5rem;"
+          >
+            <div
+              appearance="light"
+              icon-name="external-link"
+              size="16"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="nav-menu-item"
+        id="email-nav-item"
+        target="_blank"
+        url="mailto:support@.com"
+      >
+        <div
+          class="nav-item-content"
+        >
+          <span
+            appearance="body-default-md"
+          >
+            Email
+          </span>
+          <div
+            style="position: absolute; right: 0.5rem;"
+          >
+            <div
+              appearance="light"
+              icon-name="external-link"
+              size="16"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="nav-menu-item"
+        id="help-articles-nav-item"
+        target="_blank"
+        url="https://www.example.com/en-us/help/.html"
+      >
+        <div
+          class="nav-item-content"
+        >
+          <span
+            appearance="body-default-md"
+          >
+            Help articles
+          </span>
+          <div
+            style="position: absolute; right: 0.5rem;"
+          >
+            <div
+              appearance="light"
+              icon-name="external-link"
+              size="16"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="nav-menu-item"
+        id="training-nav-item"
+        target="_blank"
+        url="https://training.example.com/legal--core"
+      >
+        <div
+          class="nav-item-content"
+        >
+          <span
+            appearance="body-default-md"
+          >
+            Training
+          </span>
+          <div
+            style="position: absolute; right: 0.5rem;"
+          >
+            <div
+              appearance="light"
+              icon-name="external-link"
+              size="16"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

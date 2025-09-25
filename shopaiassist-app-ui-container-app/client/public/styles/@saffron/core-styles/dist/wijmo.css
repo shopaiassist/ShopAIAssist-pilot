@@ -1,0 +1,4947 @@
+﻿:root,
+::before,
+::after {
+  --saf-color-background-default: #ffffff;
+  --saf-color-background-subtle: #fafafa;
+  --saf-color-background-strong: #ededed;
+  --saf-color-background-stronger: #b3b3b3;
+  --saf-color-background-inverse: #1f1f1f;
+  --saf-color-line-strong: #737373;
+  --saf-color-line-subtle: #e6e6e6;
+  --saf-color-interactive-focus: #0065ff;
+  --saf-color-interactive-overlay: rgba(0, 0, 0, 0.3);
+  --saf-color-interactive-on-primary-default: #f2f2f2;
+  --saf-color-interactive-on-primary-hover: #004070;
+  --saf-color-interactive-on-primary-active: #ffffff;
+  --saf-color-interactive-on-secondary-default: #1f1f1f;
+  --saf-color-interactive-on-secondary-hover: #004070;
+  --saf-color-interactive-on-secondary-active: #ffffff;
+  --saf-color-interactive-on-tertiary-default: #1f1f1f;
+  --saf-color-interactive-on-tertiary-hover: #004070;
+  --saf-color-interactive-on-tertiary-active: #004070;
+  --saf-color-interactive-on-disabled-strong: #f2f2f2;
+  --saf-color-interactive-on-disabled-subtle: #8c8c8c;
+  --saf-color-interactive-on-hero-default: #ffffff;
+  --saf-color-interactive-on-hero-hover: #ca4615;
+  --saf-color-interactive-on-hero-active: #ffffff;
+  --saf-color-interactive-on-read-only-strong: #e6e6e6;
+  --saf-color-interactive-on-read-only-subtle: #737373;
+  --saf-color-interactive-primary-default: #000000;
+  --saf-color-interactive-primary-hover: #e5f4ff;
+  --saf-color-interactive-primary-active: #004070;
+  --saf-color-interactive-secondary-default: #fafafa;
+  --saf-color-interactive-secondary-hover: #e5f4ff;
+  --saf-color-interactive-secondary-active: #004070;
+  --saf-color-interactive-tertiary-default: rgba(255, 255, 255, 0);
+  --saf-color-interactive-tertiary-hover: #e5f4ff;
+  --saf-color-interactive-tertiary-active: #ffffff;
+  --saf-color-interactive-disabled-strong: #8c8c8c;
+  --saf-color-interactive-disabled-subtle: #f2f2f2;
+  --saf-color-interactive-hero-default: #fa6400;
+  --saf-color-interactive-hero-hover: #fff0e5;
+  --saf-color-interactive-hero-active: #ca4615;
+  --saf-color-interactive-background-default: #ffffff;
+  --saf-color-interactive-background-subtle: #fafafa;
+  --saf-color-interactive-background-strong: #ededed;
+  --saf-color-interactive-background-stronger: #d2d2d2;
+  --saf-color-interactive-background-strongest: #404040;
+  --saf-color-interactive-read-only-strong: #737373;
+  --saf-color-interactive-read-only-subtle: #e6e6e6;
+  --saf-color-anchor-default: #006fc4;
+  --saf-color-anchor-hover: #005da2;
+  --saf-color-anchor-active: #004070;
+  --saf-color-anchor-visited: #9647d1;
+  --saf-color-text-heavy: #1f1f1f;
+  --saf-color-text-strong: #404040;
+  --saf-color-text-subtle: #737373;
+  --saf-color-text-knockout: #ffffff;
+  --saf-color-status-success-strong: #387c2b;
+  --saf-color-status-success-subtle: #eaffe5;
+  --saf-color-status-error-strong: #dc0a0a;
+  --saf-color-status-error-subtle: #ffeded;
+  --saf-color-status-information-strong: #005da2;
+  --saf-color-status-information-subtle: #e5f4ff;
+  --saf-color-status-warning-strong: #ca4615;
+  --saf-color-status-warning-subtle: #fff8e5;
+  --saf-color-status-neutral-strong: #404040;
+  --saf-color-status-neutral-subtle: #ededed;
+  --saf-color-white: #ffffff;
+  --saf-color-black: #000000;
+  --saf-color-gray-50: #fafafa;
+  --saf-color-gray-100: #f2f2f2;
+  --saf-color-gray-150: #ededed;
+  --saf-color-gray-200: #e6e6e6;
+  --saf-color-gray-250: #d2d2d2;
+  --saf-color-gray-300: #b3b3b3;
+  --saf-color-gray-350: #8c8c8c;
+  --saf-color-gray-400: #737373;
+  --saf-color-gray-500: #404040;
+  --saf-color-gray-600: #1f1f1f;
+  --saf-color-blue-50: #f2faff;
+  --saf-color-blue-100: #e5f4ff;
+  --saf-color-blue-200: #b5daf7;
+  --saf-color-blue-300: #47b0ff;
+  --saf-color-blue-350: #006fc4;
+  --saf-color-blue-400: #005da2;
+  --saf-color-blue-500: #004070;
+  --saf-color-blue-600: #00233d;
+  --saf-color-blue-focus: #0065ff;
+  --saf-color-orange-100: #fff0e5;
+  --saf-color-orange-200: #ffd9bf;
+  --saf-color-orange-300: #ffb280;
+  --saf-color-orange-400: #fa6400;
+  --saf-color-orange-500: #ca4615;
+  --saf-color-green-100: #eaffe5;
+  --saf-color-green-200: #c9ffbf;
+  --saf-color-green-300: #87cc7a;
+  --saf-color-green-400: #387c2b;
+  --saf-color-green-500: #214a1a;
+  --saf-color-red-100: #ffeded;
+  --saf-color-red-200: #ffbfbf;
+  --saf-color-red-300: #ff8080;
+  --saf-color-red-400: #dc0a0a;
+  --saf-color-red-500: #a10707;
+  --saf-color-yellow-100: #fff8e5;
+  --saf-color-yellow-200: #ffeebf;
+  --saf-color-yellow-300: #ffdc80;
+  --saf-color-yellow-400: #fbb700;
+  --saf-color-yellow-500: #c98700;
+  --saf-color-purple-100: #f4e5ff;
+  --saf-color-purple-200: #e3bfff;
+  --saf-color-purple-300: #9647d1;
+  --saf-color-purple-400: #621f95;
+  --saf-color-purple-500: #351a6e;
+  --saf-color-brand-gray-100: #e5e5e5;
+  --saf-color-brand-gray-200: #9f9f9f;
+  --saf-color-brand-gray-300: #7a7a7a;
+  --saf-color-brand-gray-400: #212223;
+  --saf-color-brand-sky-100: #e3f1fd;
+  --saf-color-brand-sky-200: #6bacee;
+  --saf-color-brand-sky-300: #3990e9;
+  --saf-color-brand-sky-400: #0874e3;
+  --saf-color-brand-sky-500: #065db6;
+  --saf-color-brand-sky-600: #054688;
+  --saf-color-brand-sky-700: #032e5b;
+  --saf-color-brand-orange-100: #efb399;
+  --saf-color-brand-orange-200: #e68c66;
+  --saf-color-brand-orange-300: #de6633;
+  --saf-color-brand-orange-400: #d64000;
+  --saf-color-brand-orange-500: #ab3300;
+  --saf-color-brand-orange-600: #802600;
+  --saf-color-brand-orange-700: #561a00;
+  --saf-color-brand-racing-green-100: #cbd1ce;
+  --saf-color-brand-racing-green-200: #acb7b1;
+  --saf-color-brand-racing-green-300: #8d9c94;
+  --saf-color-brand-racing-green-400: #6e8178;
+  --saf-color-brand-racing-green-500: #50665b;
+  --saf-color-brand-racing-green-600: #314b3e;
+  --saf-color-brand-racing-green-700: #123021;
+  --saf-color-brand-teal-100: #e3f3ee;
+  --saf-color-brand-teal-200: #94d1c2;
+  --saf-color-brand-teal-300: #71c1ad;
+  --saf-color-brand-teal-400: #4db299;
+  --saf-color-brand-teal-500: #3e8e7a;
+  --saf-color-brand-teal-600: #2e6b5c;
+  --saf-color-brand-teal-700: #1f473d;
+  --saf-color-brand-lime-100: #e1f4cd;
+  --saf-color-brand-lime-200: #bce0a2;
+  --saf-color-brand-lime-300: #a5d583;
+  --saf-color-brand-lime-400: #8fcb64;
+  --saf-color-brand-lime-500: #72a250;
+  --saf-color-brand-lime-600: #567a3c;
+  --saf-color-brand-lime-700: #1f473d;
+  --saf-color-brand-gold-100: #fcf2da;
+  --saf-color-brand-gold-200: #f2d08f;
+  --saf-color-brand-gold-300: #edc06a;
+  --saf-color-brand-gold-400: #e9b045;
+  --saf-color-brand-gold-500: #ba8d37;
+  --saf-color-brand-gold-600: #8c6a29;
+  --saf-color-brand-gold-700: #5d461c;
+  --saf-color-brand-amber-100: #f8eadd;
+  --saf-color-brand-amber-200: #e5af7f;
+  --saf-color-brand-amber-300: #dd9455;
+  --saf-color-brand-amber-400: #d4792a;
+  --saf-color-brand-amber-500: #aa6122;
+  --saf-color-brand-amber-600: #7f4919;
+  --saf-color-brand-amber-700: #553011;
+  --saf-border-radius-xs: 4px;
+  --saf-border-radius-sm: 8px;
+  --saf-border-radius-md: 16px;
+  --saf-border-radius-lg: 20px;
+  --saf-border-radius-xl: 24px;
+  --saf-border-radius-circle: 88px;
+  --saf-drop-shadow-level-1: 0 2px 8px 2px #1f1f1f1a;
+  --saf-drop-shadow-level-2: 0 4px 12px 4px #1f1f1f1a;
+  --saf-drop-shadow-level-3: 0 8px 16px 8px #1f1f1f1a;
+  --saf-drop-shadow-focus: 0 0 0 2px #ffffff, 0 0 0 4px #0065ff;
+  --saf-drop-shadow-focus-flush: 0 0 0 2px #0065ff;
+  --saf-drop-shadow-error: 0 0 0 2px #ffffff, 0 0 0 4px #dc0a0a;
+  --saf-drop-shadow-success: 0 0 0 2px #ffffff, 0 0 0 4px #387c2b;
+  --saf-font-size-xs: 12px;
+  --saf-font-size-sm: 14px;
+  --saf-font-size-md: 16px;
+  --saf-font-size-lg: 20px;
+  --saf-font-size-xl: 24px;
+  --saf-font-size-2xl: 28px;
+  --saf-font-size-3xl: 32px;
+  --saf-font-size-4xl: 40px;
+  --saf-font-size-5xl: 56px;
+  --saf-line-width-thin: 1px;
+  --saf-line-width-thick: 2px;
+  --saf-line-width-thicker: 4px;
+  --saf-type-display-default-lg-strong-standard: 500 56px/120% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-display-default-lg-strong-compact: 500 56px/110% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-display-default-sm-strong-standard: 500 40px/120% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-display-default-sm-strong-compact: 500 40px/110% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-heading-default-4xl-strong-standard: 500 40px/120% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-heading-default-4xl-strong-compact: 500 40px/110% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-heading-default-3xl-strong-standard: 500 32px/120% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-heading-default-3xl-strong-compact: 500 32px/110% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-heading-default-2xl-strong-standard: 500 28px/120% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-heading-default-2xl-strong-compact: 500 28px/110% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-heading-default-xl-strong-standard: 500 24px/120% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-heading-default-xl-strong-compact: 500 24px/110% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-heading-default-lg-strong-standard: 500 20px/120% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-heading-default-lg-strong-compact: 500 20px/110% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-heading-default-md-strong-standard: 500 16px/120% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-heading-default-md-strong-compact: 500 16px/110% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-heading-link-4xl-strong-standard: 500 40px/120% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-heading-link-4xl-strong-compact: 500 40px/110% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-heading-link-3xl-strong-standard: 500 32px/120% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-heading-link-3xl-strong-compact: 500 32px/110% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-heading-link-2xl-strong-standard: 500 28px/120% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-heading-link-2xl-strong-compact: 500 28px/110% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-heading-link-xl-strong-standard: 500 24px/120% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-heading-link-xl-strong-compact: 500 24px/110% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-heading-link-lg-strong-standard: 500 20px/120% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-heading-link-lg-strong-compact: 500 20px/110% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-heading-link-md-strong-standard: 500 16px/120% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-heading-link-md-strong-compact: 500 16px/110% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-default-lg-regular-standard: 400 20px/150% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-default-lg-regular-compact: 400 20px/135% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-default-lg-strong-standard: 600 20px/150% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-default-lg-strong-compact: 600 20px/135% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-default-md-regular-standard: 400 16px/150% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-default-md-regular-compact: 400 16px/135% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-default-md-strong-standard: 600 16px/150% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-default-md-strong-compact: 600 16px/135% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-default-sm-regular-standard: 400 14px/135% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-default-sm-regular-compact: 400 14px/120% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-default-sm-strong-standard: 600 14px/135% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-default-sm-strong-compact: 600 14px/120% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-default-xs-regular-standard: 400 12px/135% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-default-xs-regular-compact: 400 12px/120% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-default-xs-strong-standard: 600 12px/135% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-default-xs-strong-compact: 600 12px/120% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-link-lg-regular-standard: 400 20px/150% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-link-lg-regular-compact: 400 20px/150% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-link-lg-strong-standard: 600 20px/150% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-link-lg-strong-compact: 600 20px/135% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-link-md-regular-standard: 400 16px/150% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-link-md-regular-compact: 400 16px/150% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-link-md-strong-standard: 600 16px/150% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-link-md-strong-compact: 600 16px/135% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-link-sm-regular-standard: 400 14px/135% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-link-sm-regular-compact: 400 14px/120% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-link-sm-strong-standard: 600 14px/135% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-link-sm-strong-compact: 600 14px/120% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-link-xs-regular-standard: 400 12px/135% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-link-xs-regular-compact: 400 12px/120% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-link-xs-strong-standard: 600 12px/135% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-body-link-xs-strong-compact: 600 12px/120% 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-icon-default-xs: 300 12px / auto 'Font Awesome 6 Pro', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-icon-default-sm: 300 14px / auto 'Font Awesome 6 Pro', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-icon-default-md: 300 16px / auto 'Font Awesome 6 Pro', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-icon-default-lg: 300 20px / auto 'Font Awesome 6 Pro', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-icon-default-xl: 300 24px / auto 'Font Awesome 6 Pro', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-icon-default-2xl: 300 40px / auto 'Font Awesome 6 Pro', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-icon-strong-xs: 900 12px / auto 'Font Awesome 6 Pro', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-icon-strong-sm: 900 14px / auto 'Font Awesome 6 Pro', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-icon-strong-md: 900 16px / auto 'Font Awesome 6 Pro', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-icon-strong-lg: 900 20px / auto 'Font Awesome 6 Pro', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-icon-strong-xl: 900 24px / auto 'Font Awesome 6 Pro', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-icon-strong-2xl: 900 40px / auto 'Font Awesome 6 Pro', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-icon-brand-xs: 900 12px / auto 'Font Awesome 6 Brands', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-icon-brand-sm: 900 14px / auto 'Font Awesome 6 Brands', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-icon-brand-md: 900 16px / auto 'Font Awesome 6 Brands', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-icon-brand-lg: 900 20px / auto 'Font Awesome 6 Brands', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-icon-brand-xl: 900 24px / auto 'Font Awesome 6 Brands', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-icon-brand-2xl: 900 40px / auto 'Font Awesome 6 Brands', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-eyebrow-default-sm-strong-standard: 700 14px/120% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-type-eyebrow-default-md-strong-standard: 700 16px/110% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-flexgrid-color-background-alt-rows: #f0f6fa;
+  --saf-flexgrid-color-background-header: #d5e0e8;
+  --saf-flexgrid-color-background-header-current-sort: #a3bbcc;
+  --saf-flexgrid-color-background-header-hover: #c5cfd6;
+  --saf-flexgrid-color-background-marquee: #4d799b;
+  --saf-logo-type-default: 700 19px/120% 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-space-inset-xxxs: 2px;
+  --saf-space-inset-xxs: 4px;
+  --saf-space-inset-xs: 8px;
+  --saf-space-inset-sm: 12px;
+  --saf-space-inset-md: 16px;
+  --saf-space-inset-lg: 20px;
+  --saf-space-inset-xl: 24px;
+  --saf-space-inset-xxl: 32px;
+  --saf-space-inset-stretch-xxs: 4px 0;
+  --saf-space-inset-stretch-xs: 8px 4px;
+  --saf-space-inset-stretch-sm: 12px 8px;
+  --saf-space-inset-stretch-md: 16px 8px;
+  --saf-space-inset-stretch-lg: 20px 12px;
+  --saf-space-inset-stretch-xl: 24px 16px;
+  --saf-space-inset-squish-xxs: 0 4px;
+  --saf-space-inset-squish-xs: 4px 8px;
+  --saf-space-inset-squish-sm: 8px 12px;
+  --saf-space-inset-squish-md: 8px 16px;
+  --saf-space-inset-squish-lg: 12px 20px;
+  --saf-space-inset-squish-xl: 16px 24px;
+  --saf-space-stack-xxs: 2px;
+  --saf-space-stack-xs: 4px;
+  --saf-space-stack-sm: 8px;
+  --saf-space-stack-md: 12px;
+  --saf-space-stack-lg: 16px;
+  --saf-space-stack-xl: 24px;
+  --saf-space-stack-xxl: 32px;
+  --saf-space-inline-xxs: 2px;
+  --saf-space-inline-xs: 4px;
+  --saf-space-inline-sm: 8px;
+  --saf-space-inline-md: 12px;
+  --saf-space-inline-lg: 16px;
+  --saf-space-inline-xl: 24px;
+  --saf-space-inline-xxl: 32px;
+  --saf-datepicker-color-background-range-highlight: #ccd9e2;
+  --saf-skeleton-color-background-default: #d2d2d2;
+  --saf-opacity-0: 0;
+  --saf-opacity-1: 1%;
+  --saf-opacity-2: 0.15;
+  --saf-opacity-3: 0.2;
+  --saf-opacity-4: 0.3;
+  --saf-opacity-5: 0.5;
+  --saf-opacity-6: 0.75;
+  --saf-font-family-knowledge2017: 'Knowledge2017', 'Helvetica Neue', Arial, sans-serif;
+  --saf-font-family-source-sans-3: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --saf-font-family-font-awesome-6-pro: 'Font Awesome 6 Pro', 'Helvetica Neue', Arial, sans-serif;
+  --saf-font-family-font-awesome-6-brands: 'Font Awesome 6 Brands', 'Helvetica Neue', Arial, sans-serif;
+  --saf-font-weight-regular: 400;
+  --saf-font-weight-medium: 500;
+  --saf-font-weight-semibold: 600;
+  --saf-font-weight-bold: 700;
+  --saf-font-weight-light: 300;
+  --saf-font-weight-solid: 900;
+  --saf-letter-spacing-0: 0;
+  --saf-letter-spacing-xs: 0.05em;
+  --saf-paragraph-spacing-0: 0;
+  --saf-text-case-none: none;
+  --saf-text-case-uppercase: uppercase;
+  --saf-text-decoration-none: none;
+  --saf-text-decoration-underline: underline;
+  --saf-line-height-auto: auto;
+  --saf-line-height-xs: 110%;
+  --saf-line-height-sm: 120%;
+  --saf-line-height-md: 135%;
+  --saf-line-height-lg: 150%;
+  --saf-paragraph-indent-0: 0;
+  --saf-grid-base: 4;
+  --saf-spacing-0: 0;
+  --saf-spacing-1: 4px;
+  --saf-spacing-2: 8px;
+  --saf-spacing-3: 12px;
+  --saf-spacing-4: 16px;
+  --saf-spacing-5: 20px;
+  --saf-spacing-6: 24px;
+  --saf-spacing-7: 28px;
+  --saf-spacing-8: 32px;
+  --saf-spacing-9: 36px;
+  --saf-spacing-10: 40px;
+  --saf-spacing-11: 44px;
+  --saf-spacing-12: 48px;
+  --saf-spacing-13: 52px;
+  --saf-spacing-14: 56px;
+  --saf-spacing-15: 60px;
+  --saf-spacing-16: 64px;
+  --saf-spacing-17: 68px;
+  --saf-spacing-18: 72px;
+  --saf-spacing-19: 76px;
+  --saf-spacing-20: 80px;
+  --saf-spacing-21: 84px;
+  --saf-spacing-22: 88px;
+  --saf-spacing-23: 92px;
+  --saf-spacing-24: 96px;
+  --saf-spacing-05: 2px;
+  --saf-token-set-order-0: saffron-core;
+  --saf-token-set-order-1: saffron-on-light;
+  --saf-saffron-on-light: [object Object];
+} /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */ /*!
+    *
+    * Saffron theme for Wijmo
+    *
+    */ /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */ /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */ /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */ /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */ /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */ /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */
+.wj-glyph,
+.wj-glyph-filter,
+.wj-glyph-up-right,
+.wj-glyph-up-left,
+.wj-glyph-up,
+.wj-glyph-step-forward,
+.wj-glyph-step-backward,
+.wj-glyph-square,
+.wj-glyph-right,
+.wj-glyph-pencil,
+.wj-glyph-plus,
+.wj-glyph-minus,
+.wj-glyph-pin,
+.wj-glyph-measure,
+.wj-glyph-left,
+.wj-glyph-file,
+.wj-glyph-drag,
+.wj-glyph-down-right,
+.wj-glyph-down-left,
+.wj-glyph-down,
+.wj-glyph-dimension,
+.wj-glyph-diamond,
+.wj-glyph-clock,
+.wj-glyph-clipboard,
+.wj-glyph-circle,
+.wj-glyph-check,
+.wj-glyph-calendar,
+.wj-glyph-asterisk {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  opacity: 0.75;
+  white-space: normal;
+  cursor: pointer;
+}
+.wj-glyph-asterisk:after {
+  content: '✱︎';
+}
+.wj-glyph-calendar {
+  width: 1em;
+  height: 1em;
+  border: 0.1em solid;
+  border-top: 0.3em solid;
+  top: 0.15em;
+}
+.wj-glyph-calendar:after {
+  position: absolute;
+  left: 0.3em;
+  top: 0.1em;
+  width: 0.2em;
+  height: 0.4em;
+  border-right: 0.1em solid;
+  border-top: 0.07em solid;
+  opacity: 0.7;
+  content: ' ';
+}
+.wj-glyph-check:after {
+  font-weight: bold;
+  content: '✔︎';
+}
+.wj-glyph-circle {
+  border: 0.3em solid;
+  border-radius: 50%;
+  top: -0.1em;
+}
+.wj-glyph-clipboard:after {
+  content: '📋︎';
+}
+.wj-glyph-clock {
+  width: 1em;
+  height: 1em;
+  border: 0.1em solid;
+  border-radius: 50%;
+  top: 0.15em;
+}
+.wj-glyph-clock:after {
+  position: absolute;
+  border-left: 0.1em solid;
+  border-bottom: 0.1em solid;
+  width: 0.25em;
+  height: 0.3em;
+  top: 0.2em;
+  left: 0.35em;
+  content: ' ';
+}
+.wj-glyph-diamond:after {
+  content: '◆︎';
+}
+.wj-glyph-dimension:after {
+  content: '⟀︎';
+}
+.wj-glyph-down {
+  border-top: 0.5em solid;
+  border-right: 0.4em solid rgba(0, 0, 0, 0);
+  border-left: 0.4em solid rgba(0, 0, 0, 0);
+}
+.wj-glyph-down-left {
+  border-top: 0.65em solid rgba(0, 0, 0, 0);
+  border-left: 0.65em solid;
+}
+.wj-glyph-down-right {
+  top: -2px;
+  border-bottom: 0.65em solid;
+  border-left: 0.65em solid rgba(0, 0, 0, 0);
+}
+.wj-glyph-drag {
+  width: 1em;
+  height: 1em;
+}
+.wj-glyph-drag:after {
+  position: absolute;
+  top: 0.15em;
+  left: 0.1em;
+  width: 1em;
+  height: 1em;
+  background: radial-gradient(#000 1px, transparent 2px);
+  background-size: 0.33em 0.33em;
+  content: ' ';
+}
+.wj-glyph-file {
+  border-left: 0.7em solid;
+  height: 0.85em;
+}
+.wj-glyph-file:after {
+  position: absolute;
+  transform: translateX(-100%);
+  border-top: 0.3em solid rgba(0, 0, 0, 0);
+  border-left: 0.3em solid #fff;
+  content: ' ';
+}
+.wj-glyph-left {
+  top: 1px;
+  border-top: 0.4em solid rgba(0, 0, 0, 0);
+  border-right: 0.5em solid;
+  border-bottom: 0.4em solid rgba(0, 0, 0, 0);
+}
+.wj-glyph-measure:after {
+  content: '📊︎';
+}
+.wj-glyph-pin {
+  top: -0.1em;
+  left: 0.1em;
+  width: 0.4em;
+  border-top: 0.6em solid;
+}
+.wj-glyph-pin:before {
+  position: absolute;
+  border-left: 0.7em solid;
+  height: 0.1em;
+  left: -0.15em;
+  top: -0.1em;
+  content: ' ';
+}
+.wj-glyph-pin:after {
+  position: absolute;
+  border-left: 0.15em solid;
+  height: 0.5em;
+  left: 0.15em;
+  top: -0.1em;
+  content: ' ';
+}
+.wj-glyph-plus,
+.wj-glyph-minus {
+  border-top: 0.25em solid;
+  width: 0.9em;
+  top: -0.3em;
+}
+.wj-glyph-plus:after {
+  position: absolute;
+  box-sizing: border-box;
+  border-left: 0.25em solid;
+  width: 0.25em;
+  height: 0.95em;
+  left: 0.33em;
+  top: -0.6em;
+  content: ' ';
+}
+.wj-glyph-pencil:after {
+  content: '✎︎';
+}
+.wj-glyph-right {
+  top: 1px;
+  border-top: 0.4em solid rgba(0, 0, 0, 0);
+  border-bottom: 0.4em solid rgba(0, 0, 0, 0);
+  border-left: 0.5em solid;
+}
+.wj-glyph-square {
+  border: 0.25em solid;
+}
+.wj-glyph-step-backward {
+  border-top: 0.4em solid rgba(0, 0, 0, 0);
+  border-right: 0.5em solid;
+  border-bottom: 0.4em solid rgba(0, 0, 0, 0);
+  top: 0.12em;
+}
+.wj-glyph-step-backward:after {
+  position: absolute;
+  border-left: 0.2em solid;
+  height: 0.75em;
+  transform: translate(-100%, -50%);
+  content: ' ';
+}
+[dir='rtl'] .wj-glyph-step-backward:after {
+  transform: translate(0, -50%);
+}
+.wj-glyph-step-forward {
+  border-top: 0.4em solid rgba(0, 0, 0, 0);
+  border-bottom: 0.4em solid rgba(0, 0, 0, 0);
+  border-left: 0.5em solid;
+}
+.wj-glyph-step-forward:after {
+  position: absolute;
+  border-left: 0.2em solid;
+  height: 0.75em;
+  transform: translateY(-50%);
+  content: ' ';
+}
+[dir='rtl'] .wj-glyph-step-forward:after {
+  transform: translate(100%, -50%);
+}
+.wj-glyph-up {
+  border-right: 0.4em solid rgba(0, 0, 0, 0);
+  border-bottom: 0.5em solid;
+  border-left: 0.4em solid rgba(0, 0, 0, 0);
+}
+.wj-glyph-up-left {
+  border-bottom: 0.65em solid rgba(0, 0, 0, 0);
+  border-left: 0.65em solid;
+}
+.wj-glyph-up-right {
+  border-top: 0.65em solid;
+  border-left: 0.65em solid rgba(0, 0, 0, 0);
+}
+.wj-glyph-filter {
+  top: -0.1em;
+  width: 0.5em;
+  border-top: 0.5em solid;
+  border-right: 0.4em solid rgba(0, 0, 0, 0);
+  border-left: 0.4em solid rgba(0, 0, 0, 0);
+}
+.wj-glyph-filter:after {
+  position: absolute;
+  border-left: 0.25em solid;
+  left: -0.125em;
+  top: -0.2em;
+  height: 0.4em;
+  content: ' ';
+} /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */
+.wj-control {
+  display: block;
+  box-sizing: border-box;
+  color: var(--saf-color-interactive-on-secondary-default);
+  background: var(--saf-color-interactive-background-default);
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.wj-control * {
+  box-sizing: inherit;
+}
+.wj-control [contenteditable] {
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+}
+.wj-control:focus,
+.wj-control *:not(.wj-tabpane *):focus,
+.wj-control .wj-tabpane .wj-control *:focus,
+.wj-control a:focus {
+  outline: none;
+}
+.wj-control input::-ms-clear {
+  display: none;
+}
+.wj-control input:-ms-input-placeholder {
+  opacity: 0.7;
+}
+.wj-control input[type='number']::-webkit-inner-spin-button,
+.wj-control input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.wj-control input:invalid {
+  box-shadow: none;
+  outline: none;
+}
+.wj-control .wj-btn,
+.wj-viewer .wj-control .wj-applybutton {
+  background: var(--saf-color-interactive-tertiary-default);
+  cursor: pointer;
+  color: var(--saf-color-interactive-on-tertiary-default);
+  display: inline-block;
+  border-style: none;
+  padding: 0 10px;
+  text-align: center;
+  min-width: 30px;
+  white-space: nowrap;
+}
+.wj-control .wj-btn:focus,
+.wj-viewer .wj-control .wj-applybutton:focus,
+.wj-control .wj-btn:hover,
+.wj-viewer .wj-control .wj-applybutton:hover {
+  background: var(--saf-color-interactive-tertiary-hover);
+  transition-duration: 0.4s;
+}
+.wj-control .wj-btn.wj-state-active,
+.wj-viewer .wj-control .wj-state-active.wj-applybutton {
+  background: rgba(255, 255, 255, 0.08);
+}
+.wj-control .wj-btn[disabled],
+.wj-viewer .wj-control [disabled].wj-applybutton {
+  cursor: default;
+  pointer-events: none;
+  opacity: 1;
+}
+.wj-control a.wj-btn,
+.wj-viewer .wj-control a.wj-applybutton,
+.wj-control button.wj-btn:not(.wj-btn-default),
+.wj-viewer .wj-control button.wj-applybutton:not(.wj-btn-default) {
+  border-radius: 0;
+  padding: 6px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+}
+.wj-header {
+  background: var(--saf-flexgrid-color-background-header);
+  color: var(--saf-color-interactive-on-secondary-default);
+  font-weight: bold;
+}
+.wj-state-multi-selected {
+  background: var(--saf-color-interactive-secondary-active);
+  color: var(--saf-color-interactive-on-secondary-default);
+}
+.wj-state-selected,
+.wj-state-last-selected {
+  background: var(--saf-color-interactive-secondary-active);
+  color: var(--saf-color-interactive-on-secondary-active);
+}
+.wj-state-disabled:not(.wj-popup) {
+  cursor: default;
+  pointer-events: none;
+  opacity: 1;
+}
+.wj-content {
+  display: inline-block;
+  border: var(--saf-line-width-thin) solid var(--saf-color-line-strong);
+  border-radius: 0;
+  overflow: hidden;
+}
+.wj-tooltip {
+  box-sizing: border-box;
+  position: absolute;
+  pointer-events: none;
+  max-width: 400px;
+  padding: var(--saf-space-inset-squish-md);
+  background: var(--saf-color-interactive-primary-default);
+  color: var(--saf-color-interactive-on-primary-default);
+  border: var(--saf-line-width-thin) solid var(--saf-color-line-strong);
+  border-radius: 0;
+  box-shadow: var(--saf-drop-shadow-level-2);
+  word-break: break-word;
+  -ms-word-break: break-all;
+}
+.wj-tooltip.wj-error-tip {
+  background: var(--saf-color-status-error-strong);
+  color: var(--saf-color-text-knockout);
+  white-space: pre-line;
+  font-weight: bold;
+}
+.wj-dropdown-panel {
+  pointer-events: auto;
+  box-shadow: var(--saf-drop-shadow-level-2);
+} /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */
+.wj-content.wj-dropdown,
+.wj-content.wj-inputnumber,
+.wj-content.wj-inputmask,
+.wj-content.wj-calendar-outer,
+.wj-content.wj-pager {
+  vertical-align: middle;
+  display: inline-table;
+  border-collapse: separate;
+}
+.wj-control.wj-inputmask {
+  display: inline-flex;
+}
+.wj-control.wj-inputmask .wj-input {
+  width: 100%;
+}
+.wj-control.wj-inputmask .wj-input-group {
+  display: flex;
+}
+.wj-dropdown-panel {
+  display: block;
+  background: var(--saf-color-interactive-background-default);
+  color: var(--saf-color-interactive-on-secondary-default);
+}
+.wj-dropdown-panel .wj-control {
+  background: rgba(0, 0, 0, 0);
+  color: inherit;
+}
+.wj-dropdown-panel.wj-content > .wj-content {
+  border: none;
+}
+.wj-control .wj-template {
+  position: relative;
+  display: table-cell;
+}
+.wj-control .wj-template,
+.wj-control .wj-input {
+  height: 100%;
+}
+.wj-control .wj-input-group {
+  display: table;
+  border-collapse: separate;
+  width: 100%;
+  height: 100%;
+}
+.wj-control .wj-input-group .wj-input-group-btn {
+  display: table-cell;
+  width: 1%;
+  height: 100%;
+  min-width: 26px;
+  white-space: nowrap;
+  vertical-align: top;
+}
+.wj-control .wj-input-group .wj-input-group-btn:last-child:not(:first-child) > .wj-btn,
+.wj-viewer .wj-control .wj-input-group .wj-input-group-btn:last-child:not(:first-child) > .wj-applybutton {
+  border-left: var(--saf-line-width-thin) solid rgba(255, 255, 255, 0);
+}
+.wj-control .wj-input-group .wj-input-group-btn:first-child:not(:last-child) > .wj-btn,
+.wj-viewer .wj-control .wj-input-group .wj-input-group-btn:first-child:not(:last-child) > .wj-applybutton {
+  border-right: var(--saf-line-width-thin) solid rgba(255, 255, 255, 0);
+}
+.wj-control .wj-input-group .wj-form-control {
+  display: table-cell;
+  padding: 4px 8px;
+  border: none;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  background: rgba(0, 0, 0, 0);
+  min-height: 2em;
+}
+.wj-control .wj-input-group button,
+.wj-control .wj-input-group input {
+  margin: 0;
+}
+.wj-control .wj-btn-group {
+  display: inline-block;
+  border: var(--saf-line-width-thin) solid rgba(255, 255, 255, 0);
+  border-radius: 0;
+  overflow: hidden;
+}
+.wj-control .wj-btn-group > *:not(:first-child) {
+  border-left: var(--saf-line-width-thin) solid rgba(255, 255, 255, 0);
+}
+.wj-control .wj-btn-group > .wj-form-control {
+  padding: var(--saf-space-inset-squish-md);
+  border: none;
+}
+.wj-control .wj-btn-group > .wj-form-control:not(:first-child) {
+  border-left: var(--saf-line-width-thin) solid rgba(255, 255, 255, 0);
+}
+.wj-control .wj-btn-group > .wj-btn,
+.wj-viewer .wj-control .wj-btn-group > .wj-applybutton,
+.wj-control .wj-input-group-btn > .wj-btn,
+.wj-viewer .wj-control .wj-input-group-btn > .wj-applybutton {
+  height: 100%;
+  min-height: 2em;
+  background: var(--saf-color-interactive-tertiary-default);
+}
+.wj-control .wj-btn-group > .wj-btn:focus,
+.wj-viewer .wj-control .wj-btn-group > .wj-applybutton:focus,
+.wj-control .wj-btn-group > .wj-btn:hover,
+.wj-viewer .wj-control .wj-btn-group > .wj-applybutton:hover,
+.wj-control .wj-input-group-btn > .wj-btn:focus,
+.wj-viewer .wj-control .wj-input-group-btn > .wj-applybutton:focus,
+.wj-control .wj-input-group-btn > .wj-btn:hover,
+.wj-viewer .wj-control .wj-input-group-btn > .wj-applybutton:hover {
+  background: var(--saf-color-interactive-tertiary-hover);
+  transition-duration: 0.4s;
+}
+.wj-control .wj-btn-group > .wj-btn.wj-btn-default,
+.wj-viewer .wj-control .wj-btn-group > .wj-btn-default.wj-applybutton,
+.wj-control .wj-input-group-btn > .wj-btn.wj-btn-default,
+.wj-viewer .wj-control .wj-input-group-btn > .wj-btn-default.wj-applybutton {
+  color: var(--saf-color-interactive-on-secondary-default);
+}
+.wj-control .wj-btn-group > .wj-btn.wj-btn-default:enabled,
+.wj-viewer .wj-control .wj-btn-group > .wj-btn-default.wj-applybutton:enabled,
+.wj-control .wj-input-group-btn > .wj-btn.wj-btn-default:enabled,
+.wj-viewer .wj-control .wj-input-group-btn > .wj-btn-default.wj-applybutton:enabled {
+  background: rgba(0, 0, 0, 0);
+}
+.wj-control .wj-btn-group > .wj-btn.wj-btn-default:focus,
+.wj-viewer .wj-control .wj-btn-group > .wj-btn-default.wj-applybutton:focus,
+.wj-control .wj-btn-group > .wj-btn.wj-btn-default:hover,
+.wj-viewer .wj-control .wj-btn-group > .wj-btn-default.wj-applybutton:hover,
+.wj-control .wj-input-group-btn > .wj-btn.wj-btn-default:focus,
+.wj-viewer .wj-control .wj-input-group-btn > .wj-btn-default.wj-applybutton:focus,
+.wj-control .wj-input-group-btn > .wj-btn.wj-btn-default:hover,
+.wj-viewer .wj-control .wj-input-group-btn > .wj-btn-default.wj-applybutton:hover {
+  background: var(--saf-color-interactive-tertiary-hover);
+  transition-duration: 0.4s;
+}
+.wj-control.wj-rtl .wj-input-group-btn:last-child:not(:first-child) > .wj-btn,
+.wj-viewer .wj-control.wj-rtl .wj-input-group-btn:last-child:not(:first-child) > .wj-applybutton {
+  border-right: var(--saf-line-width-thin) solid rgba(255, 255, 255, 0);
+  border-left: none;
+}
+.wj-control.wj-rtl .wj-input-group-btn:first-child:not(:last-child) > .wj-btn,
+.wj-viewer .wj-control.wj-rtl .wj-input-group-btn:first-child:not(:last-child) > .wj-applybutton {
+  border-left: var(--saf-line-width-thin) solid rgba(255, 255, 255, 0);
+  border-right: none;
+}
+.wj-control.wj-rtl .wj-btn-group > *:not(:first-child) {
+  border-right: var(--saf-line-width-thin) solid rgba(255, 255, 255, 0);
+  border-left: none;
+}
+.wj-control.wj-rtl .wj-btn-group > .wj-form-control:not(:first-child) {
+  border-right: var(--saf-line-width-thin) solid rgba(255, 255, 255, 0);
+  border-left: none;
+}
+.wj-inputnumber input.wj-form-control {
+  text-align: right;
+}
+.wj-listbox {
+  overflow: auto;
+  cursor: default;
+}
+.wj-listbox .wj-listbox-item {
+  padding: var(--saf-space-inset-squish-md);
+}
+.wj-listbox .wj-listbox-item.wj-separator {
+  height: 1px;
+  margin: 3px 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+.wj-listbox .wj-listbox-item.wj-header {
+  opacity: 1;
+  position: sticky;
+  top: 0;
+}
+.wj-listbox .wj-listbox-item:not(.wj-state-selected):not(.wj-state-disabled):not(.wj-separator):hover {
+  background: var(--saf-color-interactive-secondary-hover);
+  transition-duration: 0.4s;
+}
+.wj-listbox .wj-listbox-item > label {
+  display: flex;
+  align-content: flex-start;
+  align-items: baseline;
+  margin: 0;
+  font-weight: normal;
+}
+.wj-listbox .wj-listbox-item > label > input[type='checkbox'] {
+  margin: 4px;
+}
+.wj-multiselectlistbox .wj-template {
+  display: flex;
+  flex-direction: column;
+  max-height: inherit;
+  min-height: inherit;
+  height: auto;
+}
+.wj-multiselectlistbox .wj-content {
+  display: block;
+  border: none;
+  border-radius: 0;
+}
+.wj-multiselectlistbox .wj-form-control {
+  border: none;
+  width: 100%;
+  color: inherit;
+  padding: 5px 8px;
+}
+.wj-dropdown-panel > .wj-multiselectlistbox {
+  display: block;
+}
+.wj-calendar {
+  max-width: 100vw;
+  overflow: auto;
+}
+.wj-calendar .wj-header {
+  font-size: 90%;
+}
+.wj-calendar .wj-day-today {
+  font-weight: bold;
+}
+.wj-calendar .wj-day-othermonth {
+  opacity: 0.65;
+}
+.wj-calendar .wj-calendar-outer {
+  display: block;
+  padding: 10px;
+  cursor: default;
+}
+.wj-calendar .wj-calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-bottom: 7px;
+  min-width: 19em;
+}
+.wj-calendar .wj-calendar-header .wj-month-select {
+  display: inline-block;
+  margin: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.wj-calendar .wj-calendar-header .wj-month-select .wj-glyph-down {
+  opacity: 0.5;
+}
+.wj-calendar .wj-calendar-header .wj-btn-group .wj-btn,
+.wj-calendar .wj-calendar-header .wj-btn-group .wj-viewer .wj-control .wj-applybutton,
+.wj-viewer .wj-control .wj-calendar .wj-calendar-header .wj-btn-group .wj-applybutton {
+  padding: 2px 8px 0 8px;
+}
+.wj-calendar .wj-calendar-header .wj-btn-group span {
+  pointer-events: none;
+}
+.wj-calendar .wj-calendar-month {
+  width: 100%;
+  border-collapse: collapse;
+  font: inherit;
+}
+.wj-calendar .wj-calendar-month td {
+  width: 14.29%;
+}
+.wj-calendar .wj-calendar-year {
+  width: 100%;
+  border-collapse: collapse;
+  font: inherit;
+}
+.wj-calendar .wj-calendar-year td {
+  width: 25%;
+}
+.wj-calendar .wj-calendar-year :not(.wj-header) td {
+  height: 3em;
+}
+.wj-calendar td {
+  text-align: center;
+  padding: var(--saf-space-inset-squish-md);
+  border: none;
+}
+.wj-calendar td.wj-state-invalid {
+  opacity: 0.65;
+}
+.wj-calendar.wj-calendar-multimonth {
+  display: inline-flex;
+  flex-wrap: wrap;
+  border: var(--saf-line-width-thin) solid var(--saf-color-line-strong);
+  border-radius: 0;
+}
+.wj-calendar.wj-calendar-multimonth .wj-content {
+  border-color: rgba(0, 0, 0, 0.05);
+  border-radius: 0;
+}
+.wj-calendar.wj-calendar-multimonth .wj-calendar {
+  display: flex;
+}
+.wj-calendar.wj-btns-outside {
+  position: relative;
+}
+.wj-calendar.wj-btns-outside .wj-calendar-header .wj-btn-group {
+  border: none;
+}
+.wj-calendar.wj-btns-outside .wj-calendar-header .wj-btn-group button {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  min-width: 1em;
+  padding: 0;
+  border: none;
+  opacity: 0.5;
+}
+.wj-calendar.wj-btns-outside .wj-calendar-header .wj-btn-group button[wj-part='btn-prev'] {
+  left: 0;
+  display: block;
+}
+.wj-calendar.wj-btns-outside .wj-calendar-header .wj-btn-group button[wj-part='btn-next'] {
+  right: 0;
+  display: block;
+}
+.wj-calendar.wj-rtl .wj-calendar-header .wj-btn-group {
+  float: left;
+}
+.wj-calendar.wj-rtl .wj-calendar-header .wj-btn-group .wj-btn .wj-glyph-right,
+.wj-calendar.wj-rtl .wj-calendar-header .wj-btn-group .wj-viewer .wj-control .wj-applybutton .wj-glyph-right,
+.wj-viewer .wj-control .wj-calendar.wj-rtl .wj-calendar-header .wj-btn-group .wj-applybutton .wj-glyph-right,
+.wj-calendar.wj-rtl .wj-calendar-header .wj-btn-group .wj-btn .wj-glyph-left,
+.wj-calendar.wj-rtl .wj-calendar-header .wj-btn-group .wj-viewer .wj-control .wj-applybutton .wj-glyph-left,
+.wj-viewer .wj-control .wj-calendar.wj-rtl .wj-calendar-header .wj-btn-group .wj-applybutton .wj-glyph-left {
+  transform: scale(-1, 1);
+}
+.wj-dropdown-panel .wj-calendar-outer {
+  background: none;
+}
+.wj-dropdown-panel .wj-calendar-outer > .wj-content {
+  display: block;
+}
+.wj-yearpicker {
+  max-height: 12em;
+  min-width: 18em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 4em;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+.wj-yearpicker .wj-listbox-item {
+  text-align: center;
+  display: inline-block;
+  width: 4em;
+}
+.wj-outer-flex,
+.wj-inputdate-dropdown .wj-calendar-outer,
+.wj-calendar.wj-calendar-multimonth .wj-calendar-outer {
+  display: flex;
+  flex-direction: column;
+  min-width: 21em;
+  flex-shrink: 0;
+}
+.wj-inputdate-dropdown {
+  display: flex;
+  background: var(--saf-color-interactive-background-default);
+}
+.wj-inputdate-dropdown > .wj-calendar {
+  flex-grow: 1;
+  border: none;
+}
+.wj-inputdate-dropdown > .wj-listbox {
+  flex-grow: 1;
+  margin: 10px;
+  min-width: 8em;
+  max-height: 16em;
+}
+.wj-inputdate-dropdown > .wj-listbox .wj-listbox-item {
+  white-space: nowrap;
+}
+.wj-colorpicker {
+  width: 420px;
+  height: 200px;
+  padding: 4px;
+}
+.wj-colorpicker .wj-colorbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.wj-inputcolor .wj-input-group input.wj-form-control {
+  padding-left: 24px;
+}
+.wj-inputcolor .wj-inputcolorbox {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  bottom: 6px;
+  width: 12px;
+  border: 1px solid #000;
+}
+.wj-inputcolor.wj-rtl .wj-input-group input.wj-form-control {
+  padding-left: 4px;
+  padding-right: 24px;
+}
+.wj-inputcolor.wj-rtl .wj-inputcolorbox {
+  left: auto;
+  right: 6px;
+}
+.wj-listbox.wj-dropdown-panel .wj-state-match {
+  font-weight: bold;
+}
+.wj-multi-autocomplete {
+  width: 100%;
+  padding: 5px;
+}
+.wj-multi-autocomplete .wj-input {
+  float: left;
+}
+.wj-multi-autocomplete .wj-input-group .wj-form-control {
+  margin-top: 5px;
+  height: auto;
+}
+.wj-multi-autocomplete .wj-token {
+  background: var(--saf-color-interactive-tertiary-default);
+  color: var(--saf-color-interactive-on-tertiary-default);
+  border: var(--saf-line-width-thin) solid var(--saf-color-line-strong);
+  border-radius: 0;
+  margin: 5px;
+  vertical-align: middle;
+  float: left;
+  cursor: default;
+}
+.wj-multi-autocomplete .wj-token:focus,
+.wj-multi-autocomplete .wj-token:hover,
+.wj-multi-autocomplete .wj-token.wj-token-active {
+  background: var(--saf-color-interactive-tertiary-hover);
+  transition-duration: 0.4s;
+}
+.wj-multi-autocomplete .wj-token .wj-token-label {
+  padding: var(--saf-space-inset-squish-md);
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  max-width: 500px;
+}
+.wj-multi-autocomplete .wj-token .wj-token-close {
+  padding: var(--saf-space-inset-squish-md);
+  color: var(--saf-color-interactive-on-tertiary-default);
+  vertical-align: middle;
+  cursor: pointer;
+  text-decoration: none;
+}
+.wj-multi-autocomplete .wj-token .wj-token-close:hover,
+.wj-multi-autocomplete .wj-token .wj-token-close:focus {
+  opacity: 0.5;
+  transition-duration: 0.4s;
+}
+.wj-multi-autocomplete .wj-token-helper {
+  position: absolute;
+  left: -10000px;
+}
+.wj-popup {
+  background: var(--saf-color-interactive-background-default);
+  box-shadow: var(--saf-drop-shadow-level-2);
+}
+.wj-popup .wj-dialog-header {
+  width: 100%;
+  background: var(--saf-flexgrid-color-background-header);
+  color: var(--saf-color-interactive-on-secondary-default);
+  font-weight: bold;
+  font-size: 120%;
+  padding: 1em;
+}
+.wj-popup .wj-dialog-body {
+  padding: 1em;
+}
+.wj-popup .wj-dialog-footer {
+  text-align: right;
+  margin-top: 1em;
+  padding: 1em;
+}
+.wj-popup-backdrop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.wj-menu .wj-form-control {
+  cursor: pointer;
+}
+.wj-listbox.wj-menu-items .wj-listbox-item:not(.wj-state-disabled):not(.wj-separator) {
+  cursor: pointer;
+}
+.wj-listbox.wj-menu-items .wj-listbox-item.wj-subitems {
+  position: relative;
+}
+.wj-listbox.wj-menu-items .wj-listbox-item.wj-subitems:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  opacity: 0.75;
+  border-top: 0.4em solid rgba(0, 0, 0, 0);
+  border-bottom: 0.4em solid rgba(0, 0, 0, 0);
+  border-left: 0.5em solid;
+}
+.wj-listbox.wj-menu-items:not(.wj-rtl) .wj-listbox-item.wj-subitems {
+  padding-right: 1.8em;
+}
+.wj-listbox.wj-menu-items:not(.wj-rtl) .wj-listbox-item.wj-subitems:after {
+  right: 0.55em;
+}
+.wj-listbox.wj-menu-items.wj-rtl .wj-listbox-item.wj-subitems {
+  padding-left: 1.8em;
+}
+.wj-listbox.wj-menu-items.wj-rtl .wj-listbox-item.wj-subitems:after {
+  left: 0.55em;
+  transform: translate(0, -50%) scale(-1, 1);
+}
+.wj-pager .wj-input-group .wj-input-group-btn > .wj-btn,
+.wj-pager .wj-input-group .wj-viewer .wj-control .wj-input-group-btn > .wj-applybutton,
+.wj-viewer .wj-control .wj-pager .wj-input-group .wj-input-group-btn > .wj-applybutton {
+  min-width: 40px;
+}
+.wj-pager .wj-input-group .wj-form-control {
+  text-align: center;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+} /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */
+.wj-labeled-input {
+  position: relative;
+  display: inline-block;
+  width: 12em;
+  max-width: 100%;
+  margin: 0 20px;
+  padding: 20px 0;
+}
+.wj-labeled-input,
+.wj-labeled-input *,
+.wj-labeled-input *:after,
+.wj-labeled-input *:before {
+  box-sizing: border-box;
+  box-sizing: border-box;
+}
+.wj-labeled-input.wide {
+  width: 20em;
+}
+.wj-labeled-input .accesskey {
+  text-decoration: underline;
+  font-size: unset;
+}
+.wj-labeled-input .wj-control.wj-content {
+  margin: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.wj-labeled-input .wj-control.wj-content button {
+  opacity: 0.75;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+.wj-labeled-input .wj-inputnumber.wj-state-empty:not(.wj-state-focused) .wj-btn,
+.wj-labeled-input .wj-inputnumber.wj-state-empty:not(.wj-state-focused) .wj-viewer .wj-control .wj-applybutton,
+.wj-viewer .wj-control .wj-labeled-input .wj-inputnumber.wj-state-empty:not(.wj-state-focused) .wj-applybutton {
+  display: none;
+}
+.wj-labeled-input label {
+  font-size: 16px;
+  top: 24px;
+  bottom: 0;
+  margin: 0;
+  pointer-events: none;
+  position: absolute;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.258824);
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.wj-labeled-input label:after {
+  content: '';
+  background-color: var(--saf-color-interactive-secondary-active);
+  bottom: 20px;
+  height: 2px;
+  left: 45%;
+  position: absolute;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: hidden;
+  width: 10px;
+}
+.wj-labeled-input .wj-state-focused + label:after {
+  left: 0;
+  visibility: visible;
+  width: 100%;
+}
+.wj-labeled-input .wj-error {
+  color: var(--saf-color-status-error-strong);
+  position: absolute;
+  font-size: 12px;
+  margin-top: 3px;
+  visibility: hidden;
+  display: block;
+}
+.wj-labeled-input .wj-control.wj-state-invalid ~ .wj-error {
+  visibility: visible;
+}
+.wj-labeled-input .wj-state-invalid + label {
+  color: var(--saf-color-status-error-strong);
+}
+.wj-labeled-input .wj-state-invalid + label:after {
+  background-color: var(--saf-color-status-error-strong);
+}
+.wj-labeled-input input[type='checkbox'],
+.wj-labeled-input input[type='radio'] {
+  display: none;
+}
+.wj-labeled-input input[type='checkbox'] + label,
+.wj-labeled-input input[type='radio'] + label {
+  position: relative;
+  padding: 0.25em 0 0 1.8em;
+  pointer-events: all;
+  font-size: unset;
+  top: 0;
+  overflow: visible;
+}
+.wj-labeled-input input[type='checkbox'] + label:after,
+.wj-labeled-input input[type='radio'] + label:after {
+  content: '';
+  position: absolute;
+  display: block;
+  visibility: visible;
+  text-align: center;
+  left: 0;
+  top: 0.25em;
+  width: 1.3em;
+  height: 1.3em;
+  color: #fff;
+  background: #ddd;
+  transition: all 0.3s;
+}
+.wj-labeled-input input[type='checkbox'] + label:hover:after,
+.wj-labeled-input input[type='radio'] + label:hover:after {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+}
+.wj-labeled-input input[type='checkbox']:checked + label:after,
+.wj-labeled-input input[type='radio']:checked + label:after {
+  content: '✔';
+  background: var(--saf-color-interactive-secondary-active);
+}
+.wj-labeled-input input[type='radio'] + label:after {
+  border-radius: 1em;
+  transform: scale(1.1);
+}
+.wj-labeled-input input[type='radio']:checked + label:after {
+  content: '';
+  background: #fff;
+  border: 0.45em solid var(--saf-color-interactive-secondary-active);
+}
+.wj-labeled-input.switch input[type='checkbox'] + label {
+  padding-left: 3.1em;
+}
+.wj-labeled-input.switch input[type='checkbox'] + label:before {
+  content: '';
+  position: absolute;
+  display: block;
+  visibility: visible;
+  left: 0;
+  top: 0.5em;
+  width: 2.5em;
+  height: 1em;
+  border-radius: 1em;
+  background: #ddd;
+  transition: all 0.3s;
+}
+.wj-labeled-input.switch input[type='checkbox'] + label:after {
+  content: '';
+  left: 0;
+  top: 0.25em;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 1em;
+  border: 1px solid #bbb;
+  background: #fff;
+  transition: all 0.3s;
+}
+.wj-labeled-input.switch input[type='checkbox']:checked + label:before {
+  background: var(--saf-color-interactive-secondary-active);
+  opacity: 0.4;
+}
+.wj-labeled-input.switch input[type='checkbox']:checked + label:after {
+  margin-left: 1.25em;
+  border: 1px solid var(--saf-color-interactive-secondary-active);
+  background: var(--saf-color-interactive-secondary-active);
+}
+.wj-static-labels .wj-labeled-input :not(.wj-state-focused) + label,
+.wj-labeled-input .wj-state-focused + label,
+.wj-labeled-input :not(.wj-state-empty) + label {
+  font-size: 12px;
+  top: 4px;
+  color: var(--saf-color-interactive-secondary-active);
+  visibility: visible;
+} /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */
+.wj-tabpanel {
+  display: block;
+}
+.wj-tabpanel > div > .wj-tabpanes {
+  overflow: auto;
+  border-top: 1px solid #ddd;
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+}
+.wj-tabpanel > div > .wj-tabpanes > .wj-tabpane:not(.wj-state-active) {
+  display: none;
+}
+.wj-tabpanel > div > .wj-tabheaders > .wj-tabheader {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.wj-tabpanel > div > .wj-tabheaders > .wj-tabheader.wj-state-active {
+  background: var(--saf-color-interactive-background-default);
+  color: var(--saf-color-interactive-secondary-active);
+}
+.wj-tabpanel > div > .wj-tabheaders > .wj-tabheader:not(.wj-state-active):not(.wj-state-disabled):focus {
+  background: rgba(0, 0, 0, 0.1);
+}
+.wj-tabpanel > div > .wj-tabheaders > .wj-tabheader:after {
+  content: '';
+  position: absolute;
+  background: var(--saf-color-interactive-secondary-active);
+  height: 2.5px;
+  left: 45%;
+  width: 10%;
+  bottom: 0;
+  visibility: hidden;
+}
+.wj-tabpanel > div > .wj-tabheaders > .wj-tabheader.wj-state-active:after {
+  left: 0;
+  width: 100%;
+  visibility: visible;
+}
+.wj-tabpanel.wj-animated > div > .wj-tabheaders > .wj-tabheader.wj-state-active:after {
+  transition-duration: 0.2s;
+}
+.wj-accordion {
+  overflow: auto;
+}
+.wj-accordion > .wj-content {
+  border: none;
+  overflow: hidden;
+  display: none;
+}
+.wj-accordion > .wj-header.wj-state-active + .wj-content {
+  display: block;
+}
+.wj-accordion > .wj-header {
+  display: block;
+  text-decoration: none;
+  padding: 12px;
+  font-size: 120%;
+  cursor: pointer;
+}
+.wj-accordion > .wj-header.wj-state-active {
+  background: var(--saf-color-interactive-secondary-active);
+  color: var(--saf-color-interactive-on-secondary-active);
+}
+.wj-accordion > .wj-header:focus {
+  outline: 2px solid var(--saf-color-interactive-secondary-active);
+  outline-offset: -2px;
+}
+.wj-accordion.wj-show-icons > .wj-header:before {
+  content: '';
+  float: left;
+  margin: 0.4em 0.5em 0.4em 0;
+  opacity: 0.5;
+  white-space: normal;
+  border-top: 0.4em solid rgba(0, 0, 0, 0);
+  border-bottom: 0.4em solid rgba(0, 0, 0, 0);
+  border-left: 0.5em solid;
+}
+.wj-accordion.wj-show-icons > .wj-header.wj-state-active:before {
+  border-top: 0.5em solid;
+  border-left: 0.4em solid rgba(0, 0, 0, 0);
+  border-right: 0.4em solid rgba(0, 0, 0, 0);
+}
+.wj-accordion.wj-rtl.wj-show-icons > .wj-header:before {
+  float: right;
+  margin: 0.4em 0 0.4em 0.5em;
+  transform: scaleX(-1);
+}
+.wj-treeview {
+  width: 100%;
+  overflow: auto;
+  border: none;
+}
+.wj-treeview .wj-nodelist {
+  display: block;
+  position: relative;
+}
+.wj-treeview .wj-nodelist .wj-nodelist {
+  padding-left: 1em;
+}
+.wj-treeview .wj-node {
+  cursor: pointer;
+  white-space: nowrap;
+  padding: var(--saf-space-inset-squish-md);
+}
+.wj-treeview .wj-node:before {
+  content: '';
+  position: relative;
+  display: inline-block;
+  border-top: 0.5em solid;
+  border-right: 0.45em solid rgba(0, 0, 0, 0);
+  border-left: 0.45em solid rgba(0, 0, 0, 0);
+  top: -1px;
+  margin-right: 4px;
+  opacity: 0.75;
+}
+.wj-treeview .wj-node.wj-state-selected {
+  color: inherit;
+  background: rgba(0, 0, 0, 0.05);
+}
+.wj-treeview .wj-node.wj-state-collapsed:before,
+.wj-treeview .wj-node.wj-state-collapsing:before {
+  transform: rotate(-90deg);
+}
+.wj-treeview .wj-node.wj-state-collapsed.wj-state-loading:before {
+  animation-name: wjLazyNodeLoading;
+  animation-duration: 0.6s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+.wj-treeview .wj-node.wj-state-empty:before {
+  visibility: hidden;
+}
+.wj-treeview .wj-node.wj-state-collapsed + .wj-nodelist {
+  display: none;
+}
+.wj-treeview .wj-node img {
+  padding-right: 4px;
+}
+.wj-treeview .wj-node .wj-node-check {
+  margin-right: 4px;
+}
+.wj-treeview .wj-node .wj-node-text {
+  display: inline-block;
+}
+.wj-treeview .wj-marker {
+  position: absolute;
+  background: var(--saf-color-interactive-secondary-active);
+  opacity: 0.5;
+  pointer-events: none;
+}
+.wj-treeview.wj-state-loading * {
+  cursor: wait;
+}
+.wj-treeview.wj-animated .wj-node:before {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.wj-treeview.wj-animated .wj-node.wj-state-collapsed:before,
+.wj-treeview.wj-animated .wj-node.wj-state-collapsing:before {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.wj-treeview.wj-rtl .wj-nodelist .wj-nodelist {
+  padding-left: unset;
+  padding-right: 1em;
+}
+.wj-treeview.wj-rtl .wj-nodelist .wj-node:before {
+  margin-right: unset;
+  margin-left: 4px;
+}
+.wj-treeview.wj-rtl .wj-nodelist .wj-node.wj-state-collapsed:before,
+.wj-treeview.wj-rtl .wj-nodelist .wj-node.wj-state-collapsing:before {
+  transform: rotate(90deg);
+}
+.wj-treeview.wj-rtl .wj-node img {
+  padding-right: unset;
+  padding-left: 4px;
+}
+.wj-treeview.wj-rtl .wj-node .wj-node-check {
+  margin-right: unset;
+  margin-left: 4px;
+}
+@keyframes wjLazyNodeLoading {
+  from {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 0.5;
+    transform: scale(0.5);
+  }
+} /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */
+.wj-flexgrid {
+  width: 100%;
+  cursor: default;
+  overflow: hidden;
+}
+.wj-flexgrid .wj-row {
+  position: absolute;
+  top: 0;
+}
+.wj-flexgrid .wj-colheaders .wj-header .wj-btn.wj-btn-glyph.wj-elem-pin,
+.wj-flexgrid .wj-colheaders .wj-header .wj-viewer .wj-control .wj-btn-glyph.wj-elem-pin.wj-applybutton,
+.wj-viewer .wj-control .wj-flexgrid .wj-colheaders .wj-header .wj-btn-glyph.wj-elem-pin.wj-applybutton {
+  opacity: 0.9;
+}
+.wj-flexgrid .wj-colheaders .wj-header .wj-btn.wj-btn-glyph.wj-elem-pin:not(.wj-state-pinned),
+.wj-flexgrid
+  .wj-colheaders
+  .wj-header
+  .wj-viewer
+  .wj-control
+  .wj-btn-glyph.wj-elem-pin.wj-applybutton:not(.wj-state-pinned),
+.wj-viewer
+  .wj-control
+  .wj-flexgrid
+  .wj-colheaders
+  .wj-header
+  .wj-btn-glyph.wj-elem-pin.wj-applybutton:not(.wj-state-pinned) {
+  opacity: 0.4;
+}
+.wj-flexgrid .wj-colheaders .wj-header .wj-btn.wj-btn-glyph.wj-elem-pin:not(.wj-state-pinned) .wj-glyph-pin,
+.wj-flexgrid
+  .wj-colheaders
+  .wj-header
+  .wj-viewer
+  .wj-control
+  .wj-btn-glyph.wj-elem-pin.wj-applybutton:not(.wj-state-pinned)
+  .wj-glyph-pin,
+.wj-viewer
+  .wj-control
+  .wj-flexgrid
+  .wj-colheaders
+  .wj-header
+  .wj-btn-glyph.wj-elem-pin.wj-applybutton:not(.wj-state-pinned)
+  .wj-glyph-pin {
+  transform: rotate(-45deg);
+}
+.wj-flexgrid .wj-colheaders .wj-header.wj-state-multi-selected {
+  border-bottom: 2px solid var(--saf-color-interactive-secondary-active);
+}
+.wj-flexgrid .wj-colheaders .wj-header.wj-colgroup {
+  display: flex;
+  align-items: center;
+}
+.wj-flexgrid .wj-colheaders .wj-header.wj-colgroup.wj-align-right {
+  justify-content: flex-end;
+}
+.wj-flexgrid .wj-colheaders .wj-header.wj-colgroup.wj-align-center {
+  justify-content: center;
+}
+.wj-flexgrid .wj-colheaders .wj-header.wj-big-header:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 2px;
+  border-right: var(--saf-line-width-thin) solid var(--saf-color-line-strong);
+  content: '';
+}
+.wj-flexgrid .wj-rowheaders .wj-header.wj-state-multi-selected {
+  border-right: 2px solid var(--saf-color-interactive-secondary-active);
+}
+.wj-flexgrid .wj-rowheaders .wj-header.wj-big-header:after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2px;
+  border-bottom: var(--saf-line-width-thin) solid var(--saf-color-line-strong);
+  content: '';
+}
+.wj-flexgrid .wj-topleft .wj-header.wj-big-header:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 2px;
+  border-right: var(--saf-line-width-thin) solid var(--saf-color-line-strong);
+  content: '';
+}
+.wj-flexgrid .wj-frozen-clone .wj-cell {
+  pointer-events: auto;
+}
+.wj-flexgrid .wj-frozen-clone .wj-cell a {
+  display: inline-block;
+}
+.wj-flexgrid .wj-marquee,
+.wj-flexgrid .wj-focus-header-cell {
+  position: absolute;
+  box-shadow:
+    0 0 0 1px var(--saf-color-interactive-secondary-active),
+    inset 0 0 0 1px var(--saf-color-interactive-secondary-active);
+  pointer-events: none;
+}
+.wj-flexgrid .wj-marker {
+  position: absolute;
+  background: var(--saf-color-interactive-secondary-active);
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 1000;
+}
+.wj-flexgrid .wj-state-sticky .wj-header {
+  opacity: 0.75;
+}
+.wj-flexgrid .wj-grid-editor {
+  width: 100%;
+  height: 100%;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: inherit;
+  color: inherit;
+  overflow: hidden;
+  resize: none;
+}
+.wj-flexgrid .wj-cell .wj-btn.wj-btn-glyph,
+.wj-flexgrid .wj-cell .wj-viewer .wj-control .wj-btn-glyph.wj-applybutton,
+.wj-viewer .wj-control .wj-flexgrid .wj-cell .wj-btn-glyph.wj-applybutton {
+  padding: 0 4px;
+  min-width: 1.5em;
+  color: inherit;
+  background: rgba(0, 0, 0, 0);
+  opacity: 0.4;
+}
+.wj-flexgrid .wj-cell .wj-btn.wj-btn-glyph:hover,
+.wj-flexgrid .wj-cell .wj-viewer .wj-control .wj-btn-glyph.wj-applybutton:hover,
+.wj-viewer .wj-control .wj-flexgrid .wj-cell .wj-btn-glyph.wj-applybutton:hover,
+.wj-flexgrid .wj-cell .wj-btn.wj-btn-glyph:focus,
+.wj-flexgrid .wj-cell .wj-viewer .wj-control .wj-btn-glyph.wj-applybutton:focus,
+.wj-viewer .wj-control .wj-flexgrid .wj-cell .wj-btn-glyph.wj-applybutton:focus {
+  opacity: 1;
+  transition-duration: 0.4s;
+}
+.wj-flexgrid .wj-cell .wj-btn.wj-btn-glyph.wj-right,
+.wj-flexgrid .wj-cell .wj-viewer .wj-control .wj-btn-glyph.wj-right.wj-applybutton,
+.wj-viewer .wj-control .wj-flexgrid .wj-cell .wj-btn-glyph.wj-right.wj-applybutton {
+  float: right;
+  order: 2;
+}
+.wj-flexgrid .wj-cell .wj-btn.wj-btn-glyph.wj-right:nth-child(1),
+.wj-flexgrid .wj-cell .wj-viewer .wj-control .wj-btn-glyph.wj-right.wj-applybutton:nth-child(1),
+.wj-viewer .wj-control .wj-flexgrid .wj-cell .wj-btn-glyph.wj-right.wj-applybutton:nth-child(1) {
+  order: 5;
+}
+.wj-flexgrid .wj-cell .wj-btn.wj-btn-glyph.wj-right:nth-child(2),
+.wj-flexgrid .wj-cell .wj-viewer .wj-control .wj-btn-glyph.wj-right.wj-applybutton:nth-child(2),
+.wj-viewer .wj-control .wj-flexgrid .wj-cell .wj-btn-glyph.wj-right.wj-applybutton:nth-child(2) {
+  order: 4;
+}
+.wj-flexgrid .wj-cell .wj-btn.wj-btn-glyph.wj-right:nth-child(3),
+.wj-flexgrid .wj-cell .wj-viewer .wj-control .wj-btn-glyph.wj-right.wj-applybutton:nth-child(3),
+.wj-viewer .wj-control .wj-flexgrid .wj-cell .wj-btn-glyph.wj-right.wj-applybutton:nth-child(3) {
+  order: 3;
+}
+.wj-flexgrid .wj-cell .wj-btn.wj-btn-glyph.wj-elem-detail,
+.wj-flexgrid .wj-cell .wj-viewer .wj-control .wj-btn-glyph.wj-elem-detail.wj-applybutton,
+.wj-viewer .wj-control .wj-flexgrid .wj-cell .wj-btn-glyph.wj-elem-detail.wj-applybutton {
+  min-width: 1em;
+  padding: 0;
+}
+.wj-flexgrid .wj-cell .wj-btn.wj-btn-glyph > span,
+.wj-flexgrid .wj-cell .wj-viewer .wj-control .wj-btn-glyph.wj-applybutton > span,
+.wj-viewer .wj-control .wj-flexgrid .wj-cell .wj-btn-glyph.wj-applybutton > span {
+  opacity: 1;
+}
+.wj-flexgrid .wj-cell.wj-hasdropdown {
+  display: flex;
+}
+.wj-flexgrid .wj-cell.wj-hasdropdown > div {
+  flex-grow: 1;
+}
+.wj-flexgrid .wj-cell.wj-hasdropdown .wj-btn.wj-btn-glyph.wj-right,
+.wj-flexgrid .wj-cell.wj-hasdropdown .wj-viewer .wj-control .wj-btn-glyph.wj-right.wj-applybutton,
+.wj-viewer .wj-control .wj-flexgrid .wj-cell.wj-hasdropdown .wj-btn-glyph.wj-right.wj-applybutton {
+  height: 100%;
+}
+.wj-flexgrid .wj-cell.wj-radio-map label {
+  display: inline-block;
+  font-weight: inherit;
+  margin: 0 1em 0 0;
+}
+.wj-flexgrid .wj-cell.wj-radio-map label input[type='radio'] {
+  margin: 0 4px 0 0;
+  outline: none;
+}
+.wj-flexgrid .wj-cell.wj-radio-map label input[type='radio']:not(:checked) {
+  opacity: 0.4;
+}
+.wj-flexgrid .wj-cell.wj-detail .wj-content.wj-flexgrid {
+  vertical-align: top;
+}
+.wj-flexgrid .wj-cell.wj-frozen-row.wj-detail {
+  z-index: 2;
+}
+.wj-flexgrid .wj-cell.wj-detail {
+  z-index: 0;
+}
+.wj-flexgrid .wj-cell label {
+  display: inline-block;
+  max-width: 100%;
+  margin: 0;
+  font-weight: inherit;
+  line-height: 1em;
+}
+.wj-flexgrid .wj-cell label input[type='checkbox'] {
+  margin: 0px 6px 0px 0px;
+}
+.wj-flexgrid.wj-rtl .wj-cell {
+  border-left: var(--saf-line-width-thin) solid var(--saf-color-line-strong);
+  border-right: none;
+}
+.wj-flexgrid.wj-rtl .wj-cell .wj-btn.wj-btn-glyph.wj-right,
+.wj-flexgrid.wj-rtl .wj-cell .wj-viewer .wj-control .wj-btn-glyph.wj-right.wj-applybutton,
+.wj-viewer .wj-control .wj-flexgrid.wj-rtl .wj-cell .wj-btn-glyph.wj-right.wj-applybutton {
+  float: left;
+}
+.wj-flexgrid.wj-rtl .wj-frozen-col {
+  border-left: var(--saf-line-width-thin) solid var(--saf-color-line-strong);
+  border-right: none;
+}
+.wj-flexgrid.wj-rtl .wj-colheaders .wj-header.wj-filter-on,
+.wj-flexgrid.wj-rtl .wj-colheaders .wj-header.wj-filter-off {
+  white-space: normal;
+  word-break: break-all;
+}
+.wj-flexgrid.wj-rtl .wj-colheaders .wj-header.wj-big-header:after {
+  left: 2px;
+  right: unset;
+}
+.wj-flexgrid.wj-rtl .wj-colheaders .wj-header .wj-sort-index {
+  padding: 0 0.2em 0 0;
+}
+.wj-flexgrid.wj-rtl .wj-rowheaders .wj-header.wj-state-multi-selected {
+  border-left: 2px solid var(--saf-color-interactive-secondary-active);
+  border-right: none;
+}
+.wj-flexgrid.wj-rtl .wj-topleft .wj-header.wj-big-header:after {
+  left: 2px;
+  right: unset;
+}
+.wj-flexgrid.wj-whitespace-pre .wj-cell {
+  white-space: pre;
+}
+.wj-flexgrid.wj-whitespace-pre .wj-cell.wj-wrap {
+  white-space: pre-wrap;
+}
+.wj-flexgrid.wj-whitespace-pre .wj-cell.wj-multiline {
+  white-space: pre-wrap;
+}
+.wj-flexgrid [wj-state-measuring].wj-cell .wj-btn.wj-btn-glyph.wj-right,
+.wj-flexgrid [wj-state-measuring].wj-cell .wj-viewer .wj-control .wj-btn-glyph.wj-right.wj-applybutton,
+.wj-viewer .wj-control .wj-flexgrid [wj-state-measuring].wj-cell .wj-btn-glyph.wj-right.wj-applybutton {
+  float: none;
+}
+.wj-cell {
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: var(--saf-space-inset-squish-md);
+  border-right: var(--saf-line-width-thin) solid var(--saf-color-line-strong);
+  border-bottom: var(--saf-line-width-thin) solid var(--saf-color-line-strong);
+  background: var(--saf-color-interactive-background-default);
+  outline: none;
+}
+.wj-cell:not(.wj-hasdropdown) {
+  text-overflow: ellipsis;
+}
+.wj-cell.wj-alt {
+  background: var(--saf-flexgrid-color-background-alt-rows);
+}
+.wj-cell.wj-header {
+  background: var(--saf-flexgrid-color-background-header);
+  color: var(--saf-color-interactive-on-secondary-default);
+  font-weight: bold;
+}
+.wj-cell.wj-header.wj-state-multi-selected {
+  background: var(--saf-flexgrid-color-background-header-hover);
+  color: var(--saf-color-interactive-on-secondary-default);
+  font-weight: bold;
+}
+.wj-cell.wj-header .wj-sort-index {
+  display: inline-block;
+  font-weight: normal;
+  font-size: 80%;
+  vertical-align: top;
+  color: var(--saf-color-interactive-secondary-active);
+  padding: 0 0 0 0.2em;
+  opacity: 1;
+}
+.wj-cell.wj-last-frozen-row {
+  border-bottom: var(--saf-line-width-thin) solid var(--saf-color-line-strong);
+}
+.wj-cell.wj-frozen-col {
+  border-right: var(--saf-line-width-thin) solid var(--saf-color-line-strong);
+}
+.wj-cell.wj-group {
+  background: var(--saf-flexgrid-color-background-header);
+  color: var(--saf-color-interactive-on-secondary-default);
+}
+.wj-cell.wj-state-invalid {
+  border: 1.2px solid var(--saf-color-status-error-strong);
+}
+.wj-cell.wj-state-invalid.wj-header {
+  background: #ffb4b4;
+}
+.wj-cell.wj-state-invalid:not(.wj-header):after {
+  position: absolute;
+  content: '';
+  width: 0;
+  right: 0;
+  top: -6px;
+  border: 6px solid rgba(0, 0, 0, 0);
+  border-right-color: var(--saf-color-status-error-strong);
+}
+.wj-cell.wj-header.wj-state-dragsrc {
+  opacity: 0.5;
+}
+.wj-cell.wj-wrap {
+  white-space: normal;
+  text-overflow: clip;
+  word-wrap: break-word;
+}
+.wj-cell.wj-multiline {
+  white-space: pre;
+  text-overflow: clip;
+  word-wrap: break-word;
+}
+.wj-cell.wj-wrap.wj-multiline {
+  white-space: pre-wrap;
+  text-overflow: clip;
+}
+.wj-cell.wj-align-left {
+  text-align: left;
+}
+.wj-cell.wj-align-right {
+  text-align: right;
+}
+.wj-cell.wj-align-center {
+  text-align: center;
+}
+.wj-cell.wj-align-justify {
+  text-align: justify;
+}
+.wj-cell.wj-align-justify-all {
+  text-align: justify;
+  text-align-last: justify;
+  text-justify: distribute;
+}
+.wj-cells .wj-cell.wj-state-selected {
+  background: var(--saf-color-interactive-secondary-active);
+  color: var(--saf-color-interactive-on-secondary-active);
+}
+.wj-cells .wj-cell.wj-state-multi-selected {
+  background: var(--saf-color-interactive-secondary-active);
+  color: var(--saf-color-interactive-on-secondary-default);
+} /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */
+.wj-flexgrid .wj-cell.wj-filter-on .wj-elem-filter {
+  opacity: 0.9;
+}
+.wj-flexgrid .wj-cell.wj-filter-off .wj-elem-filter {
+  opacity: 0.5;
+}
+.wj-columnfiltereditor {
+  padding: 10px;
+  min-width: 240px;
+  max-width: 400px;
+}
+.wj-columnfiltereditor .wj-filtertype {
+  text-align: right;
+  margin: 14px 0px;
+  font-size: 12px;
+}
+.wj-columnfiltereditor .wj-control {
+  margin-bottom: 6px;
+  width: 100%;
+}
+.wj-columnfiltereditor .wj-valuefilter-editor,
+.wj-columnfiltereditor .wj-conditionfilter-editor {
+  margin-top: 1em;
+}
+.wj-columnfiltereditor .wj-conditionfilter-editor > div > label {
+  display: block;
+  margin-bottom: 0px;
+  font-weight: normal;
+}
+.wj-columnfiltereditor .wj-listbox {
+  height: 150px;
+}
+.wj-columnfiltereditor .wj-listbox:not(.wj-state-focused) .wj-listbox-item.wj-state-selected {
+  color: inherit;
+  background: rgba(0, 0, 0, 0);
+}
+.wj-columnfiltereditor .wj-listbox:not(.wj-state-focused) .wj-listbox-item.wj-state-selected:hover {
+  background: var(--saf-color-interactive-secondary-hover);
+  transition-duration: 0.4s;
+}
+.wj-columnfiltereditor label {
+  display: inline-block;
+  width: auto;
+}
+.wj-columnfiltereditor a {
+  color: inherit;
+  font-size: inherit;
+  font-weight: bold;
+}
+.wj-columnfiltereditor a.wj-state-disabled {
+  text-decoration: none;
+}
+.wj-columnfiltereditor .wj-sort-buttons .wj-btn,
+.wj-columnfiltereditor .wj-sort-buttons .wj-viewer .wj-control .wj-applybutton,
+.wj-viewer .wj-control .wj-columnfiltereditor .wj-sort-buttons .wj-applybutton {
+  min-width: 95px;
+} /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */
+.wj-grouppanel {
+  display: block;
+  background: var(--saf-flexgrid-color-background-header);
+  padding: 15px;
+  min-height: 1em;
+}
+.wj-grouppanel .wj-groupmarker {
+  margin-right: 10px;
+  padding: 6px 16px;
+  border: var(--saf-line-width-thin) solid var(--saf-color-line-strong);
+  cursor: pointer;
+}
+.wj-grouppanel .wj-groupmarker:hover {
+  background: var(--saf-flexgrid-color-background-header-hover);
+}
+.wj-grouppanel .wj-groupmarker .wj-glyph-drag {
+  margin: 0 10px 0 0;
+}
+.wj-grouppanel .wj-groupmarker .wj-filter {
+  margin: 0 0 0 10px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.wj-grouppanel .wj-groupmarker .wj-filter:hover,
+.wj-grouppanel .wj-groupmarker .wj-filter.wj-filter-on {
+  opacity: 1;
+}
+.wj-grouppanel .wj-groupmarker .wj-remove {
+  cursor: pointer;
+  opacity: 0.5;
+  padding: 12px 0 12px 12px;
+}
+.wj-grouppanel .wj-groupmarker .wj-remove:hover {
+  opacity: 1;
+}
+.wj-grouppanel .wj-groupmarker span {
+  opacity: 0.5;
+}
+.wj-grouppanel .wj-groupmarker span:hover {
+  opacity: 1;
+}
+.wj-grouppanel.wj-rtl .wj-groupmarker .wj-glyph-drag {
+  margin: 0 0 0 10px;
+}
+.wj-grouppanel.wj-rtl .wj-groupmarker .wj-filter {
+  margin: 0 10px 0 0;
+}
+.wj-grouppanel.wj-rtl .wj-groupmarker .wj-remove {
+  padding: 12px 12px 12px 0;
+} /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */
+.wj-content.wj-flexgridsearch {
+  vertical-align: middle;
+  display: inline-table;
+  border-collapse: separate;
+}
+.wj-flexgrid .wj-cell span.wj-state-match {
+  background: #ff0;
+  color: var(--saf-color-interactive-on-secondary-default);
+  font-weight: bold;
+} /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */
+.wj-flexgrid .wj-cell input.wj-column-selector {
+  margin: 4px;
+  vertical-align: bottom;
+  outline: none;
+}
+.wj-flexgrid .wj-cell input.wj-column-selector.wj-column-selector-group {
+  transform: scale(1.25);
+  margin-right: 6px;
+} /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */
+.wj-flexgrid .wj-cell .wj-cell-maker {
+  width: 100%;
+  height: 100%;
+}
+.wj-flexgrid .wj-cell:not([wj-state-measuring]) button.wj-cell-maker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--saf-color-interactive-on-secondary-default);
+}
+.wj-flexgrid .wj-cell.wj-state-selected a.wj-cell-maker,
+.wj-flexgrid .wj-cell.wj-state-multi-selected a.wj-cell-maker {
+  color: inherit;
+}
+.wj-flexgrid .wj-cell img.wj-cell-maker {
+  width: unset;
+}
+.wj-flexgrid .wj-cell .wj-cell-maker svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  stroke: #376092;
+  fill: #376092;
+}
+.wj-flexgrid .wj-cell .wj-cell-maker svg rect,
+.wj-flexgrid .wj-cell .wj-cell-maker svg circle {
+  stroke-width: 0;
+}
+.wj-flexgrid .wj-cell .wj-cell-maker svg line {
+  stroke-width: 2px;
+}
+.wj-flexgrid .wj-cell .wj-cell-maker svg line.x-axis {
+  stroke-width: 0.5px;
+  stroke-opacity: 0.5;
+}
+.wj-flexgrid .wj-cell .wj-cell-maker svg .wj-marker {
+  fill: #d00000;
+  opacity: 1;
+}
+.wj-flexgrid .wj-cell.wj-cell-maker.wj-radio-map label {
+  position: relative;
+  width: 1em;
+  transform: scale(0.1);
+  color: orange;
+  margin: 0 1em 0 0;
+}
+.wj-flexgrid .wj-cell.wj-cell-maker.wj-radio-map label input,
+.wj-flexgrid .wj-cell.wj-cell-maker.wj-radio-map label input:not(:checked) {
+  opacity: 0;
+}
+.wj-flexgrid .wj-cell.wj-cell-maker.wj-radio-map label:after {
+  position: absolute;
+  transform: scale(20);
+  cursor: pointer;
+  content: '★';
+  height: 100%;
+}
+.wj-flexgrid .wj-cell.wj-cell-maker.wj-radio-map label:hover {
+  opacity: 1;
+  color: #ff4500;
+  transition: color 600ms;
+}
+.wj-flexgrid .wj-cell.wj-cell-maker.wj-radio-map label.wj-chk-hidden {
+  opacity: 0;
+  margin: 0 0 0 -1em;
+}
+.wj-flexgrid .wj-cell.wj-cell-maker.wj-radio-map label.wj-chk-off:not(:hover):not(.wj-chk-hidden) {
+  opacity: 0.15;
+}
+.wj-flexgrid .wj-cell.wj-cell-maker.wj-radio-map[aria-readonly='true'] label {
+  pointer-events: none;
+} /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */
+.wj-flexchart {
+  height: 400px;
+  padding: 15px 10px;
+  margin-bottom: 12px;
+  background: var(--saf-color-interactive-background-default);
+  border: 1px solid #e4e4e4;
+  display: block;
+  background: rgba(0, 0, 0, 0);
+}
+.wj-flexchart .wj-header .wj-title {
+  font-size: 16pt;
+  fill: #666;
+  font-weight: normal;
+}
+.wj-flexchart .wj-footer .wj-title {
+  fill: #666;
+  font-weight: normal;
+}
+.wj-flexchart .wj-label,
+.wj-flexchart .wj-data-label {
+  fill: #666;
+}
+.wj-flexchart .wj-data-label-border {
+  stroke: rgba(128, 128, 128, 0.5);
+}
+.wj-flexchart .wj-data-label-line {
+  stroke: gray;
+}
+.wj-flexchart .wj-axis-x .wj-title,
+.wj-flexchart .wj-axis-y .wj-title,
+.wj-flexchart .wj-legend .wj-title {
+  font-style: italic;
+}
+.wj-flexchart .wj-axis-x .wj-line {
+  stroke: #aaa;
+  stroke-width: 1px;
+}
+.wj-flexchart .wj-gridline,
+.wj-flexchart .wj-gridline-minor {
+  stroke: #666;
+  stroke-width: 1px;
+  opacity: 0.75;
+}
+.wj-flexchart .wj-gridline-minor {
+  opacity: 0.25;
+}
+.wj-flexchart .wj-tick,
+.wj-flexchart .wj-tick-minor {
+  stroke: #aaa;
+  stroke-width: 1px;
+}
+.wj-flexchart .wj-state-selected {
+  stroke-width: 3px;
+  stroke-dasharray: 6;
+  stroke-linecap: square;
+}
+.wj-flexchart.wj-flexchart-touch-disabled {
+  touch-action: none;
+  -ms-touch-action: none;
+}
+.wj-flexchart .wj-chart-linemarker {
+  background: rgba(128, 128, 128, 0.3);
+  position: absolute;
+  padding: 2px;
+}
+.wj-flexchart .wj-chart-linemarker .wj-chart-linemarker-hline {
+  height: 2px;
+  background: gray;
+  position: absolute;
+  touch-action: none;
+  -ms-touch-action: none;
+}
+.wj-flexchart .wj-chart-linemarker .wj-chart-linemarker-vline {
+  width: 2px;
+  background: gray;
+  position: absolute;
+  touch-action: none;
+  -ms-touch-action: none;
+}
+.wj-flexchart .wj-chart-linemarker-container {
+  position: relative;
+}
+.wj-flexchart.wj-chart-linemarker-draggable,
+.wj-flexchart .wj-chart-linemarker .wj-chart-linemarker-draggable {
+  cursor: move;
+}
+@media (max-width: 1025px) {
+  .wj-flexchart .wj-state-selected {
+    stroke-width: 2px;
+    stroke-dasharray: 4;
+  }
+}
+@media (max-width: 767px) {
+  wj-flexchart .wj-state-selected {
+    stroke-width: 1px;
+    stroke-dasharray: 3;
+  }
+} /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */
+.wj-treemap .wj-data-label {
+  fill: var(--saf-color-interactive-background-default);
+} /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */
+.wj-flexchart .wj-chart-rangeslider {
+  position: absolute;
+  touch-action: none;
+  -ms-touch-action: none;
+}
+.wj-flexchart .wj-chart-rangeslider button {
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0;
+  line-height: 16px;
+  border-radius: 2px;
+}
+.wj-flexchart .wj-chart-rangeslider .wj-rangeslider-content {
+  background: #eaeaea;
+  height: 100%;
+  position: relative;
+}
+.wj-flexchart .wj-chart-rangeslider .wj-rangeslider-rangehandle {
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  background: #bdbdbd;
+  height: 100%;
+  width: 100%;
+}
+.wj-flexchart .wj-chart-rangeslider .wj-rangeslider-minhandle,
+.wj-flexchart .wj-chart-rangeslider .wj-rangeslider-maxhandle {
+  border: 1px solid gray;
+  display: block;
+  position: absolute;
+  border-radius: 4px;
+}
+.wj-flexchart .wj-chart-rangeslider .wj-rangeslider-handle-active {
+  z-index: 2;
+}
+.wj-flexchart .wj-chart-rangeslider .wj-glyph-left {
+  border-top: 5px solid rgba(0, 0, 0, 0);
+  border-right: 4px solid;
+  border-bottom: 4px solid rgba(0, 0, 0, 0);
+  margin-right: 2px;
+}
+.wj-flexchart .wj-chart-rangeslider .wj-glyph-right {
+  border-bottom: 5px solid rgba(0, 0, 0, 0);
+  border-left: 4px solid;
+  border-top: 4px solid rgba(0, 0, 0, 0);
+  margin-left: 2px;
+}
+.wj-flexchart .wj-chart-rangeslider .wj-glyph-down {
+  border-top: 5px solid;
+  border-right: 4px solid rgba(0, 0, 0, 0);
+  border-left: 4px solid rgba(0, 0, 0, 0);
+  margin-bottom: 3px;
+}
+.wj-flexchart .wj-chart-rangeslider .wj-glyph-up {
+  border-right: 4px solid rgba(0, 0, 0, 0);
+  border-bottom: 5px solid;
+  border-left: 4px solid rgba(0, 0, 0, 0);
+  margin-bottom: 4px;
+}
+.wj-flexchart .wj-chart-hrangeslider .wj-rangeslider-minhandle,
+.wj-flexchart .wj-chart-hrangeslider .wj-rangeslider-maxhandle {
+  background: #bdbdbd;
+  cursor: ew-resize;
+  height: 22px;
+  margin-top: -2px;
+  width: 14px;
+}
+.wj-flexchart .wj-chart-hrangeslider .wj-rangeslider-decbtn {
+  left: 0;
+}
+.wj-flexchart .wj-chart-hrangeslider .wj-rangeslider-incbtn {
+  right: 0;
+}
+.wj-flexchart .wj-chart-hrangeslider button {
+  width: 16px;
+  height: 100%;
+}
+.wj-flexchart .wj-chart-vrangeslider .wj-rangeslider-minhandle,
+.wj-flexchart .wj-chart-vrangeslider .wj-rangeslider-maxhandle {
+  background: #bdbdbd;
+  cursor: ns-resize;
+  width: 22px;
+  margin-left: -2px;
+  height: 14px;
+}
+.wj-flexchart .wj-chart-vrangeslider .wj-rangeslider-decbtn {
+  bottom: 0;
+}
+.wj-flexchart .wj-chart-vrangeslider .wj-rangeslider-incbtn {
+  top: 0;
+}
+.wj-flexchart .wj-chart-vrangeslider button {
+  height: 16px;
+  width: 100%;
+}
+.wj-flexchart .wj-chart-rangeselector-container {
+  position: relative;
+}
+.wj-flexchart .wj-chart-rangeselector-container .wj-chart-rangeslider,
+.wj-flexchart .wj-chart-rangeselector-container .wj-rangeslider-content {
+  background: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+.wj-flexchart .wj-chart-rangeselector-container .wj-rangeslider-rangehandle {
+  opacity: 0.3;
+}
+.wj-flexchart .wj-chart-rangeselector-container .wj-rangeslider-minhandle,
+.wj-flexchart .wj-chart-rangeselector-container .wj-rangeslider-maxhandle {
+  background: rgba(0, 0, 0, 0);
+  opacity: 0.6;
+  border: 2px solid gray;
+  border-radius: 0.5em;
+}
+.wj-flexchart .wj-chart-rangeselector-container .wj-chart-hrangeslider .wj-rangeslider-minhandle,
+.wj-flexchart .wj-chart-rangeselector-container .wj-chart-hrangeslider .wj-rangeslider-maxhandle {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 1px solid rgba(128, 128, 128, 0.75);
+  color: gray;
+  background: #d3d3d3;
+  opacity: 1;
+}
+.wj-flexchart .wj-chart-rangeselector-container .wj-chart-hrangeslider .wj-rangeslider-minhandle:after,
+.wj-flexchart .wj-chart-rangeselector-container .wj-chart-hrangeslider .wj-rangeslider-maxhandle:after {
+  content: '║';
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-55%);
+  opacity: 0.75;
+  font-size: 10px;
+}
+.wj-flexchart .wj-chart-rangeselector-container .wj-chart-vrangeslider .wj-rangeslider-minhandle,
+.wj-flexchart .wj-chart-rangeselector-container .wj-chart-vrangeslider .wj-rangeslider-maxhandle {
+  height: 20px;
+  width: 20px;
+  left: 50%;
+  border-radius: 50%;
+  border: 1px solid rgba(128, 128, 128, 0.75);
+  top: 0;
+  bottom: 0;
+  color: gray;
+  background: #d3d3d3;
+  opacity: 1;
+}
+.wj-flexchart .wj-chart-rangeselector-container .wj-chart-vrangeslider .wj-rangeslider-minhandle:after,
+.wj-flexchart .wj-chart-rangeselector-container .wj-chart-vrangeslider .wj-rangeslider-maxhandle:after {
+  content: '═';
+  text-align: center;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+  margin: 0;
+  left: 50%;
+  transform: translate(-50%, 15%);
+  opacity: 0.75;
+  font-size: 12px;
+}
+.wj-flexchart
+  .wj-chart-rangeselector-container
+  .wj-chart-rangeslider
+  .wj-rangeslider-minhandle.wj-rangeslider-handle-active,
+.wj-flexchart
+  .wj-chart-rangeselector-container
+  .wj-chart-rangeslider
+  .wj-rangeslider-maxhandle.wj-rangeslider-handle-active {
+  background: rgba(136, 189, 230, 0.7);
+}
+.wj-flexchart .wj-rangeselector .wj-scroller-center {
+  background: rgba(128, 128, 128, 0.1);
+  position: absolute;
+  display: block;
+  touch-action: none;
+  -ms-touch-action: none;
+}
+.wj-flexchart.wj-panable {
+  cursor: pointer;
+}
+.wj-flexchart .wj-zoom {
+  visibility: hidden;
+  position: relative;
+}
+.wj-flexchart .wj-zoom-overlay {
+  background: rgba(128, 128, 128, 0.2);
+  position: absolute;
+  display: block;
+  touch-action: none;
+  -ms-touch-action: none;
+}
+.wj-flexchart .wj-block-other-interaction {
+  display: none;
+} /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */
+.wj-flexmap .wj-btn,
+.wj-flexmap .wj-viewer .wj-control .wj-applybutton,
+.wj-viewer .wj-control .wj-flexmap .wj-applybutton {
+  opacity: 0.9;
+  padding: 10px 10px 6px 10px !important;
+  border: solid 0.5px gray;
+} /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */
+.wj-gauge {
+  background: rgba(0, 0, 0, 0);
+}
+.wj-gauge:not(.wj-state-readonly) {
+  touch-action: none;
+}
+.wj-gauge .wj-face path {
+  fill: #f5f5f5;
+  stroke: #cbcbcb;
+  stroke-width: 1px;
+  stroke-linejoin: round;
+}
+.wj-gauge .wj-pointer,
+.wj-gauge .wj-needle {
+  fill: var(--saf-color-interactive-secondary-active);
+}
+.wj-gauge .wj-ticks {
+  stroke-width: 2px;
+  stroke: var(--saf-color-interactive-background-default);
+}
+.wj-gauge .wj-min,
+.wj-gauge .wj-max,
+.wj-gauge .wj-tick-text text {
+  font-size: 60%;
+  opacity: 0.5;
+}
+.wj-gauge text {
+  fill: currentColor;
+}
+.wj-gauge svg {
+  overflow: visible;
+}
+.wj-gauge g {
+  cursor: inherit;
+}
+.wj-radialgauge .wj-value {
+  font-size: 150%;
+}
+.wj-lineargauge {
+  height: 1.2em;
+}
+.wj-lineargauge .wj-value {
+  fill: var(--saf-color-interactive-on-secondary-active);
+} /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */
+.wj-barcode {
+  height: 60px;
+  display: inline-block;
+}
+.wj-barcode.wj-state-invalid {
+  border: 1.2px solid var(--saf-color-status-error-strong);
+}
+.wj-barcode-qrcode {
+  width: 100px;
+  height: 100px;
+}
+.wj-barcode-ean8 {
+  width: 85px;
+}
+.wj-barcode-ean13 {
+  width: 140px;
+}
+.wj-barcode-upca {
+  width: 115px;
+}
+.wj-barcode-upce0 {
+  width: 70px;
+}
+.wj-barcode-upce1 {
+  width: 70px;
+}
+.wj-barcode-gs1databar-omnidirectional {
+  width: 100px;
+}
+.wj-barcode-gs1databar-truncated {
+  width: 100px;
+}
+.wj-barcode-gs1databar-stacked {
+  width: 60px;
+}
+.wj-barcode-gs1databar-stacked-omnidirectional {
+  width: 60px;
+}
+.wj-barcode-gs1databar-limited {
+  width: 85px;
+}
+.wj-barcode-micropdf417 {
+  width: 105px;
+}
+.wj-barcode-datamatrix {
+  width: 85px;
+  height: 85px;
+}
+.wj-barcode-code49 {
+  width: 85px;
+}
+.wj-barcode-itf14 {
+  width: 170px;
+}
+.wj-barcode-japanese-postal {
+  width: 140px;
+  height: 40px;
+} /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */
+.wj-flexsheet {
+  background: #a9a9a9;
+  width: 100%;
+  height: 100%;
+}
+.wj-flexsheet .wj-content {
+  outline: none;
+  border-color: #ccc;
+  border-radius: 0;
+}
+.wj-flexsheet .wj-header-row {
+  background: #96abb4 !important;
+  color: #fff !important;
+}
+.wj-flexsheet .wj-cell.wj-state-multi-selected {
+  background: #e6e6e6;
+  color: #222;
+  border-right: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+}
+.wj-flexsheet .wj-state-selected .wj-flexsheet-formula-description {
+  color: #fff;
+}
+.wj-flexsheet .wj-tabholder {
+  width: 100%;
+  min-width: 100px;
+  background: #b8b8b8;
+}
+.wj-flexsheet .wj-tabholder span.wj-sheet-icon {
+  margin: 0 14px;
+}
+.wj-flexsheet .wj-tabholder div.wj-sheet-page.wj-btn-group {
+  border: none;
+}
+.wj-flexsheet .wj-tabholder div.wj-sheet-page.wj-btn-group > button {
+  padding: 1px 0 0 0;
+  border: none;
+  background: #e4e5e8;
+  color: #727275;
+  min-height: 0;
+}
+.wj-flexsheet .wj-tabholder div.wj-sheet-page.wj-btn-group > button:hover {
+  background: #d2d3d8;
+}
+.wj-flexsheet .wj-tabholder .wj-sheet-tab ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+.wj-flexsheet .wj-tabholder .wj-sheet-tab ul li {
+  float: left;
+  display: block;
+  padding-right: 20px;
+  padding-left: 20px;
+  cursor: pointer;
+  margin-top: 1px;
+  border-left: 1px solid #b8b8b8;
+  min-height: 20px;
+  background: #d2d3d8;
+  text-align: center;
+  padding-top: 2px;
+  font-size: 11px;
+  color: #727275;
+}
+.wj-flexsheet .wj-tabholder .wj-sheet-tab ul li.active {
+  border-top-color: rgba(0, 0, 0, 0);
+  background: #fff;
+  cursor: default;
+  height: 100%;
+  margin-top: 1px;
+  border-left: 1px solid #b8b8b8;
+  font-weight: bold;
+}
+.wj-flexsheet .wj-tabholder .wj-sheet-tab ul li.hidden {
+  display: none;
+}
+.wj-flexsheet .wj-tabholder .wj-sheet-tab ul li:not(.active):hover {
+  background: #aabcd6;
+  color: #fff;
+  cursor: pointer;
+}
+.wj-flexsheet .wj-tabholder .wj-sheet-tab ul li .wj-new-sheet:hover {
+  background: var(--saf-color-interactive-secondary-active);
+}
+.wj-flexsheet .wj-tabholder .wj-sheet-tab ul li .wj-sheet-name-editor {
+  height: 100%;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: inherit;
+  color: inherit;
+  overflow: hidden;
+  resize: none;
+}
+.wj-flexsheet .wj-tabholder .wj-new-sheet {
+  padding: 0;
+  width: 32px;
+  height: 20px;
+  font-size: 11px;
+  text-align: center;
+  background: #668eb9;
+  color: #fff;
+}
+.wj-flexsheet .wj-tabholder .wj-new-sheet .wj-sheet-icon {
+  color: #727275;
+  margin-top: 5px;
+}
+.wj-flexsheet .wj-tabholder .wj-sheet > div {
+  display: block;
+  float: left;
+}
+.wj-flexsheet .wj-flexchart {
+  background: var(--saf-color-interactive-background-default);
+  border: var(--saf-line-width-thin) solid var(--saf-color-line-strong);
+}
+.wj-flexsheet.wj-rtl div.wj-sheet > div {
+  float: right;
+}
+.wj-flexsheet-formula-list {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-family: arial, sans-serif;
+  font-size: 12px;
+  line-height: 22px;
+  position: absolute;
+  width: 300px;
+  z-index: 2001;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.wj-flexsheet-formula-list .wj-flexsheet-formula-name {
+  color: #222;
+  font-size: 13px;
+  font-family: inconsolata, monospace, arial, sans, sans-serif;
+  margin: -2px 0;
+}
+.wj-flexsheet-formula-list .wj-flexsheet-formula-description {
+  color: #666;
+  display: block;
+  font-size: 11px;
+  margin: -2px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.wj-flexsheet-formula-list .wj-listbox-item.wj-state-selected > * {
+  color: #fff;
+}
+.wj-flexsheet-context-menu {
+  background: #fff;
+  border: thin solid gray;
+  cursor: default;
+  padding: 3px 0;
+}
+.wj-flexsheet-context-menu .wj-context-menu-item {
+  padding: 3px 10px;
+}
+.wj-flexsheet-context-menu .wj-context-menu-item:not(.wj-context-menu-item-selected):hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.wj-flexsheet-context-menu .wj-context-menu-item-selected {
+  background: var(--saf-color-interactive-secondary-active);
+  color: #fff;
+}
+.wj-flexsheet-smart-tag {
+  background: #fff;
+  border: 1px solid #ababab;
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  height: 18px;
+  outline: none;
+} /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */
+.wj-multirow .wj-cell.wj-record-end:not(.wj-header) {
+  border-bottom-color: #787878;
+}
+.wj-multirow .wj-cell.wj-group-end {
+  border-right-color: #787878;
+}
+.wj-multirow .wj-cell.wj-center-vert:not(.wj-hasdropdown) {
+  display: table;
+  table-layout: fixed;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.wj-multirow .wj-cell.wj-center-vert:not(.wj-hasdropdown) div {
+  display: table-cell;
+  vertical-align: middle;
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+}
+.wj-multirow .wj-cell.wj-center-vert:not(.wj-hasdropdown) div.wj-btn.wj-btn-glyph.wj-elem-detail,
+.wj-multirow
+  .wj-cell.wj-center-vert:not(.wj-hasdropdown)
+  .wj-viewer
+  .wj-control
+  div.wj-btn-glyph.wj-elem-detail.wj-applybutton,
+.wj-viewer
+  .wj-control
+  .wj-multirow
+  .wj-cell.wj-center-vert:not(.wj-hasdropdown)
+  div.wj-btn-glyph.wj-elem-detail.wj-applybutton {
+  vertical-align: top;
+  padding-top: var(--saf-space-inset-squish-md);
+}
+.wj-multirow .wj-hdr-collapse {
+  position: absolute;
+  padding: 6px;
+  right: 0;
+  top: 0;
+  color: var(--saf-color-interactive-secondary-active);
+  opacity: 0.5;
+}
+.wj-multirow .wj-hdr-collapse:hover {
+  opacity: 1;
+} /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */
+.wj-transposed-multirow .wj-cell.wj-record-end:not(.wj-header) {
+  border-right-color: #787878;
+}
+.wj-transposed-multirow .wj-cell.wj-group-end {
+  border-bottom-color: #787878;
+} /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */
+.wj-pivotpanel {
+  position: relative;
+  padding: 3px 6px;
+  overflow: auto;
+  min-height: 25em;
+  width: 100%;
+}
+.wj-pivotpanel table {
+  table-layout: fixed;
+  width: 100%;
+}
+.wj-pivotpanel div {
+  width: 100%;
+}
+.wj-pivotpanel ,
+.wj-pivotpanel td {
+  border: 1px none #e0e0e0;
+  padding: 3px;
+}
+.wj-pivotpanel label {
+  display: block;
+  font-weight: bold;
+  margin: 0;
+}
+.wj-pivotpanel .wj-marker {
+  position: absolute;
+  background: var(--saf-color-interactive-secondary-active);
+  opacity: 0.5;
+  pointer-events: none;
+}
+.wj-pivotpanel .wj-flexgrid {
+  border: none;
+  border-radius: 0;
+  min-height: 8em;
+  max-height: 20em;
+  margin-left: 6px;
+  background: inherit;
+}
+.wj-pivotpanel .wj-flexgrid .wj-cell {
+  border: none;
+  background: inherit;
+  color: inherit;
+}
+.wj-pivotpanel .wj-flexgrid .wj-cell.wj-group {
+  background: inherit;
+  color: inherit;
+}
+.wj-pivotpanel .wj-flexgrid .wj-cell.wj-group:not(.wj-header):hover {
+  background: var(--saf-color-interactive-secondary-hover);
+  border-radius: 0;
+}
+.wj-pivotpanel .wj-flexgrid .wj-cell label {
+  font-weight: normal;
+  margin: 0;
+}
+.wj-pivotpanel .wj-flexgrid .wj-cell label input[type='checkbox'] {
+  margin: 0;
+}
+.wj-pivotpanel .wj-flexgrid .wj-glyph-filter {
+  cursor: default;
+  opacity: 0.5;
+}
+.wj-pivotpanel .wj-flexgrid .wj-glyph-dimension,
+.wj-pivotpanel .wj-flexgrid .wj-glyph-measure {
+  cursor: default;
+}
+.wj-pivotpanel .wj-flexgrid .wj-aggregate {
+  font-size: 80%;
+  opacity: 0.5;
+}
+.wj-pivotpanel table .wj-flexgrid {
+  min-height: 5em;
+  height: 5em;
+  width: 95%;
+}
+.wj-pivotfieldeditor {
+  min-width: 400px;
+}
+.wj-pivotfieldeditor .wj-separator {
+  border-top: 10px solid rgba(0, 0, 0, 0);
+}
+.wj-pivotfieldeditor td:first-child {
+  text-align: right;
+  padding-right: 0.5em;
+}
+.wj-pivotfiltereditor {
+  padding: 10px;
+  min-width: 230px;
+}
+.wj-pivotfiltereditor .wj-control {
+  margin-bottom: 6px;
+  width: 100%;
+}
+.wj-pivotfiltereditor .wj-listbox {
+  max-height: 150px;
+}
+.wj-pivotfiltereditor .wj-listbox .wj-listbox-item label {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.wj-olap-context-menu {
+  font-size: 90%;
+  padding: 6px;
+}
+.wj-olap-context-menu .menu-icon {
+  display: inline-block;
+  width: 1em;
+  margin-right: 6px;
+  opacity: 0.75;
+  text-align: center;
+}
+.wj-olap-context-menu .menu-icon.menu-icon-remove {
+  color: maroon;
+  font-weight: bold;
+}
+.wj-detaildialog {
+  min-width: 15em;
+  min-height: 20em;
+  width: 60vw;
+  height: 55vh;
+}
+.wj-detaildialog > div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.wj-detaildialog > div .wj-dialog-header,
+.wj-detaildialog > div .wj-dialog-footer {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+.wj-detaildialog > div .wj-dialog-body {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  display: flex;
+  flex-direction: column;
+}
+.wj-detaildialog > div .wj-dialog-body .wj-summary {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+.wj-detaildialog > div .wj-dialog-body .wj-flexgrid {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+.wj-pivotgrid .wj-cell.wj-aggregate {
+  font-weight: bold;
+}
+.wj-pivotgrid
+  .wj-cell.wj-aggregate:not(.wj-header):not(.wj-group):not(.wj-state-selected):not(.wj-state-multi-selected) {
+  background: #d9edf7;
+}
+.wj-pivotgrid .wj-cell.wj-align-vcenter {
+  display: flex;
+  align-items: center;
+  align-items: safe center;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.wj-pivotgrid .wj-cell.wj-align-vcenter.wj-align-right {
+  justify-content: flex-end;
+}
+.wj-pivotgrid .wj-cell.wj-align-vcenter.wj-align-center {
+  justify-content: center;
+}
+.wj-pivotgrid .wj-topleft .wj-cell.wj-col-field-hdr {
+  text-align: right;
+  justify-content: flex-end;
+}
+.wj-pivotgrid .wj-colheaders .wj-cell.wj-header {
+  text-align: center;
+  justify-content: center;
+}
+.wj-pivotgrid .wj-pivot-collapse {
+  display: inline;
+  margin-right: 4px;
+  cursor: pointer;
+}
+.wj-pivotchart {
+  position: relative;
+}
+.wj-pivotchart .wj-dropdown {
+  position: absolute;
+  margin-right: 15px;
+  z-index: 999;
+}
+.wj-pivotchart .wj-flexchart {
+  padding: 35px 15px 10px;
+}
+.wj-slicer > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  max-height: inherit;
+}
+.wj-slicer .wj-header {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.wj-slicer .wj-header div:first-child {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 6px;
+}
+.wj-slicer .wj-header .wj-btn.wj-state-active,
+.wj-slicer .wj-header .wj-viewer .wj-control .wj-state-active.wj-applybutton,
+.wj-viewer .wj-control .wj-slicer .wj-header .wj-state-active.wj-applybutton {
+  background: rgba(0, 0, 0, 0.2);
+}
+.wj-slicer .wj-listbox {
+  border: none;
+  border-radius: 0;
+}
+.wj-slicer .wj-listbox .wj-listbox-item label {
+  width: 100%;
+}
+.wj-slicer.wj-nocheck .wj-listbox .wj-listbox-item {
+  border: 2px solid rgba(0, 0, 0, 0);
+  padding: 6px;
+  margin: 4px;
+  border-radius: 0;
+}
+.wj-slicer.wj-nocheck .wj-listbox .wj-listbox-item.wj-state-checked:not(:hover) {
+  background-color: var(--saf-color-interactive-secondary-active);
+  color: var(--saf-color-interactive-on-secondary-active);
+}
+.wj-slicer.wj-nocheck .wj-listbox .wj-listbox-item.wj-state-selected {
+  border-color: var(--saf-color-interactive-secondary-active);
+}
+.wj-slicer.wj-nocheck .wj-listbox .wj-listbox-item.wj-state-selected:not(.wj-state-checked) {
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--saf-color-interactive-on-secondary-default);
+}
+.wj-slicer.wj-nocheck .wj-listbox .wj-listbox-item input {
+  display: none;
+} /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */
+.wj-viewer {
+  height: 750px;
+}
+.wj-viewer .wj-viewer-outer {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  padding-top: 50px;
+}
+.wj-viewer .wj-viewer-outer input {
+  background: var(--saf-color-interactive-background-default);
+  color: var(--saf-color-interactive-on-secondary-default);
+}
+.wj-viewer .wj-viewer-container {
+  height: 100%;
+  width: 100%;
+}
+.wj-viewer .wj-viewer-leftpanel {
+  float: left;
+  height: 100%;
+}
+.wj-viewer .wj-viewer-splitter {
+  cursor: pointer;
+  float: left;
+  height: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.wj-viewer .wj-viewer-splitter button {
+  height: 100%;
+  padding: 0 2px;
+  min-width: 12px;
+  background: #fafafa;
+  border-left: 1px solid #c8c8c8;
+  border-right: 1px solid #c8c8c8;
+  border-top: none;
+  border-bottom: none;
+}
+.wj-viewer .wj-viewer-splitter button:hover {
+  background: #dadada;
+}
+.wj-viewer .wj-viewer-splitter span {
+  text-align: center;
+}
+.wj-viewer .wj-viewpanel-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.wj-viewer .wj-viewpanel-container.move .wj-view-page {
+  cursor: move;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.wj-viewer .wj-viewpanel-container.rubberband-actived .wj-view-page,
+.wj-viewer .wj-viewpanel-container.magnifier-actived .wj-view-page {
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.wj-viewer .wj-viewpanel-container.rubberband-actived .wj-view-page svg,
+.wj-viewer .wj-viewpanel-container.magnifier-actived .wj-view-page svg {
+  pointer-events: none;
+}
+.wj-viewer .wj-viewpanel-container.rubberband-actived .wj-rubberband.show,
+.wj-viewer .wj-viewpanel-container.magnifier-actived .wj-magnifier.show {
+  display: block;
+}
+.wj-viewer .wj-pageview {
+  outline: none;
+  position: relative;
+  background: #e5e5e5;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  -webkit-overflow-scrolling: touch;
+}
+.wj-viewer .wj-pageview.hidden {
+  display: none;
+  visibility: hidden;
+}
+.wj-viewer .wj-pageview-continuous {
+  overflow: auto;
+}
+.wj-viewer .wj-pageview-single:not(.virtual) .wj-pageview-pagescontainer {
+  overflow-y: auto;
+}
+.wj-viewer .wj-pageview-single:not(.virtual) .wj-pageview-vscroller {
+  visibility: hidden;
+}
+.wj-viewer .wj-pageview-pagescontainer {
+  outline: none;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  overflow-x: auto;
+  overflow-y: scroll;
+  text-align: center;
+}
+.wj-viewer.wj-state-disabled .wj-pageview {
+  overflow-y: hidden;
+}
+.wj-viewer.wj-state-disabled .wj-pageview .wj-pageview-pagescontainer {
+  overflow-y: hidden;
+}
+.wj-viewer .wj-pages-wrapper {
+  display: inline-block;
+  margin: 30px;
+}
+.wj-viewer .wj-view-page {
+  width: 1px;
+  height: 1px;
+  margin: 0 auto 30px auto;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.wj-viewer .wj-view-page .wj-loading {
+  background: rgba(204, 204, 204, 0.8);
+  width: 100%;
+  height: 100%;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+.wj-viewer .wj-view-page .highlight {
+  fill: var(--saf-color-interactive-secondary-active);
+  fill-opacity: 0.5;
+}
+.wj-viewer .wj-view-page rect {
+  pointer-events: none;
+}
+.wj-viewer .wj-view-page rect[arsvg\:data-action-type],
+.wj-viewer .wj-view-page a rect {
+  pointer-events: inherit;
+}
+.wj-viewer .wj-view-page:last-child {
+  margin-bottom: 0;
+}
+.wj-viewer .wj-pageview-vscroller {
+  outline: none;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 18px;
+  float: right;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.wj-viewer .wj-vscroller-wrapper {
+  width: 1px;
+}
+.wj-viewer .wj-toolbar {
+  height: 50px;
+  width: 100%;
+  border-bottom: 1px solid #c8c8c8;
+  position: absolute;
+  margin-top: -50px;
+}
+.wj-viewer .wj-toolbar:hover .wj-toolbar-move.enabled {
+  opacity: 1;
+}
+.wj-viewer .wj-toolbar a:hover,
+.wj-viewer .wj-toolbar a:focus {
+  background: #eee;
+  outline: none;
+}
+.wj-viewer .wj-toolbar a:hover.disabled,
+.wj-viewer .wj-toolbar a:focus.disabled,
+.wj-viewer .wj-toolbar a:hover.checked,
+.wj-viewer .wj-toolbar a:focus.checked {
+  background: rgba(0, 0, 0, 0);
+  cursor: default;
+}
+.wj-viewer .wj-toolbar > .wj-control,
+.wj-viewer .wj-toolbar .wj-tabcontent,
+.wj-viewer .wj-viewer-leftpanel > .wj-control,
+.wj-viewer .wj-viewer-leftpanel .wj-tabcontent {
+  background: inherit;
+  color: inherit;
+}
+.wj-viewer .wj-content:not(.mobile) .wj-toolbar.mobile {
+  display: none;
+}
+.wj-viewer .wj-toolbar-move {
+  width: 12px;
+  height: 100%;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0.2;
+}
+.wj-viewer .wj-toolbar-move.left {
+  float: left;
+}
+.wj-viewer .wj-toolbar-move.right {
+  float: right;
+}
+.wj-viewer .wj-toolbar-move .wj-glyph-left,
+.wj-viewer .wj-toolbar-move .wj-glyph-right {
+  margin-top: 20px;
+  margin-left: 2px;
+}
+.wj-viewer .wj-toolbarcontainer {
+  float: left;
+  height: 100%;
+  overflow: hidden;
+}
+.wj-viewer .wj-toolbarwrapper {
+  position: relative;
+  border: 0;
+  border-radius: 0;
+  padding-top: 5px;
+  height: 100%;
+}
+.wj-viewer .wj-toolbarwrapper.wj-btn-group > :not(.wj-control) {
+  border-left: none;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+  float: left;
+}
+.wj-viewer .wj-toolbarwrapper.wj-btn-group > .wj-separator {
+  height: 33px;
+  width: 10px;
+  float: left;
+  border-right: 2px solid #000;
+  margin: 3px 10px 0 0;
+  opacity: 0.25;
+}
+.wj-viewer .wj-toolbarwrapper .wj-pagenumber {
+  margin: 4px 10px;
+  height: 30px;
+  width: 80px;
+  float: left;
+}
+.wj-viewer .wj-toolbarwrapper .wj-pagecount {
+  margin: 5px 10px;
+  height: 30px;
+  line-height: 30px;
+  float: left;
+}
+.wj-viewer .wj-toolbarwrapper .wj-input-zoom {
+  margin: 4px 10px;
+  height: 30px;
+  width: 100px;
+  float: left;
+}
+.wj-viewer .wj-toolbarwrapper .slash {
+  float: left;
+  height: 40px;
+  width: 10px;
+  line-height: 40px;
+}
+.wj-viewer .wj-toolbarwrapper .hidden {
+  display: none;
+}
+.wj-viewer .wj-mini-toolbar {
+  position: absolute;
+  vertical-align: bottom;
+  border: none;
+  bottom: 2em;
+  padding: 0 24px;
+  width: auto;
+  background: #303030;
+  visibility: hidden;
+  opacity: 0.8;
+}
+.wj-viewer .wj-mini-toolbar .wj-btn-group > .wj-btn:focus,
+.wj-viewer .wj-mini-toolbar .wj-control .wj-btn-group > .wj-applybutton:focus,
+.wj-viewer .wj-control .wj-mini-toolbar .wj-btn-group > .wj-applybutton:focus {
+  background: rgba(0, 0, 0, 0);
+}
+.wj-viewer .wj-mini-toolbar .wj-btn-group > .wj-btn:hover,
+.wj-viewer .wj-mini-toolbar .wj-control .wj-btn-group > .wj-applybutton:hover,
+.wj-viewer .wj-control .wj-mini-toolbar .wj-btn-group > .wj-applybutton:hover {
+  background: #555;
+}
+.wj-viewer .wj-mini-toolbar .slash,
+.wj-viewer .wj-mini-toolbar .wj-pagecount {
+  color: #e0e0e0;
+}
+.wj-viewer .wj-mini-toolbar .wj-pagenumber {
+  color: #e0e0e0;
+  background: #202020;
+}
+.wj-viewer .wj-mini-toolbar .wj-pagenumber input {
+  color: inherit;
+  background: rgba(0, 0, 0, 0);
+}
+.wj-viewer .wj-mini-toolbar .wj-toolbar-move {
+  visibility: hidden;
+  display: none;
+}
+.wj-viewer .wj-mini-toolbar .wj-btn:hover,
+.wj-viewer .wj-mini-toolbar .wj-control .wj-applybutton:hover,
+.wj-viewer .wj-control .wj-mini-toolbar .wj-applybutton:hover {
+  background: #606060;
+}
+.wj-viewer .wj-mini-toolbar .wj-btn-group .wj-btn svg.wj-svg-btn,
+.wj-viewer .wj-mini-toolbar .wj-btn-group .wj-control .wj-applybutton svg.wj-svg-btn,
+.wj-viewer .wj-control .wj-mini-toolbar .wj-btn-group .wj-applybutton svg.wj-svg-btn {
+  fill: #fff;
+  opacity: 1;
+}
+.wj-viewer .wj-nav {
+  padding-left: 0;
+  list-style: none;
+  float: left;
+  border-bottom: 0;
+  margin-bottom: -1px;
+}
+.wj-viewer .wj-nav > li {
+  border: none;
+}
+.wj-viewer .wj-nav > li:not(:first-child) {
+  border: none;
+}
+.wj-viewer .wj-nav > li.hidden {
+  display: none;
+}
+.wj-viewer .wj-nav > li > a {
+  width: 48px;
+  height: 48px;
+}
+.wj-viewer .wj-nav > li > a:hover,
+.wj-viewer .wj-nav > li > a:focus {
+  text-decoration: none;
+  background: #eee;
+}
+.wj-viewer .wj-arrow {
+  display: none;
+}
+.wj-viewer .wj-arrow .wj-insidearrow {
+  position: absolute;
+  top: 17px;
+  right: -1px;
+  height: 0;
+  width: 0;
+  border: 7px solid rgba(0, 0, 0, 0);
+  border-right-color: #fafafa;
+  z-index: 1000;
+}
+.wj-viewer .wj-arrow .wj-outsidearrow {
+  position: absolute;
+  top: 16px;
+  right: -1px;
+  height: 0;
+  width: 0;
+  border: 8px solid rgba(0, 0, 0, 0);
+  border-right-color: #c8c8c8;
+}
+.wj-viewer .wj-viewer-tabsleft {
+  height: 100%;
+  position: relative;
+}
+.wj-viewer .wj-viewer-tabsleft.collapsed .wj-tabcontent {
+  width: 0;
+  visibility: collapse;
+}
+.wj-viewer .wj-tabcontent {
+  float: right;
+  height: 100%;
+  width: auto;
+}
+.wj-viewer .wj-tabcontent h3 {
+  line-height: 1.1;
+  margin-bottom: 10px;
+  margin-top: 0;
+  font-family: -apple-system-font, 'Segoe UI Light', 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 24px;
+  color: inherit;
+}
+.wj-viewer .wj-tabcontent legend {
+  color: inherit;
+}
+.wj-viewer .wj-tabcontent .active {
+  left: 0;
+  width: 300px;
+  height: 100%;
+  border-left: 1px solid #c8c8c8;
+  display: block;
+}
+.wj-viewer .wj-tabcontent .wj-tabpane .wj-tabcontent-inner {
+  overflow: auto;
+  height: 100%;
+  border-top: 1px solid #c8c8c8;
+}
+.wj-viewer .wj-tabpane {
+  background: #fafafa;
+  display: none;
+}
+.wj-viewer .wj-tabtitle-wrapper {
+  position: absolute;
+  width: 299px;
+  padding: 10px;
+}
+.wj-viewer .wj-tabtitle-wrapper .wj-close {
+  position: absolute;
+  top: 0.2em;
+  right: 0.3em;
+  font-size: 30pt;
+  font-weight: bold;
+  line-height: 0.9em;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.wj-viewer .wj-tabtitle-wrapper .wj-close:hover {
+  opacity: 0.75;
+}
+.wj-viewer .wj-tabtitle-wrapper .wj-exportcontainer label {
+  margin-right: 8px;
+}
+.wj-viewer .wj-tabcontent-wrapper {
+  height: 100%;
+  padding-top: 48px;
+}
+.wj-viewer .wj-tabcontent-wrapper.search-wrapper {
+  padding-top: 202px;
+}
+.wj-viewer .wj-tabcontent-wrapper.wj-exportformats-wrapper {
+  padding-top: 120px;
+}
+.wj-viewer .wj-tabcontent-wrapper.wj-exportformats-wrapper .wj-export-editor {
+  width: 100%;
+}
+.wj-viewer .wj-tabcontent-wrapper.wj-exportformats-wrapper .wj-export-editor td {
+  font-size: 8pt;
+}
+.wj-viewer .wj-tabcontent-wrapper.wj-exportformats-wrapper .wj-export-editor td:first-child {
+  width: 200px;
+}
+.wj-viewer .wj-tabcontent-wrapper.wj-exportformats-wrapper .wj-export-editor td:last-child {
+  width: 150px;
+}
+.wj-viewer .wj-tabcontent-wrapper.wj-exportformats-wrapper .wj-export-editor .wj-exportformats-group {
+  margin: 8px;
+}
+.wj-viewer .wj-tabcontent-wrapper.wj-exportformats-wrapper .wj-exportformats-footer {
+  padding: 8px;
+}
+.wj-viewer .wj-outlines-tree {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  background: #fafafa;
+  padding-top: 20px;
+  padding-left: 4px;
+}
+.wj-viewer .wj-cell {
+  border: none;
+  background: #fafafa;
+  color: #000;
+  cursor: pointer;
+}
+.wj-viewer .wj-cell span {
+  margin-right: 5px;
+}
+.wj-viewer .wj-cell a:link,
+.wj-viewer .wj-cell a:visited,
+.wj-viewer .wj-cell a:hover {
+  color: #000;
+  text-decoration: none;
+}
+.wj-viewer .wj-cell.wj-state-selected {
+  background: #eee;
+  color: #000;
+}
+.wj-viewer .wj-cell.wj-state-multi-selected {
+  background: #fafafa;
+  color: #000;
+}
+.wj-viewer .wj-cell.wj-header {
+  color: #fff;
+  background: #000;
+  border: none;
+  font-weight: bold;
+}
+.wj-viewer .wj-cell.wj-alt:not(.wj-state-selected):not(.wj-state-multi-selected) {
+  background: #fafafa;
+  color: #000;
+}
+.wj-viewer .wj-cell.wj-group:not(.wj-state-selected):not(.wj-state-multi-selected) {
+  background: #fafafa;
+  color: #000;
+}
+.wj-viewer .wj-thumbnaillist {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  background: inherit;
+  color: inherit;
+}
+.wj-viewer .wj-thumbnail-item {
+  height: auto;
+  text-align: center;
+  padding-top: 35px;
+}
+.wj-viewer .wj-thumbnail-item .wj-pagethumbnail {
+  background: #fff;
+  border: 1px solid #c8c8c8;
+  cursor: pointer;
+  outline: none;
+  margin: 0 auto 10px auto;
+}
+.wj-viewer .wj-thumbnail-item.wj-state-selected {
+  background: rgba(0, 0, 0, 0);
+  color: inherit;
+}
+.wj-viewer .wj-thumbnail-item.wj-state-selected .wj-pagethumbnail {
+  border-color: var(--saf-color-interactive-secondary-active);
+}
+.wj-viewer .wj-thumbnail-item:not(.wj-state-selected):not(.wj-state-disabled):not(.wj-separator):hover {
+  background: rgba(0, 0, 0, 0);
+  color: inherit;
+}
+.wj-viewer .wj-parameterscontainer {
+  float: left;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.wj-viewer .wj-parameterscontainer.wj-parametererrors-hidden .wj-parametercontainer .error {
+  display: none;
+}
+.wj-viewer .wj-parametercontainer {
+  float: left;
+  margin-top: 20px;
+}
+.wj-viewer .wj-parametercontainer .wj-parametercontrol {
+  width: 100%;
+}
+.wj-viewer .wj-parametercontainer .error {
+  color: var(--saf-color-status-error-strong);
+  float: right;
+}
+.wj-viewer .wj-parametercontainer textarea {
+  float: right;
+  resize: none;
+  height: 100px;
+  width: 140px;
+}
+.wj-viewer .wj-searchoption {
+  margin-top: 10px;
+  float: left;
+  width: 100%;
+}
+.wj-viewer .wj-searchoption input {
+  width: 16px;
+  height: 16px;
+  float: left;
+  margin: 2px 0 0;
+}
+.wj-viewer .wj-searchoption label {
+  margin-top: 2px;
+  float: left;
+  font-weight: initial;
+}
+.wj-viewer .wj-searchresult {
+  padding-top: 15px;
+  float: left;
+}
+.wj-viewer .wj-searchresultlist {
+  float: left;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0);
+  color: var(--saf-color-interactive-on-secondary-default);
+}
+.wj-viewer .wj-searchresultlist .wj-search-item {
+  cursor: pointer;
+}
+.wj-viewer .wj-searchresultlist .wj-search-item .wj-search-text {
+  font-size: 125%;
+}
+.wj-viewer .wj-searchresultlist .wj-search-item:not(.wj-state-selected):not(:hover) .wj-search-text {
+  color: rgba(0, 0, 0, 0.08);
+}
+.wj-viewer .wj-control .wj-applybutton {
+  float: right;
+  margin-top: 20px;
+  border-radius: 0;
+  padding: 4px 1em;
+}
+.wj-viewer .wj-searchbar {
+  height: 50px;
+  width: 100%;
+  border-top: 1px solid #c8c8c8;
+  position: relative;
+  margin: 0 auto;
+}
+.wj-viewer .wj-searchbar.hidden {
+  visibility: hidden;
+  display: none;
+}
+.wj-viewer .wj-searchbox {
+  border: var(--saf-line-width-thin) solid var(--saf-color-line-strong);
+  border-radius: 0;
+  padding: var(--saf-space-inset-squish-md);
+  width: 100%;
+  border-right: 4.75em solid var(--saf-flexgrid-color-background-header);
+}
+.wj-viewer .mobile .wj-searchbox {
+  border-right-width: 1px;
+}
+.wj-viewer .mobile .wj-searchcontainer .wj-btn-group > .wj-btn-search {
+  padding-top: 4px;
+}
+.wj-viewer .wj-searchcontainer {
+  position: relative;
+  padding-top: 4px;
+}
+.wj-viewer .wj-searchcontainer .wj-btn-group {
+  position: absolute;
+  right: 0.1em;
+}
+.wj-viewer .wj-searchcontainer .wj-btn-group > .wj-btn-search {
+  padding-top: 4px;
+}
+.wj-viewer .wj-searchcontainer .wj-btn-group button {
+  background: rgba(0, 0, 0, 0);
+  height: 30px;
+  width: 30px;
+  border: none;
+  padding: 1px;
+}
+.wj-viewer .wj-toolbarcontainer {
+  width: 100%;
+}
+.wj-viewer .wj-toolbarwrapper {
+  width: 100%;
+}
+.wj-viewer .wj-toolbarwrapper > .wj-btn,
+.wj-viewer .wj-control .wj-toolbarwrapper > .wj-applybutton {
+  display: inline-block;
+}
+.wj-viewer .wj-toolbarwrapper > .wj-btn.hidden,
+.wj-viewer .wj-control .wj-toolbarwrapper > .hidden.wj-applybutton {
+  display: none;
+}
+.wj-viewer .wj-toolbarwrapper .wj-searchbtn-groups {
+  float: right;
+  width: auto;
+  padding-top: 0;
+}
+.wj-viewer .wj-rubberband {
+  position: absolute;
+  border: solid;
+  border-color: var(--saf-color-interactive-secondary-active);
+  border-width: 2px;
+  display: none;
+  z-index: 1;
+}
+.wj-viewer .wj-magnifier {
+  border: solid;
+  border-color: var(--saf-color-interactive-secondary-active);
+  border-width: 2px;
+  width: 242px;
+  height: 150px;
+  position: absolute;
+  display: none;
+  overflow: hidden;
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  pointer-events: none;
+  z-index: 1;
+}
+.wj-viewer .wj-magnifier .wj-view-page {
+  position: absolute;
+}
+.wj-viewer .wj-viewer-footer {
+  height: 50px;
+  width: 100%;
+  border-top: 1px solid #c8c8c8;
+  position: relative;
+  display: none;
+}
+.wj-viewer .wj-viewer-footer .wj-toolbar {
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+.wj-viewer .wj-viewer-footer .wj-close {
+  font-size: 30pt;
+  line-height: 20px;
+  float: right;
+  font-weight: bold;
+  color: #000;
+  opacity: 0.2;
+  cursor: pointer;
+  margin-top: 12px;
+}
+.wj-viewer .wj-btn-group {
+  border: none;
+}
+.wj-viewer .wj-btn-group > .wj-btn,
+.wj-viewer .wj-control .wj-btn-group > .wj-applybutton {
+  padding: 8px;
+  margin: 0;
+  width: 34px;
+  height: 36px;
+  background: rgba(0, 0, 0, 0);
+}
+.wj-viewer .wj-btn-group > li > a.wj-btn,
+.wj-viewer .wj-control .wj-btn-group > li > a.wj-applybutton {
+  padding: 12px 10px;
+  background: rgba(0, 0, 0, 0);
+}
+.wj-viewer .wj-btn-group > li > a.wj-btn:focus,
+.wj-viewer .wj-control .wj-btn-group > li > a.wj-applybutton:focus,
+.wj-viewer .wj-btn-group > li > a.wj-btn:hover,
+.wj-viewer .wj-control .wj-btn-group > li > a.wj-applybutton:hover {
+  background: var(--saf-color-interactive-tertiary-hover);
+}
+.wj-viewer .wj-viewer-loading {
+  background: rgba(204, 204, 204, 0.8);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 20pt;
+}
+.wj-viewer .wj-viewer-loading .verticalalign {
+  vertical-align: middle;
+  display: inline-block;
+  width: 1px;
+  height: 100%;
+  margin-left: -1px;
+}
+.wj-viewer .wj-viewer-loading .textspan {
+  vertical-align: middle;
+  display: inline-block;
+  padding: 20px;
+}
+.wj-viewer .wj-viewer-loading.errormessage {
+  font-size: inherit;
+}
+.wj-viewer .mobile.with-footer,
+.wj-viewer .mobile.with-searchbar {
+  padding-bottom: 50px;
+}
+.wj-viewer .mobile.with-footer.with-searchbar {
+  padding-bottom: 100px;
+}
+.wj-viewer .mobile .wj-viewer-leftpanel {
+  width: 0;
+}
+.wj-viewer .mobile .wj-viewer-splitter {
+  visibility: hidden;
+  display: none;
+}
+.wj-viewer .mobile .wj-toolbar {
+  visibility: hidden;
+  display: none;
+}
+.wj-viewer .mobile .wj-toolbar .wj-pagenumber {
+  width: 50px;
+}
+.wj-viewer .mobile .wj-toolbar .wj-pagecount {
+  margin: 5px 7px;
+}
+.wj-viewer .mobile .wj-toolbar .wj-toolbar-move {
+  visibility: hidden;
+  display: none;
+}
+.wj-viewer .mobile .wj-toolbar.mobile {
+  display: block;
+}
+.wj-viewer .mobile .wj-toolbar.mobile.hidden {
+  display: none;
+}
+.wj-viewer .mobile .wj-nav {
+  display: none;
+  visibility: hidden;
+}
+.wj-viewer .mobile .wj-viewer-tabsleft {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+}
+.wj-viewer .mobile .wj-viewer-tabsleft.collapsed {
+  width: 0;
+}
+.wj-viewer .mobile .wj-tabcontent {
+  width: 100%;
+}
+.wj-viewer .mobile .wj-tabcontent .wj-tabpane .wj-pagesetupcontainer {
+  width: 100%;
+}
+.wj-viewer .mobile .wj-tabcontent .wj-tabpane .wj-tabtitle-wrapper {
+  position: absolute;
+  width: 100%;
+  padding: 10px 20px 20px 20px;
+}
+.wj-viewer .mobile .wj-tabcontent .active {
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #c8c8c8;
+  display: block;
+}
+.wj-viewer .mobile .wj-viewer-footer {
+  display: block;
+}
+.wj-viewer .mobile .wj-viewer-footer.hidden {
+  display: none;
+}
+.wj-viewer .mobile .wj-btn-group > .wj-btn,
+.wj-viewer .mobile .wj-control .wj-btn-group > .wj-applybutton,
+.wj-viewer .wj-control .mobile .wj-btn-group > .wj-applybutton {
+  padding-top: 9px;
+}
+.wj-viewer .mobile .mobile {
+  visibility: visible;
+}
+.wj-viewer.full-screen {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: fixed;
+  z-index: 1200;
+}
+.wj-viewer.full-screen .wj-viewer-outer {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  padding-top: 0;
+}
+.wj-viewer.full-screen .wj-viewer-outer.mobile {
+  padding-top: 50px;
+}
+.wj-viewer.full-screen .wj-viewer-outer.mobile .wj-toolbar {
+  display: block;
+}
+.wj-viewer.full-screen .wj-viewer-outer.mobile .wj-mini-toolbar {
+  visibility: hidden;
+  display: none;
+}
+.wj-viewer.full-screen .wj-viewer-outer.mobile .wj-viewer-leftpanel {
+  display: block;
+}
+.wj-viewer.full-screen .wj-viewer-outer.mobile .wj-searchbar.hidden {
+  display: none;
+}
+.wj-viewer.full-screen .wj-viewer-leftpanel {
+  display: none;
+}
+.wj-viewer.full-screen .wj-viewer-splitter {
+  display: none;
+}
+.wj-viewer.full-screen .wj-toolbar {
+  display: none;
+}
+.wj-viewer.full-screen .wj-mini-toolbar {
+  visibility: visible;
+  display: inline-block;
+}
+.wj-viewer.narrow .wj-viewer-splitter {
+  display: none;
+  visibility: hidden;
+}
+.wj-viewer.narrow .wj-viewer-leftpanel {
+  display: none;
+  visibility: hidden;
+}
+.wj-viewer.wj-control {
+  user-select: inherit;
+  -webkit-user-select: inherit;
+  -moz-user-select: inherit;
+  -ms-user-select: inherit;
+}
+.wj-viewer .wj-btn-group .wj-btn svg.wj-svg-btn,
+.wj-viewer .wj-btn-group .wj-control .wj-applybutton svg.wj-svg-btn,
+.wj-viewer .wj-control .wj-btn-group .wj-applybutton svg.wj-svg-btn {
+  fill: var(--saf-color-interactive-on-secondary-default);
+  stroke: var(--saf-color-interactive-on-secondary-default);
+}
+.wj-viewer .wj-btn-group .wj-btn.wj-state-active svg.wj-svg-btn,
+.wj-viewer .wj-btn-group .wj-control .wj-state-active.wj-applybutton svg.wj-svg-btn,
+.wj-viewer .wj-control .wj-btn-group .wj-state-active.wj-applybutton svg.wj-svg-btn {
+  fill: #3986c7;
+  opacity: 1;
+  stroke: #3986c7;
+}
+.wj-viewer .wj-btn-group .wj-btn:hover svg.wj-svg-btn,
+.wj-viewer .wj-btn-group .wj-control .wj-applybutton:hover svg.wj-svg-btn,
+.wj-viewer .wj-control .wj-btn-group .wj-applybutton:hover svg.wj-svg-btn {
+  opacity: 1;
+}
+.wj-viewer-menu.wj-btn-group-vertical .wj-listbox-item.wj-state-active .wj-btn .wj-svg-btn,
+.wj-viewer-menu.wj-btn-group-vertical
+  .wj-listbox-item.wj-state-active
+  .wj-viewer
+  .wj-control
+  .wj-applybutton
+  .wj-svg-btn,
+.wj-viewer
+  .wj-control
+  .wj-viewer-menu.wj-btn-group-vertical
+  .wj-listbox-item.wj-state-active
+  .wj-applybutton
+  .wj-svg-btn {
+  fill: #3986c7;
+  opacity: 1;
+}
+.wj-viewer-menu.wj-btn-group-vertical .wj-listbox-item.wj-state-active .wj-btn .wj-svg-btn .wj-hollow-svg,
+.wj-viewer-menu.wj-btn-group-vertical
+  .wj-listbox-item.wj-state-active
+  .wj-viewer
+  .wj-control
+  .wj-applybutton
+  .wj-svg-btn
+  .wj-hollow-svg,
+.wj-viewer
+  .wj-control
+  .wj-viewer-menu.wj-btn-group-vertical
+  .wj-listbox-item.wj-state-active
+  .wj-applybutton
+  .wj-svg-btn
+  .wj-hollow-svg {
+  fill: none;
+  stroke: #3986c7;
+}
+.wj-viewer-menu > .wj-listbox-item {
+  white-space: nowrap;
+  padding: 0 10px 10px 10px;
+}
+.wj-viewer-menu > .wj-listbox-item a.wj-btn,
+.wj-viewer-menu > .wj-listbox-item .wj-viewer .wj-control a.wj-applybutton,
+.wj-viewer .wj-control .wj-viewer-menu > .wj-listbox-item a.wj-applybutton {
+  background: rgba(0, 0, 0, 0);
+  transform: translateY(0.4em);
+}
+.wj-viewer-menu > .wj-listbox-item .checkIcon {
+  width: 20px;
+  margin-right: 5px;
+  visibility: hidden;
+}
+.wj-viewer-menu > .wj-listbox-item.checked .checkIcon {
+  visibility: visible;
+}
+.wj-viewer-menu > .wj-listbox-item.hidden {
+  display: none;
+  visibility: hidden;
+}
+.wj-viewer svg.wj-svg-btn,
+.wj-viewer-menu svg.wj-svg-btn {
+  opacity: 0.75;
+  width: 22px;
+  height: 22px;
+  stroke-width: 0;
+}
+body.full-screen {
+  overflow: hidden;
+}
+@media print {
+  .wj-viewer .wj-toolbar-move {
+    visibility: hidden;
+    display: none;
+  }
+  .wj-viewer .wj-viewpanel-container {
+    display: inline-block;
+    float: none;
+  }
+} /*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */
+.wj-flexchart .fibonacci-arcs path.wj-state-selected {
+  stroke-dasharray: 5 10;
+  stroke-linecap: butt;
+}
+.wj-flexgrid,
+.wj-flexsheet,
+.wj-columnfiltereditor {
+  --saf-flexgrid-checkbox-size: 20px;
+  --saf-flexgrid-checkbox-margin: 2px 4px 0px 0px;
+  --saf-flexgrid-cell-font: var(--saf-type-body-default-md-regular-standard);
+  --saf-flexgrid-cell-padding: var(--saf-space-inset-squish-md);
+  --saf-flexgrid-columnfiltereditor-listbox-height: 250px;
+  --saf-flexgrid-header-cell-font: var(--saf-type-body-default-md-strong-standard);
+  --saf-flexgrid-icon-font: 'Font Awesome 6 Pro', 'Helvetica Neue', arial, sans-serif;
+  --saf-flexgrid-icon-button-size: 32px;
+  --saf-flexgrid-listbox-item-size: 40px;
+  --saf-flexgrid-radio-size: 20px;
+  --saf-flexgrid-radio-icon-size: 6px;
+}
+.wj-flexgrid.saf-flexgrid--compact,
+.wj-flexsheet.saf-flexgrid--compact {
+  --saf-flexgrid-cell-font: var(--saf-type-body-default-md-regular-compact);
+  --saf-flexgrid-cell-padding: calc(var(--saf-space-inset-xxs) - 0.5px) var(--saf-space-inset-md);
+  --saf-flexgrid-checkbox-margin: 1px 0px 0px 0px;
+  --saf-flexgrid-header-cell-font: var(--saf-type-body-default-md-strong-compact);
+  --saf-flexgrid-icon-button-size: 24px;
+}
+.wj-flexsheet {
+  background: var(--saf-color-interactive-background-default);
+}
+.wj-flexgrid.wj-content:not(.wj-flexsheet),
+.wj-flexgrid:not(.wj-flexsheet) .wj-rowheaders .wj-header[aria-selected] {
+  border-left: none;
+  border-right: none;
+}
+.wj-flexgrid:not(.wj-flexsheet) .wj-cell:not(.wj-header),
+.wj-flexgrid .wj-cell:not(.wj-header):last-child,
+.wj-flexsheet .wj-colheaders .wj-header:last-child {
+  border-right: none;
+}
+.wj-flexgrid .wj-row:last-child .wj-cell:not(.wj-header),
+.wj-flexgrid .wj-rowheaders .wj-row:last-child .wj-cell {
+  border-bottom: none;
+}
+.wj-flexgrid:not(.wj-flexsheet) .wj-topleft .wj-header:first-of-type,
+.wj-flexgrid:not(.wj-flexsheet) .wj-rowheaders .wj-header {
+  border-left: var(--saf-line-width-thin) solid var(--saf-color-line-strong);
+}
+.wj-flexgrid:not(.wj-flexsheet) .wj-rowheaders .wj-header[aria-selected] {
+  background: var(--saf-color-interactive-background-default);
+}
+.wj-flexgrid:not(.wj-flexsheet) .wj-rowheaders .wj-header-alt[aria-selected] {
+  background: var(--saf-flexgrid-color-background-alt-rows);
+}
+.wj-row:last-child .wj-cell:not(.wj-header),
+.wj-rowheaders .wj-row:last-child .wj-cell {
+  border-bottom: none;
+}
+.wj-header.wj-cell {
+  align-content: center;
+  font: var(--saf-flexgrid-header-cell-font);
+}
+.wj-colheaders:not(.wj-rowheaders) .wj-header.wj-cell {
+  padding-bottom: var(--saf-space-stack-xs);
+  padding-top: var(--saf-space-stack-xs);
+}
+.wj-topleft .wj-header.wj-cell {
+  display: inline-grid;
+  place-content: center;
+}
+.wj-header:hover {
+  background: var(--saf-flexgrid-color-background-header-hover);
+}
+.wj-header[aria-sort='ascending'],
+.wj-header[aria-sort='descending'],
+.wj-header.wj-state-dragsrc {
+  background: var(--saf-flexgrid-color-background-header-current-sort);
+}
+.wj-cell {
+  font: var(--saf-flexgrid-cell-font);
+  padding: var(--saf-flexgrid-cell-padding);
+}
+.wj-cell[aria-readonly='true'],
+.wj-cell.wj-state-readonly {
+  background: var(--saf-color-interactive-read-only-subtle);
+}
+.wj-cell:not(
+    [aria-readonly='true'],
+    .wj-state-readonly,
+    .wj-state-selected,
+    .wj-state-multi-selected,
+    .wj-header
+  ):hover {
+  background-color: var(--saf-color-interactive-secondary-hover);
+}
+.wj-flexgrid .wj-grid-editor {
+  font: inherit;
+}
+.wj-flexgrid a,
+.wj-flexgrid a:hover,
+.wj-flexgrid a:active,
+.wj-flexgrid a:visited {
+  color: var(--saf-color-anchor-active);
+  font: var(--saf-type-body-link-md-regular-standard);
+}
+.wj-flexgrid a:focus {
+  border-radius: var(--saf-border-radius-xs);
+  box-shadow: var(--saf-drop-shadow-focus);
+}
+.wj-columnfiltereditor.wj-control .wj-btn[wj-part='btn-apply'],
+.wj-viewer .wj-columnfiltereditor.wj-control [wj-part='btn-apply'].wj-applybutton {
+  background: var(--saf-color-interactive-primary-default);
+  border-color: var(--saf-color-interactive-on-primary-default);
+  color: var(--saf-color-interactive-on-primary-default);
+}
+.wj-cell button:not(.wj-btn-default, .wj-btn-glyph),
+.wj-control button.wj-btn:not(.wj-btn-default, .wj-btn-glyph),
+.wj-viewer .wj-control button.wj-applybutton:not(.wj-btn-default, .wj-btn-glyph) {
+  align-items: center;
+  background: var(--saf-color-interactive-secondary-default);
+  border: var(--saf-line-width-thin) solid var(--saf-color-interactive-on-secondary-default);
+  border-radius: var(--saf-border-radius-xs);
+  box-sizing: border-box;
+  color: var(--saf-color-interactive-on-secondary-default);
+  display: flex;
+  font: var(--saf-type-body-default-md-strong-standard);
+  justify-content: center;
+  position: relative;
+  text-align: left;
+}
+.wj-control button.wj-btn:not(.wj-btn-default, .wj-btn-glyph),
+.wj-viewer .wj-control button.wj-applybutton:not(.wj-btn-default, .wj-btn-glyph) {
+  padding: var(--saf-space-inset-squish-md);
+}
+.wj-cell button:not(.wj-btn-default, .wj-btn-glyph):hover::after,
+.wj-control .wj-btn:not(.wj-btn-default, .wj-btn-glyph):hover::after,
+.wj-viewer .wj-control .wj-applybutton:not(.wj-btn-default, .wj-btn-glyph):hover::after {
+  border: var(--saf-line-width-thick) solid var(--saf-color-interactive-on-primary-hover);
+  border-radius: var(--saf-border-radius-xs);
+  content: '';
+  height: calc(100% - 2px);
+  left: -1px;
+  position: absolute;
+  top: -1px;
+  width: calc(100% - 2px);
+}
+.wj-cell button:not(.wj-btn-default, .wj-btn-glyph):hover,
+.wj-control .wj-btn:not(.wj-btn-default, .wj-btn-glyph):hover,
+.wj-viewer .wj-control .wj-applybutton:not(.wj-btn-default, .wj-btn-glyph):hover {
+  background: var(--saf-color-interactive-secondary-hover);
+  color: var(--saf-color-interactive-on-primary-hover);
+}
+.wj-cell button:not(.wj-btn-default, .wj-btn-glyph):active,
+.wj-control .wj-btn:not(.wj-btn-default, .wj-btn-glyph):active,
+.wj-viewer .wj-control .wj-applybutton:not(.wj-btn-default, .wj-btn-glyph):active {
+  background: var(--saf-color-interactive-secondary-active);
+  border-color: var(--saf-color-interactive-secondary-active);
+  color: var(--saf-color-interactive-on-secondary-active);
+}
+.wj-cell button:not(.wj-btn-default, .wj-btn-glyph):active:focus,
+.wj-control .wj-btn:not(.wj-btn-default, .wj-btn-glyph):active:focus,
+.wj-viewer .wj-control .wj-applybutton:not(.wj-btn-default, .wj-btn-glyph):active:focus {
+  border-color: var(--saf-color-interactive-on-secondary-default);
+  box-shadow: var(--saf-drop-shadow-focus);
+}
+.wj-cell button:not(.wj-btn-default, .wj-btn-glyph):disabled,
+.wj-control .wj-btn:not(.wj-btn-default, .wj-btn-glyph):disabled,
+.wj-viewer .wj-control .wj-applybutton:not(.wj-btn-default, .wj-btn-glyph):disabled,
+.wj-columnfiltereditor.wj-control .wj-btn[wj-part='btn-apply']:disabled,
+.wj-viewer .wj-columnfiltereditor.wj-control [wj-part='btn-apply'].wj-applybutton:disabled {
+  background: var(--saf-color-interactive-disabled-subtle);
+  border-color: var(--saf-color-interactive-disabled-subtle);
+  color: var(--saf-color-interactive-on-disabled-subtle);
+}
+.wj-control .wj-btn:focus,
+.wj-viewer .wj-control .wj-applybutton:focus {
+  box-shadow: var(--saf-drop-shadow-focus);
+}
+.wj-flexgrid .wj-cell .wj-btn.wj-btn-glyph,
+.wj-flexgrid .wj-cell .wj-viewer .wj-control .wj-btn-glyph.wj-applybutton,
+.wj-viewer .wj-control .wj-flexgrid .wj-cell .wj-btn-glyph.wj-applybutton {
+  background: var(--saf-color-interactive-tertiary-default);
+  color: var(--saf-color-interactive-on-tertiary-default);
+  font: var(--saf-type-icon-default-md);
+  height: 100%;
+  opacity: 1;
+  padding: 0;
+}
+.wj-flexgrid .wj-cell .wj-btn.wj-btn-glyph.wj-elem-dropdown,
+.wj-flexgrid .wj-cell .wj-viewer .wj-control .wj-btn-glyph.wj-elem-dropdown.wj-applybutton,
+.wj-viewer .wj-control .wj-flexgrid .wj-cell .wj-btn-glyph.wj-elem-dropdown.wj-applybutton {
+  padding-inline-start: var(--saf-space-inline-md);
+}
+.wj-flexgrid .wj-cell .wj-btn.wj-btn-glyph.wj-elem-filter,
+.wj-flexgrid .wj-cell .wj-viewer .wj-control .wj-btn-glyph.wj-elem-filter.wj-applybutton,
+.wj-viewer .wj-control .wj-flexgrid .wj-cell .wj-btn-glyph.wj-elem-filter.wj-applybutton,
+.wj-columnfiltereditor.wj-control .wj-btn[wj-part='btn-clear'],
+.wj-viewer .wj-columnfiltereditor.wj-control [wj-part='btn-clear'].wj-applybutton {
+  background: var(--saf-color-interactive-tertiary-default);
+  border: var(--saf-line-width-thin) solid rgba(255, 255, 255, 0);
+  color: var(--saf-color-interactive-on-tertiary-default);
+}
+.wj-flexgrid .wj-cell .wj-btn.wj-btn-glyph.wj-elem-filter,
+.wj-flexgrid .wj-cell .wj-viewer .wj-control .wj-btn-glyph.wj-elem-filter.wj-applybutton,
+.wj-viewer .wj-control .wj-flexgrid .wj-cell .wj-btn-glyph.wj-elem-filter.wj-applybutton {
+  border-radius: var(--saf-border-radius-xs);
+  border-width: var(--saf-line-width-thick);
+  float: none;
+  height: var(--saf-flexgrid-icon-button-size);
+  margin-inline-end: var(--saf-space-inline-xs);
+  min-width: var(--saf-flexgrid-icon-button-size);
+}
+.wj-flexgrid .wj-cell .wj-btn.wj-btn-glyph.wj-elem-filter:hover,
+.wj-flexgrid .wj-cell .wj-viewer .wj-control .wj-btn-glyph.wj-elem-filter.wj-applybutton:hover,
+.wj-viewer .wj-control .wj-flexgrid .wj-cell .wj-btn-glyph.wj-elem-filter.wj-applybutton:hover,
+.wj-columnfiltereditor.wj-control .wj-btn[wj-part='btn-clear']:hover,
+.wj-viewer .wj-columnfiltereditor.wj-control [wj-part='btn-clear'].wj-applybutton:hover {
+  background: var(--saf-color-interactive-tertiary-hover);
+  border-color: var(--saf-color-interactive-on-tertiary-hover);
+  color: var(--saf-color-interactive-on-tertiary-hover);
+}
+.wj-flexgrid .wj-cell .wj-btn.wj-btn-glyph.wj-elem-filter:focus,
+.wj-flexgrid .wj-cell .wj-viewer .wj-control .wj-btn-glyph.wj-elem-filter.wj-applybutton:focus,
+.wj-viewer .wj-control .wj-flexgrid .wj-cell .wj-btn-glyph.wj-elem-filter.wj-applybutton:focus {
+  background: var(--saf-color-interactive-background-default);
+  border-color: var(--saf-color-interactive-focus);
+}
+.wj-flexgrid .wj-cell .wj-btn.wj-btn-glyph.wj-elem-filter:active,
+.wj-flexgrid .wj-cell .wj-viewer .wj-control .wj-btn-glyph.wj-elem-filter.wj-applybutton:active,
+.wj-viewer .wj-control .wj-flexgrid .wj-cell .wj-btn-glyph.wj-elem-filter.wj-applybutton:active,
+.wj-flexgrid .wj-cell .wj-btn.wj-btn-glyph.wj-elem-filter[aria-expanded='true'],
+.wj-flexgrid .wj-cell .wj-viewer .wj-control .wj-btn-glyph.wj-elem-filter[aria-expanded='true'].wj-applybutton,
+.wj-viewer .wj-control .wj-flexgrid .wj-cell .wj-btn-glyph.wj-elem-filter[aria-expanded='true'].wj-applybutton {
+  background: var(--saf-color-interactive-tertiary-active);
+  border: var(--saf-line-width-thin) solid var(--saf-color-interactive-on-tertiary-active);
+  color: var(--saf-color-interactive-on-tertiary-active);
+}
+.wj-columnfiltereditor.wj-control .wj-btn[wj-part='btn-clear']::before,
+.wj-viewer .wj-columnfiltereditor.wj-control [wj-part='btn-clear'].wj-applybutton::before {
+  content: '';
+  font-family: var(--saf-flexgrid-icon-font);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: normal;
+  margin-right: var(--saf-space-inline-sm);
+}
+.wj-control .wj-input-group-btn > .wj-btn.wj-btn-default:hover,
+.wj-viewer .wj-control .wj-input-group-btn > .wj-btn-default.wj-applybutton:hover {
+  background: rgba(255, 255, 255, 0);
+}
+.wj-glyph-down,
+.wj-glyph-up,
+.wj-glyph-filter {
+  border: none;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: auto;
+}
+.wj-glyph-filter {
+  top: 1px;
+  width: 100%;
+}
+.wj-glyph-down::before,
+.wj-glyph-up::before,
+.wj-glyph-filter::before {
+  color: var(--saf-color-interactive-on-secondary-default);
+  font-family: var(--saf-flexgrid-icon-font);
+  font-size: 12px;
+  font-weight: 900;
+  line-height: normal;
+}
+.wj-glyph-down::before {
+  content: '';
+}
+.wj-glyph-up::before {
+  content: '';
+}
+.wj-glyph-filter::before {
+  content: '';
+  font-size: 16px;
+  font-weight: 300;
+}
+.wj-glyph-filter::after {
+  display: none;
+}
+.wj-dropdown-panel,
+.wj-listbox {
+  padding: var(--saf-space-inset-xxs);
+}
+.wj-dropdown-panel.wj-grid-listbox {
+  border-radius: 0;
+}
+.wj-listbox .wj-listbox-item {
+  min-height: var(--saf-flexgrid-listbox-item-size);
+  padding: var(--saf-space-inset-squish-sm);
+  position: relative;
+}
+.wj-listbox .wj-listbox-item::before {
+  border: var(--saf-line-width-thick) solid rgba(255, 255, 255, 0);
+  border-radius: var(--saf-border-radius-xs);
+  content: '';
+  inset: -1px;
+  position: absolute;
+}
+.wj-listbox .wj-listbox-item.wj-state-selected {
+  background: var(--saf-color-interactive-tertiary-active);
+  color: var(--saf-color-interactive-on-tertiary-active);
+}
+.wj-listbox .wj-listbox-item.wj-state-selected::before {
+  border-color: var(--saf-color-interactive-on-tertiary-active);
+}
+.wj-listbox .wj-listbox-item:not(.wj-state-selected, .wj-state-disabled, .wj-separator):hover,
+.wj-listbox .wj-listbox-item.wj-state-selected:hover {
+  background: var(--saf-color-interactive-tertiary-hover);
+  color: var(--saf-color-interactive-on-tertiary-hover);
+}
+.wj-listbox .wj-listbox-item:not(.wj-state-selected, .wj-state-disabled, .wj-separator):hover::before,
+.wj-listbox .wj-listbox-item.wj-state-selected:hover::before {
+  border-color: var(--saf-color-interactive-on-tertiary-hover);
+}
+.wj-columnfiltereditor + .wj-dropdown-panel.wj-listbox {
+  border-radius: var(--saf-border-radius-xs);
+}
+.wj-content.wj-columnfiltereditor {
+  border-radius: var(--saf-border-radius-sm);
+  min-width: 320px !important;
+}
+.wj-columnfiltereditor .wj-sort-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--saf-space-inset-md);
+}
+.wj-columnfiltereditor .wj-sort-buttons .wj-btn,
+.wj-columnfiltereditor .wj-sort-buttons .wj-viewer .wj-control .wj-applybutton,
+.wj-viewer .wj-control .wj-columnfiltereditor .wj-sort-buttons .wj-applybutton {
+  width: 100%;
+}
+.wj-columnfiltereditor .wj-filtertype {
+  font: var(--saf-type-body-link-md-strong-standard);
+  margin: 0;
+  padding: var(--saf-space-inset-squish-md);
+}
+.wj-columnfiltereditor a {
+  color: var(--saf-color-anchor-default);
+  font-weight: inherit;
+  margin: 0;
+  padding: 0 6px;
+}
+.wj-columnfiltereditor a:hover {
+  color: var(--saf-color-anchor-hover);
+  text-decoration: 2px underline;
+}
+.wj-columnfiltereditor a:active {
+  color: var(--saf-color-anchor-active);
+}
+.wj-columnfiltereditor a:focus {
+  border-radius: var(--saf-border-radius-xs);
+  box-shadow: var(--saf-drop-shadow-focus);
+}
+.wj-columnfiltereditor a.wj-state-disabled {
+  color: var(--saf-color-text-heavy);
+}
+.wj-columnfiltereditor label,
+.wj-columnfiltereditor .wj-conditionfilter-editor > div > label,
+span[wj-part='sp-select-all'] {
+  font: var(--saf-type-body-default-md-strong-standard);
+}
+.wj-columnfiltereditor .wj-listbox-item label,
+.wj-conditionfilter-editor div[role='radiogroup'] label {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  font: var(--saf-type-body-default-md-regular);
+  gap: var(--saf-space-inline-sm);
+}
+.wj-columnfiltereditor .wj-listbox-item[role='option'] label {
+  align-items: unset;
+  gap: var(--saf-space-inline-xs);
+}
+.wj-columnfiltereditor .wj-conditionfilter-editor > div > label {
+  margin-bottom: var(--saf-space-stack-sm);
+}
+.wj-content.wj-dropdown {
+  overflow: visible;
+}
+.wj-form-control,
+.wj-dropdown-panel .wj-control,
+.wj-control .wj-input-group {
+  background: var(--saf-color-interactive-background-default);
+  border-radius: var(--saf-border-radius-xs);
+}
+.wj-control .wj-input-group:focus-within {
+  box-shadow: var(--saf-drop-shadow-focus);
+  outline: var(--saf-line-width-thin) solid var(--saf-color-line-strong);
+}
+.wj-columnfiltereditor .wj-control {
+  margin-bottom: var(--saf-space-stack-lg);
+}
+.wj-columnfiltereditor .wj-listbox-item:not([role='option']) {
+  margin-bottom: var(--saf-space-stack-md);
+}
+.wj-conditionfilter-editor div[role='radiogroup'] {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 var(--saf-space-stack-md);
+}
+.wj-columnfiltereditor .wj-control.wj-listbox {
+  height: var(--saf-flexgrid-columnfiltereditor-listbox-height);
+  margin-bottom: var(--saf-space-stack-xs);
+}
+.wj-columnfiltereditor .wj-control.wj-listbox:focus {
+  box-shadow: var(--saf-drop-shadow-focus);
+}
+.wj-columnfiltereditor .wj-valuefilter-editor,
+.wj-columnfiltereditor .wj-conditionfilter-editor {
+  margin-top: 0;
+  padding: var(--saf-space-stack-md) var(--saf-space-inline-lg) 0;
+}
+.wj-control .wj-input-group .wj-form-control {
+  font: var(--saf-type-body-default-md-regular-standard);
+  padding: var(--saf-space-inset-squish-sm);
+}
+.wj-conditionfilter-editor .wj-control {
+  margin-bottom: var(--saf-space-stack-md);
+}
+.wj-columnfiltereditor > div > div:last-child {
+  display: flex;
+  padding: 0 var(--saf-space-inline-lg) var(--saf-space-inline-lg);
+}
+.wj-columnfiltereditor > div > div:last-child > .wj-btn,
+.wj-viewer .wj-control .wj-columnfiltereditor > div > div:last-child > .wj-applybutton {
+  width: 100%;
+}
+.wj-control input[type='checkbox'],
+.wj-control input[type='radio'] {
+  appearance: none;
+  background: var(--saf-color-interactive-background-default);
+  border: var(--saf-line-width-thin) solid var(--saf-color-line-strong);
+  position: relative;
+}
+.wj-control input[type='checkbox'] {
+  border-radius: var(--saf-border-radius-xs);
+  height: var(--saf-flexgrid-checkbox-size);
+  width: var(--saf-flexgrid-checkbox-size);
+}
+.wj-control input[type='radio'] {
+  border-radius: var(--saf-border-radius-circle);
+  height: var(--saf-flexgrid-radio-size);
+  width: var(--saf-flexgrid-radio-size);
+}
+.wj-listbox .wj-listbox-item > label > input[type='checkbox'],
+.wj-control input[type='checkbox'][wj-part='cb-select-all'],
+.wj-control input[type='radio'] {
+  flex: 0 0 auto;
+  margin: 2px 0 0;
+}
+.wj-control input[type='checkbox']:checked,
+.wj-control input[type='radio']:checked {
+  background: var(--saf-color-interactive-secondary-active);
+  border: var(--saf-line-width-thin) solid var(--saf-color-interactive-secondary-active);
+}
+.wj-control input[type='checkbox']:checked {
+  color: var(--saf-color-interactive-on-secondary-active);
+}
+.wj-control input[type='checkbox']:checked::after,
+.wj-control input[type='radio']:checked::after {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.wj-control input[type='checkbox']:checked::after {
+  content: '';
+  font-family: var(--saf-flexgrid-icon-font);
+  font-size: 16px;
+  font-weight: 900;
+}
+.wj-control input[type='radio']:checked::after {
+  background: var(--saf-color-interactive-on-secondary-active);
+  border-radius: var(--saf-border-radius-circle);
+  content: '';
+  height: var(--saf-flexgrid-radio-icon-size);
+  width: var(--saf-flexgrid-radio-icon-size);
+}
+.wj-control input[type='checkbox']:hover,
+.wj-control input[type='radio']:hover {
+  background: var(--saf-color-interactive-secondary-hover);
+  border: var(--saf-line-width-thick) solid var(--saf-color-interactive-on-secondary-hover);
+}
+.wj-control input[type='checkbox']:hover {
+  color: var(--saf-color-interactive-on-secondary-hover);
+}
+.wj-control input[type='radio']:hover::after {
+  background: var(--saf-color-interactive-on-secondary-hover);
+}
+.wj-control input[type='checkbox']:focus,
+.wj-control input[type='radio']:focus {
+  box-shadow: var(--saf-drop-shadow-focus);
+}
+.wj-flexgrid .wj-cell label input[type='checkbox'] {
+  margin: var(--saf-flexgrid-checkbox-margin);
+}
+.wj-cells .wj-cell.wj-state-multi-selected,
+.wj-flexsheet .wj-cell.wj-state-multi-selected {
+  background: var(--saf-flexgrid-color-background-marquee);
+  border-bottom-color: var(--saf-color-line-strong);
+  border-right-color: var(--saf-color-line-strong);
+  color: var(--saf-color-text-knockout);
+}
+.wj-cell.wj-state-multi-selected .wj-glyph-down::before,
+.wj-cell.wj-state-multi-selected .wj-glyph-up::before {
+  color: var(--saf-color-text-knockout);
+}
+.wj-cells .wj-cell.wj-state-selected {
+  background: var(--saf-color-interactive-background-default);
+  box-shadow:
+    0 0 0 1px var(--saf-color-interactive-secondary-active),
+    inset 0 0 0 1px var(--saf-color-interactive-secondary-active);
+  color: var(--saf-color-interactive-secondary-active);
+}
+.wj-flexgrid .wj-cell.wj-state-multi-selected a,
+.wj-flexgrid .wj-cell.wj-state-multi-selected a:hover,
+.wj-flexgrid .wj-cell.wj-state-multi-selected a:active,
+.wj-flexgrid .wj-cell.wj-state-multi-selected a:visited {
+  color: var(--saf-color-text-knockout);
+}
+.wj-cell.wj-state-multi-selected input[type='checkbox']:checked {
+  background: var(--saf-color-interactive-background-default);
+  border: var(--saf-line-width-thin) solid var(--saf-color-interactive-secondary-active);
+}
+.wj-cell.wj-state-multi-selected input[type='checkbox']:checked::after {
+  color: var(--saf-color-interactive-secondary-active);
+} /*# sourceMappingURL=wijmo.css.map */

@@ -1,0 +1,93 @@
+{
+  "featurePermissions": [
+    {
+      "feature": "APPLICATION",
+      "resourcePermissions": [
+        {
+          "resource": "ShopAIAssist APPLICATION ADMIN",
+          "permission": "Deny"
+        },
+        {
+          "resource": "SUPPRESS FEATURES ADMIN ZW",
+          "permission": "Deny"
+        },
+        {
+          "resource": "PRDCT ShopAIAssistCORE US",
+          "permission": "Grant"
+        },
+        {
+          "resource": "PRDCT ShopAIAssistCORE UK",
+          "permission": "Deny"
+        },
+        {
+          "resource": "PRDCT ShopAIAssistCORE CA",
+          "permission": "Deny"
+        },
+        {
+          "resource": "PRDCT ShopAIAssistCORE AU",
+          "permission": "Deny"
+        },
+        {
+          "resource": "PRDCT COCODRAFT",
+          "permission": "Deny"
+        },
+        {
+          "resource": "COCODRAFT AI ASSISTANT US",
+          "permission": "Deny"
+        },
+        {
+          "resource": "ShopAIAssist VIEW DATABASE ACCESS",
+          "permission": "Grant"
+        },
+        {
+          "resource": "ShopAIAssist CREATE DATABASE ACCESS",
+          "permission": "Grant"
+        },
+        {
+          "resource": "ShopAIAssist SHARE DATABASE ACCESS",
+          "permission": "Deny"
+        },
+        {
+          "resource": "SUMMARIZE SKILL",
+          "permission": "Grant"
+        },
+        {
+          "resource": "SEARCH A DATABASE SKILL",
+          "permission": "Grant"
+        },
+        {
+          "resource": "REVIEW DOCUMENTS SKILL",
+          "permission": "Grant"
+        },
+        {
+          "resource": "GENERATE TIMELINE SKILL",
+          "permission": "Deny"
+        },
+        {
+          "resource": "EXTRACT CONTRACT DATA SKILL",
+          "permission": "Deny"
+        },
+        {
+          "resource": "DRAFT CORRESPONDENCE SKILL",
+          "permission": "Grant"
+        },
+        {
+          "resource": "DEPOSITION QUESTIONS SKILL",
+          "permission": "Deny"
+        },
+        {
+          "resource": "CONTRACT POLICY COMPLIANCE SKILL",
+          "permission": "Deny"
+        },
+        {
+          "resource": "AI RESEARCH",
+          "permission": "Grant"
+        },
+        {
+          "resource": "COCODRAFT DRAFT A CLAUSE SKILL US",
+          "permission": "Deny"
+        }
+      ]
+    }
+  ]
+}

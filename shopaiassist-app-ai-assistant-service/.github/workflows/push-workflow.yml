@@ -1,0 +1,15 @@
+name: Push Workflow
+
+on:
+  push:
+    branches:
+    - develop
+    - 'release/**'
+
+jobs:
+  ci:
+    uses: tr/a209047_osdo-cnf-cicd-workflows/.github/workflows/poetry-common-ci-template.yml@feature/a208767
+    with:
+      ARTIFACTORY_DOCKER_HOST: "tr1-docker-local.jfrog.io"
+      ARTIFACTORY_DOCKER_REPO: "a208767/assisvc"
+    secrets: inherit

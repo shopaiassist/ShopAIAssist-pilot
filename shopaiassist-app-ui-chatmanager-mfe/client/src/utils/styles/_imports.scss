@@ -1,0 +1,24 @@
+// Define the z-index map globally (before other imports)
+$z-index-map: (
+  'deep-dive': -9999,
+  'z-index-auto': auto,
+  'default': 1,
+  'hover': 2,
+  'active': 3,
+  'focus': 4,
+  'dropdown': 1000,
+  'sticky': 1100,
+  'fixed': 1200,
+  'backdrop-side-nav': 1300,
+  'side-nav': 1400,
+  'overlay': 1500,
+  'dialog': 1800,
+  'tooltip': 1900,
+  'tooltip-focus': 1899,
+  'loader-progress-ring': 2000,
+  'alert-toast': 2100
+);
+
+@import './node_modules/@on/core-styles/dist/tokens/_variables.scss';
+@import './node_modules/@on/core-styles/dist/scss/_z-index.scss';
+@import './functions'

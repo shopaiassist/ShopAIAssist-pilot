@@ -1,0 +1,15 @@
+.menu-item {
+   .chat-or-folder-saf-menu-divider {
+      width: 90%;
+      margin-top: 0.25rem;
+      margin-bottom: 0.25rem;
+   }
+
+   .chat-or-folder-saf-menu-item {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+      align-items: baseline;
+      width: max-content;
+   }
+}

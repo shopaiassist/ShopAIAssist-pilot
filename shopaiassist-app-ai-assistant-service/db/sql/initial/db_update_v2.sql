@@ -1,0 +1,1 @@
+INSERT INTO ct_ai_assistantdb.tb_organization (org_id, org_name) VALUES (3, 'Trust Tax');

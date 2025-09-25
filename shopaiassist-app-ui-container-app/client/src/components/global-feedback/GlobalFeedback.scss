@@ -1,0 +1,66 @@
+@import '../../utils/styles/imports';
+
+#feedback-dialog::part(control) {  
+  width: 500px;
+  max-height: 500px;
+  max-width: 500px;
+}
+
+#feedback-dialog::part(overlay) {
+  background-color: $saf-color-background-default !important;
+}
+
+@media (width >= 340px) and (height >= 276px) {
+  #feedback-dialog::part(control) {
+    width: calc(100vw - var(--saf-spacing-16)) !important;
+  }
+}
+
+.feedback-prompt {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 600px;
+  z-index: 1500;
+  max-width: 643px;
+
+  .feedback-prompt__updown {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .comment_textarea {
+    resize: none;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+
+    .button-controls {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .sending-completed {
+      display: flex;
+    }
+
+    .download-transcript {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+  
+      span {
+        margin-right: 5px;
+      }
+    }
+  }
+
+
+  
+}

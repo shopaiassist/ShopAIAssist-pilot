@@ -1,0 +1,203 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChatList Tests render should render 1`] = `
+<div
+  class="chat-list-container"
+>
+  <div
+    class="chat-list"
+  >
+    <div>
+      <div
+        class="timeframe-text"
+      >
+        Past 7 Days
+      </div>
+      <div
+        class="chat-or-folder-item-container"
+      >
+        <div
+          class="selectable-item"
+          data-testid="folder-9a4144e0-65ea-4f6c-8cd5-43a0a6d1e634-selectable"
+        >
+          <div
+            appearance="light"
+            class="chat-or-folder-icon"
+            iconname="folder"
+            size="16"
+          />
+          <span
+            appearance="body-strong-md"
+            id="chat-text-9a4144e0-65ea-4f6c-8cd5-43a0a6d1e634"
+          >
+            Test Folder For Created At 2
+          </span>
+        </div>
+        <div
+          class="chat-or-folder-menu"
+        >
+          <div
+            class="selectable-item selectable-icon"
+            data-testid="folder-9a4144e0-65ea-4f6c-8cd5-43a0a6d1e634-option-menu"
+          >
+            <div
+              iconname="ellipsis-vertical"
+              size="24"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="chat-or-folder-item-container"
+      >
+        <div
+          class="selectable-item"
+          data-testid="folder-5aa13d2b-3f04-4a91-a84b-bf214420b47c-selectable"
+        >
+          <div
+            appearance="light"
+            class="chat-or-folder-icon"
+            iconname="folder"
+            size="16"
+          />
+          <span
+            appearance="body-strong-md"
+            id="chat-text-5aa13d2b-3f04-4a91-a84b-bf214420b47c"
+          >
+            Test Folder For Created At 2
+          </span>
+        </div>
+        <div
+          class="chat-or-folder-menu"
+        >
+          <div
+            class="selectable-item selectable-icon"
+            data-testid="folder-5aa13d2b-3f04-4a91-a84b-bf214420b47c-option-menu"
+          >
+            <div
+              iconname="ellipsis-vertical"
+              size="24"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="chat-or-folder-item-container"
+      >
+        <div
+          class="selectable-item"
+          data-testid="chat-e35607c7-be8f-4172-a3cd-ae7e39bc2b96-selectable"
+        >
+          <div
+            appearance="light"
+            class="chat-or-folder-icon"
+            iconname="message-lines"
+            size="16"
+          />
+          <span
+            appearance="body-strong-md"
+            id="chat-text-e35607c7-be8f-4172-a3cd-ae7e39bc2b96"
+          >
+            A chat named desire
+          </span>
+        </div>
+        <div
+          class="chat-or-folder-menu"
+        >
+          <div
+            class="selectable-item selectable-icon"
+            data-testid="chat-e35607c7-be8f-4172-a3cd-ae7e39bc2b96-option-menu"
+          >
+            <div
+              iconname="ellipsis-vertical"
+              size="24"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        class="timeframe-text"
+      >
+        Past 30 Days
+      </div>
+      <div
+        class="chat-or-folder-item-container"
+      >
+        <div
+          class="selectable-item"
+          data-testid="folder-4c484fb3-faf6-4fe8-9930-410772f141d7-selectable"
+        >
+          <div
+            appearance="light"
+            class="chat-or-folder-icon"
+            iconname="folder"
+            size="16"
+          />
+          <span
+            appearance="body-strong-md"
+            id="chat-text-4c484fb3-faf6-4fe8-9930-410772f141d7"
+          >
+            New Folder 100
+          </span>
+        </div>
+        <div
+          class="chat-or-folder-menu"
+        >
+          <div
+            class="selectable-item selectable-icon"
+            data-testid="folder-4c484fb3-faf6-4fe8-9930-410772f141d7-option-menu"
+          >
+            <div
+              iconname="ellipsis-vertical"
+              size="24"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        class="timeframe-text"
+      >
+        February 2024
+      </div>
+      <div
+        class="chat-or-folder-item-container"
+      >
+        <div
+          class="selectable-item"
+          data-testid="folder-8c1b78b3-a798-4557-871a-bff6c8ac804e-selectable"
+        >
+          <div
+            appearance="light"
+            class="chat-or-folder-icon"
+            iconname="folder"
+            size="16"
+          />
+          <span
+            appearance="body-strong-md"
+            id="chat-text-8c1b78b3-a798-4557-871a-bff6c8ac804e"
+          >
+            new2
+          </span>
+        </div>
+        <div
+          class="chat-or-folder-menu"
+        >
+          <div
+            class="selectable-item selectable-icon"
+            data-testid="folder-8c1b78b3-a798-4557-871a-bff6c8ac804e-option-menu"
+          >
+            <div
+              iconname="ellipsis-vertical"
+              size="24"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

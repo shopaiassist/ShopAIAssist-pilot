@@ -1,0 +1,49 @@
+@import "../../../../utils/styles/imports";
+
+.matter-sidebar-footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.3rem;
+    
+
+    &-separator {
+        border: 0;
+        border-bottom: 1px solid $saf-color-gray-200;
+        margin: 1rem 0;
+        width: 100%;
+    }
+
+    .matter-sidebar-archived-matters-selectable {
+        width: 100%;
+
+        &-section {
+           display: flex;
+        }
+
+        &-item {
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           width: 100%;
+        }
+
+        &-icon {
+           margin-right: 0.4rem;
+        }
+     }
+
+    .matter-sidebar-footer-button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 0.5rem;
+        padding: 0.5rem;
+        justify-content: center;
+    }
+
+    .matter-settings-button {
+        width: fit-content;
+    }
+}

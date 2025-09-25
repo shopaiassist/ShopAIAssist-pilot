@@ -1,0 +1,736 @@
+@forward '../tokens/variables.css';
+@use 'sass:color';
+
+/*!
+    *
+    * Wijmo Library 5.20232.939
+    * https://developer.mescius.com/wijmo
+    *
+    * Copyright(c) MESCIUS inc. All rights reserved.
+    *
+    * Licensed under the End-User License Agreement For MESCIUS Wijmo Software.
+    * us.sales@mescius.com
+    * https://developer.mescius.com/wijmo/licensing
+    *
+    */
+
+/*!
+    *
+    * Saffron theme for Wijmo
+    *
+    */
+
+/* ------------------------------
+ * Wijmo variable overrides
+ * ------------------------------ */
+
+ /* Content variables */
+$wj-bkg: var(--saf-color-interactive-background-default) !default; // content background
+$wj-txt: var(--saf-color-interactive-on-secondary-default) !default; // content foreground
+$wj-bdr-clr: var(--saf-color-line-strong) !default; // content border color
+$wj-bdr-wid: var(--saf-line-width-thin) !default; // content border width
+$wj-bdr: $wj-bdr-wid solid $wj-bdr-clr !default; // content border
+$wj-bdr-rad: 0 !default; // content border radius
+$wj-box-shadow: var(--saf-drop-shadow-level-2) !default; // box shadow for drop-downs/dialogs
+$wj-invalid: var(--saf-color-status-error-strong) !default; // invalid state markers
+$wj-item-pdg: var(--saf-space-inset-squish-md) !default; // item padding (listbox items, grid cells, etc)
+$wj-item-hvr: var(--saf-color-interactive-secondary-hover) !default; // item hover
+// $wj-tdn-focus: .4s !default; // focus/hover transition duration
+$wj-disabled-opacity: 1 !default; // opacity for disabled controls/items
+$wj-disabled-bkg: var(--saf-color-interactive-disabled-subtle) !default; // background for disabled controls/items
+
+/* Header variables */
+$wj-hdr-bkg: var(--saf-flexgrid-color-background-header) !default; // header element background
+$wj-hdr-hvr: var(--saf-flexgrid-color-background-header-hover) !default; // header element hover background
+$wj-hdr-txt: var(--saf-color-interactive-on-secondary-default) !default; // header element foreground
+
+/* Button variables */
+$wj-btn-bkg: var(--saf-color-interactive-tertiary-default) !default; // button background
+$wj-btn-hvr: var(--saf-color-interactive-tertiary-hover) !default; // button hover background
+$wj-btn-txt: var(--saf-color-interactive-on-tertiary-default) !default; // button text
+$wj-btn-grp-bdr: var(--saf-line-width-thin) solid #fff0 !default; // button group border
+
+/* Selection variables */
+$wj-sel-bkg: var(--saf-color-interactive-secondary-active) !default; // selected element background
+$wj-sel-txt: var(--saf-color-interactive-on-secondary-active) !default; // selected element foreground
+$wj-msel-bkg: var(--saf-color-interactive-secondary-active) !default; // extended selection background
+$wj-msel-bkg: var(--saf-flexgrid-color-background-marquee) !default; // extended selection background
+$wj-msel-txt: var(--saf-color-interactive-on-secondary-default) !default; // extended selection foreground
+$wj-accent-bkg: $wj-sel-bkg !default; // accent background (like drag markers)
+$wj-accent-txt: $wj-sel-txt !default; // accent background (like drag markers)
+
+/* Cell variables */
+$wj-cell: $wj-bkg !default; // cell background
+$wj-cell-alt: var(--saf-flexgrid-color-background-alt-rows) !default; // alternating cell background
+$wj-cell-frz: null !default; // frozen cell background
+$wj-cell-frz-alt: null !default; // alternating frozen cell background
+$wj-cell-frz-txt: $wj-txt !default; // frozen cell foreground
+$wj-cell-pdg: $wj-item-pdg !default; // cell padding
+$wj-cell-bdr-clr: var(--saf-color-line-strong) !default; // cell border color
+$wj-cell-bdr: var(--saf-line-width-thin) solid $wj-cell-bdr-clr !default; // cell border
+$wj-cell-bdr-vrt: $wj-cell-bdr !default; // cell vertical border
+$wj-cell-bdr-hrz: $wj-cell-bdr !default; // cell horizontal border
+$wj-cell-grp-bkg: $wj-hdr-bkg !default; // group row background
+$wj-cell-grp-txt: $wj-hdr-txt !default; // group row foreground
+$wj-cell-frz-bdr-clr: $wj-cell-bdr-clr !default; // frozen cell border color
+$wj-cell-frz-bdr: var(--saf-line-width-thin) solid $wj-cell-frz-bdr-clr !default; // frozen cell border
+$wj-cell-frz-bdr-vrt: $wj-cell-frz-bdr !default; // frozen area vertical border
+$wj-cell-frz-bdr-hrz: $wj-cell-frz-bdr !default; // frozen area horizontal border
+
+/* Tooltip variables */
+$wj-tooltip: var(--saf-color-interactive-primary-default) !default; // tooltip background
+$wj-tooltip-txt: var(--saf-color-interactive-on-primary-default) !default; // tooltip text
+$wj-error-tooltip: var(--saf-color-status-error-strong) !default; // error tooltip background
+$wj-error-tooltip-txt: var(--saf-color-text-knockout) !default; // error tooltip text
+
+/* Background gradient variables */
+$wj-bkg-grd: false !default; // content background gradient
+$wj-btn-grd: false !default; // button background gradient
+$wj-hdr-grd: false !default; // header background gradient
+$wj-input-grd: false !default; // input element background gradient
+
+/* Set variables */
+
+/* Apply variables */
+@import '../../../../node_modules/@grapecity/wijmo.styles/wijmo';
+
+/* ------------------------------
+ * Saffron variables
+ * ------------------------------ */
+
+ /* Saffron variables */
+.wj-flexgrid,
+.wj-flexsheet,
+.wj-columnfiltereditor {
+	--saf-flexgrid-checkbox-size: 20px;
+	--saf-flexgrid-checkbox-margin: 2px 4px 0px 0px;
+	--saf-flexgrid-cell-font: var(--saf-type-body-default-md-regular-standard);
+	--saf-flexgrid-cell-padding: var(--saf-space-inset-squish-md);
+	--saf-flexgrid-columnfiltereditor-listbox-height: 250px; // show 6 items
+	--saf-flexgrid-header-cell-font: var(--saf-type-body-default-md-strong-standard);
+	--saf-flexgrid-icon-font: "Font Awesome 6 Pro", "Helvetica Neue", arial, sans-serif;
+	--saf-flexgrid-icon-button-size: 32px;
+	--saf-flexgrid-listbox-item-size: 40px;
+	--saf-flexgrid-radio-size: 20px;
+	--saf-flexgrid-radio-icon-size: 6px;
+}
+
+/* Saffron compact variables */
+.wj-flexgrid.saf-flexgrid--compact,
+.wj-flexsheet.saf-flexgrid--compact {
+	--saf-flexgrid-cell-font: var(--saf-type-body-default-md-regular-compact);
+	--saf-flexgrid-cell-padding: calc(var(--saf-space-inset-xxs) - 0.5px) var(--saf-space-inset-md);
+	--saf-flexgrid-checkbox-margin: 1px 0px 0px 0px;
+	--saf-flexgrid-header-cell-font: var(--saf-type-body-default-md-strong-compact);
+	--saf-flexgrid-icon-button-size: 24px;
+}
+
+/* ------------------------------
+ * Wijmo class overrides
+ * ------------------------------ */
+
+.wj-flexsheet {
+	// same bg for both grid and sheet
+	background: $wj-bkg;
+}
+
+/* List styles with borders turned off by default, on for flexsheet */
+.wj-flexgrid.wj-content:not(.wj-flexsheet),
+.wj-flexgrid:not(.wj-flexsheet) .wj-rowheaders .wj-header[aria-selected] {
+    border-left: none;
+    border-right: none;
+}
+
+.wj-flexgrid:not(.wj-flexsheet) .wj-cell:not(.wj-header),
+.wj-flexgrid .wj-cell:not(.wj-header):last-child,
+.wj-flexsheet .wj-colheaders .wj-header:last-child {
+	border-right: none;
+}
+
+.wj-flexgrid .wj-row:last-child .wj-cell:not(.wj-header),
+.wj-flexgrid .wj-rowheaders .wj-row:last-child .wj-cell {
+	border-bottom: none;
+}
+
+.wj-flexgrid:not(.wj-flexsheet) .wj-topleft .wj-header:first-of-type,
+.wj-flexgrid:not(.wj-flexsheet) .wj-rowheaders .wj-header { 
+	// keep border on first header cell
+	// keep border when first column contain row headers but not checkbox selection
+	border-left: $wj-bdr;
+}
+
+.wj-flexgrid:not(.wj-flexsheet) .wj-rowheaders .wj-header[aria-selected] {
+	// reset bg to default on checkbox selection column
+    background: $wj-bkg;
+}
+
+.wj-flexgrid:not(.wj-flexsheet) .wj-rowheaders .wj-header-alt[aria-selected] {
+	// add alt row styling to checkbox selection row headers
+	background: $wj-cell-alt;
+}
+
+/* Rows */
+.wj-row:last-child .wj-cell:not(.wj-header), 
+.wj-rowheaders .wj-row:last-child .wj-cell {
+	// remove extra border from last row
+	border-bottom: none; 
+}
+
+/* Header cells */
+.wj-header.wj-cell {
+	align-content: center;
+	font: var(--saf-flexgrid-header-cell-font);
+}
+
+.wj-colheaders:not(.wj-rowheaders) .wj-header.wj-cell {
+	padding-bottom: var(--saf-space-stack-xs);
+	padding-top: var(--saf-space-stack-xs);
+}
+
+.wj-topleft .wj-header.wj-cell {
+	display: inline-grid;
+	place-content: center;
+  }
+
+.wj-header:hover {
+	background: var(--saf-flexgrid-color-background-header-hover);
+}
+
+.wj-header[aria-sort='ascending'],
+.wj-header[aria-sort='descending'],
+.wj-header.wj-state-dragsrc {
+	background: var(--saf-flexgrid-color-background-header-current-sort);
+}
+
+/* Body cells */
+.wj-cell {
+	font: var(--saf-flexgrid-cell-font);
+	padding: var(--saf-flexgrid-cell-padding);
+}
+
+.wj-cell[aria-readonly="true"],
+.wj-cell.wj-state-readonly {
+	background: var(--saf-color-interactive-read-only-subtle);
+}
+
+.wj-cell:not([aria-readonly="true"], .wj-state-readonly, .wj-state-selected, .wj-state-multi-selected, .wj-header):hover {
+	background-color: var(--saf-color-interactive-secondary-hover);
+}
+
+.wj-flexgrid .wj-grid-editor {
+	// match font to grid cell
+	font: inherit;
+}
+
+/* Links */
+.wj-flexgrid a,
+.wj-flexgrid a:hover,
+.wj-flexgrid a:active,
+.wj-flexgrid a:visited {
+	// all links to use this color token to pass color contrast on different background states
+	color: var(--saf-color-anchor-active);
+	font: var(--saf-type-body-link-md-regular-standard);
+}
+
+.wj-flexgrid a:focus {
+	border-radius: var(--saf-border-radius-xs);
+	box-shadow: var(--saf-drop-shadow-focus);
+}
+
+
+/* Buttons */
+
+// Apply button in filter dropdown with primary styles
+.wj-columnfiltereditor.wj-control .wj-btn[wj-part="btn-apply"] {
+	background: var(--saf-color-interactive-primary-default);
+	border-color: var(--saf-color-interactive-on-primary-default);
+	color: var(--saf-color-interactive-on-primary-default);
+}
+
+// Default buttons used in grid have secondary styles
+// Does not account for CellMaker.makeButtons method
+.wj-cell button:not(.wj-btn-default, .wj-btn-glyph),
+.wj-control button.wj-btn:not(.wj-btn-default, .wj-btn-glyph) {
+	align-items: center;
+	background: var(--saf-color-interactive-secondary-default);
+    border: var(--saf-line-width-thin) solid var(--saf-color-interactive-on-secondary-default);
+	border-radius: var(--saf-border-radius-xs);
+	box-sizing: border-box;
+    color: var(--saf-color-interactive-on-secondary-default);
+	display: flex;
+	font: var(--saf-type-body-default-md-strong-standard);
+	justify-content: center;
+	position: relative;
+    text-align: left;
+}
+
+.wj-control button.wj-btn:not(.wj-btn-default, .wj-btn-glyph) {
+	padding: var(--saf-space-inset-squish-md);
+}
+
+.wj-cell button:not(.wj-btn-default, .wj-btn-glyph):hover::after,
+.wj-control .wj-btn:not(.wj-btn-default, .wj-btn-glyph):hover::after {
+	// using ::after to apply styles on hover so ::before can be used to place icons
+	border: var(--saf-line-width-thick) solid var(--saf-color-interactive-on-primary-hover);
+	border-radius: var(--saf-border-radius-xs);
+	content: '';
+	height: calc(100% - 2px);
+	left: -1px;
+	position: absolute;
+	top: -1px;
+	width: calc(100% - 2px);
+}
+
+.wj-cell button:not(.wj-btn-default, .wj-btn-glyph):hover,
+.wj-control .wj-btn:not(.wj-btn-default, .wj-btn-glyph):hover {
+	background: var(--saf-color-interactive-secondary-hover);
+	color: var(--saf-color-interactive-on-primary-hover);
+}
+
+.wj-cell button:not(.wj-btn-default, .wj-btn-glyph):active,
+.wj-control .wj-btn:not(.wj-btn-default, .wj-btn-glyph):active {
+	background: var(--saf-color-interactive-secondary-active);
+	border-color: var(--saf-color-interactive-secondary-active);
+	color: var(--saf-color-interactive-on-secondary-active);
+}
+
+.wj-cell button:not(.wj-btn-default, .wj-btn-glyph):active:focus,
+.wj-control .wj-btn:not(.wj-btn-default, .wj-btn-glyph):active:focus {
+	border-color: var(--saf-color-interactive-on-secondary-default);
+	box-shadow: var(--saf-drop-shadow-focus);
+}
+
+.wj-cell button:not(.wj-btn-default, .wj-btn-glyph):disabled,
+.wj-control .wj-btn:not(.wj-btn-default, .wj-btn-glyph):disabled,
+.wj-columnfiltereditor.wj-control .wj-btn[wj-part="btn-apply"]:disabled {
+	background: var(--saf-color-interactive-disabled-subtle);
+	border-color: var(--saf-color-interactive-disabled-subtle);
+	color: var(--saf-color-interactive-on-disabled-subtle);
+}
+
+.wj-control .wj-btn:focus {
+	box-shadow: var(--saf-drop-shadow-focus);
+}
+
+// Icon buttons (e.g., filter and dropdown)
+.wj-flexgrid .wj-cell .wj-btn.wj-btn-glyph {
+	background: var(--saf-color-interactive-tertiary-default);
+    color: var(--saf-color-interactive-on-tertiary-default);
+	font: var(--saf-type-icon-default-md);
+	height: 100%;
+	opacity: 1;
+	padding: 0;
+}
+
+.wj-flexgrid .wj-cell .wj-btn.wj-btn-glyph.wj-elem-dropdown {
+	padding-inline-start: var(--saf-space-inline-md);
+}
+
+// Header cell filter button and clear button in filter dropdown with tertiary styles
+.wj-flexgrid .wj-cell .wj-btn.wj-btn-glyph.wj-elem-filter,
+.wj-columnfiltereditor.wj-control .wj-btn[wj-part="btn-clear"] {
+	background: var(--saf-color-interactive-tertiary-default);
+	border: var(--saf-line-width-thin) solid #fff0;
+	color: var(--saf-color-interactive-on-tertiary-default);
+}
+
+.wj-flexgrid .wj-cell .wj-btn.wj-btn-glyph.wj-elem-filter {
+	border-radius: var(--saf-border-radius-xs);
+	border-width: var(--saf-line-width-thick);
+	float: none;
+    height: var(--saf-flexgrid-icon-button-size);
+	margin-inline-end: var(--saf-space-inline-xs);
+    min-width: var(--saf-flexgrid-icon-button-size);
+}
+
+.wj-flexgrid .wj-cell .wj-btn.wj-btn-glyph.wj-elem-filter:hover,
+.wj-columnfiltereditor.wj-control .wj-btn[wj-part="btn-clear"]:hover {
+	background: var(--saf-color-interactive-tertiary-hover);
+	border-color: var(--saf-color-interactive-on-tertiary-hover);
+	color: var(--saf-color-interactive-on-tertiary-hover);
+}
+
+.wj-flexgrid .wj-cell .wj-btn.wj-btn-glyph.wj-elem-filter:focus {
+	background: var(--saf-color-interactive-background-default);
+	border-color: var(--saf-color-interactive-focus);
+}
+
+.wj-flexgrid .wj-cell .wj-btn.wj-btn-glyph.wj-elem-filter:active,
+.wj-flexgrid .wj-cell .wj-btn.wj-btn-glyph.wj-elem-filter[aria-expanded="true"] {
+	background: var(--saf-color-interactive-tertiary-active);
+	border: var(--saf-line-width-thin) solid var(--saf-color-interactive-on-tertiary-active);
+	color: var(--saf-color-interactive-on-tertiary-active);
+}
+
+.wj-columnfiltereditor.wj-control .wj-btn[wj-part="btn-clear"]::before {
+	// arrow-rotate
+	content: '\f021';
+    font-family: var(--saf-flexgrid-icon-font);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: normal;
+	margin-right: var(--saf-space-inline-sm);
+}
+
+// Button in select in Filter by condition dropdown
+.wj-control .wj-input-group-btn > .wj-btn.wj-btn-default:hover {
+	// remove hover background styles
+	background: #fff0;
+}
+
+/* Glyphs - replace with FA icon unicodes */
+.wj-glyph-down, 
+.wj-glyph-up,
+.wj-glyph-filter {
+	border: none;
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: auto;
+}
+
+.wj-glyph-filter {
+	top: 1px;
+	width: 100%;
+}
+
+.wj-glyph-down::before,
+.wj-glyph-up::before,
+.wj-glyph-filter::before {
+	color: var(--saf-color-interactive-on-secondary-default);
+	font-family: var(--saf-flexgrid-icon-font);
+	font-size: 12px;
+	font-weight: 900;
+	line-height: normal;
+}
+
+.wj-glyph-down::before {
+	// chevron-down - used in .wj-elem-dropdown select controls
+	content: '\f078';
+}
+
+.wj-glyph-up::before {
+	// chevron-up - used in .wj-elem-dropdown select controls
+	content: '\f077';
+}
+
+.wj-glyph-filter::before {
+	// filter - used in filter button in header cells
+	content: '\f0b0';
+	font-size: 16px;
+	font-weight: 300;
+}
+
+.wj-glyph-filter::after {
+	display: none;
+}
+
+/* Listbox */
+.wj-dropdown-panel,
+.wj-listbox {
+	padding: var(--saf-space-inset-xxs);
+}
+
+.wj-dropdown-panel.wj-grid-listbox {
+	// match border radius with select when inside grid cell
+	border-radius: 0;
+}
+
+.wj-listbox .wj-listbox-item {
+    min-height: var(--saf-flexgrid-listbox-item-size);
+	padding: var(--saf-space-inset-squish-sm);
+	position: relative;
+}
+
+.wj-listbox .wj-listbox-item::before {
+	border: var(--saf-line-width-thick) solid #fff0;
+	border-radius: var(--saf-border-radius-xs);
+	content: '';
+	inset: -1px;
+	position: absolute;
+}
+
+.wj-listbox .wj-listbox-item.wj-state-selected {
+	background: var(--saf-color-interactive-tertiary-active);
+    color: var(--saf-color-interactive-on-tertiary-active);
+}
+
+.wj-listbox .wj-listbox-item.wj-state-selected::before {
+	border-color: var(--saf-color-interactive-on-tertiary-active);
+}
+
+.wj-listbox .wj-listbox-item:not(.wj-state-selected, .wj-state-disabled, .wj-separator):hover,
+.wj-listbox .wj-listbox-item.wj-state-selected:hover {
+	background: var(--saf-color-interactive-tertiary-hover);
+    color: var(--saf-color-interactive-on-tertiary-hover);
+}
+
+.wj-listbox .wj-listbox-item:not(.wj-state-selected, .wj-state-disabled, .wj-separator):hover::before,
+.wj-listbox .wj-listbox-item.wj-state-selected:hover::before {
+	border-color: var(--saf-color-interactive-on-tertiary-hover);
+}
+
+.wj-columnfiltereditor + .wj-dropdown-panel.wj-listbox {
+    border-radius: var(--saf-border-radius-xs);
+}
+
+/* Column filter editor */
+.wj-content.wj-columnfiltereditor {
+    border-radius: var(--saf-border-radius-sm);
+	/* stylelint-disable-next-line declaration-no-important */
+	min-width: 320px !important; // to override inline style
+}
+
+// Sort by ascending/descending buttons
+.wj-columnfiltereditor .wj-sort-buttons {
+	display: flex;
+	justify-content: space-between;
+	padding: var(--saf-space-inset-md);
+}
+
+.wj-columnfiltereditor .wj-sort-buttons .wj-btn {
+	width: 100%;
+}
+
+// Filter type links
+.wj-columnfiltereditor .wj-filtertype {
+	font: var(--saf-type-body-link-md-strong-standard);
+	margin: 0;
+	padding: var(--saf-space-inset-squish-md);
+}
+
+.wj-columnfiltereditor a {
+	color: var(--saf-color-anchor-default);
+	font-weight: inherit;
+	margin: 0;
+	padding: 0 6px;
+}	
+
+.wj-columnfiltereditor a:hover {
+	color: var(--saf-color-anchor-hover);
+	text-decoration: 2px underline;
+}
+
+.wj-columnfiltereditor a:active {
+	color: var(--saf-color-anchor-active);
+}
+
+.wj-columnfiltereditor a:focus {
+	border-radius: var(--saf-border-radius-xs);
+	box-shadow: var(--saf-drop-shadow-focus);
+}
+
+.wj-columnfiltereditor a.wj-state-disabled {
+	color: var(--saf-color-text-heavy);
+}
+
+// Labels
+.wj-columnfiltereditor label,
+.wj-columnfiltereditor .wj-conditionfilter-editor > div > label,
+span[wj-part="sp-select-all"] {
+	font: var(--saf-type-body-default-md-strong-standard);
+}
+
+.wj-columnfiltereditor .wj-listbox-item label,
+.wj-conditionfilter-editor div[role='radiogroup'] label {
+	align-items: center;
+	display: flex;
+	flex: 0 0 auto;
+	font: var(--saf-type-body-default-md-regular);
+	gap: var(--saf-space-inline-sm);
+}
+
+.wj-columnfiltereditor .wj-listbox-item[role='option'] label {
+	align-items: unset;
+	gap: var(--saf-space-inline-xs);
+}
+
+.wj-columnfiltereditor .wj-conditionfilter-editor > div > label {
+	margin-bottom: var(--saf-space-stack-sm);
+}
+
+// Form controls
+.wj-content.wj-dropdown {
+	// override overflow to allow focus states to display
+	overflow: visible;
+}
+
+.wj-form-control,
+.wj-dropdown-panel .wj-control,
+.wj-control .wj-input-group {
+	background: var(--saf-color-interactive-background-default);
+	border-radius: var(--saf-border-radius-xs);
+}
+
+.wj-control .wj-input-group:focus-within {
+	box-shadow: var(--saf-drop-shadow-focus);
+	outline: $wj-bdr;
+}
+
+.wj-columnfiltereditor .wj-control {
+	margin-bottom: var(--saf-space-stack-lg);
+}
+
+.wj-columnfiltereditor .wj-listbox-item:not([role='option']) {
+	margin-bottom: var(--saf-space-stack-md);
+}
+
+.wj-conditionfilter-editor div[role='radiogroup'] {
+	display: flex;
+	justify-content: center;
+	margin: 0 0 var(--saf-space-stack-md);
+}
+
+.wj-columnfiltereditor .wj-control.wj-listbox {
+	height: var(--saf-flexgrid-columnfiltereditor-listbox-height);
+	margin-bottom: var(--saf-space-stack-xs);
+}
+
+.wj-columnfiltereditor .wj-control.wj-listbox:focus {
+	box-shadow: var(--saf-drop-shadow-focus);
+}
+
+.wj-columnfiltereditor .wj-valuefilter-editor,
+.wj-columnfiltereditor .wj-conditionfilter-editor {
+	margin-top: 0;
+	padding: var(--saf-space-stack-md) var(--saf-space-inline-lg) 0;
+}
+
+.wj-control .wj-input-group .wj-form-control {
+    font: var(--saf-type-body-default-md-regular-standard);
+	padding: var(--saf-space-inset-squish-sm);
+}
+
+.wj-conditionfilter-editor .wj-control {
+    margin-bottom: var(--saf-space-stack-md);
+}
+
+// Button bar
+.wj-columnfiltereditor > div > div:last-child {
+	display: flex;
+	padding: 0 var(--saf-space-inline-lg) var(--saf-space-inline-lg);
+}
+
+.wj-columnfiltereditor > div > div:last-child > .wj-btn {
+	width: 100%;
+}
+
+/* Checkbox and radio inputs */
+.wj-control input[type="checkbox"],
+.wj-control input[type="radio"] {
+	appearance: none;
+	background: var(--saf-color-interactive-background-default);
+	border: var(--saf-line-width-thin) solid var(--saf-color-line-strong);
+	position: relative;
+}
+
+.wj-control input[type="checkbox"] {
+    border-radius: var(--saf-border-radius-xs);
+    height: var(--saf-flexgrid-checkbox-size);
+    width: var(--saf-flexgrid-checkbox-size);
+}
+
+.wj-control input[type="radio"] {
+    border-radius: var(--saf-border-radius-circle);
+    height: var(--saf-flexgrid-radio-size);
+    width: var(--saf-flexgrid-radio-size);
+}
+
+.wj-listbox .wj-listbox-item > label > input[type="checkbox"],
+.wj-control input[type="checkbox"][wj-part="cb-select-all"],
+.wj-control input[type="radio"] {
+	flex: 0 0 auto;
+	margin: 2px 0 0;
+}
+
+.wj-control input[type="checkbox"]:checked,
+.wj-control input[type="radio"]:checked {
+    background: var(--saf-color-interactive-secondary-active);
+	border: var(--saf-line-width-thin) solid var(--saf-color-interactive-secondary-active);
+}
+
+.wj-control input[type="checkbox"]:checked {
+	color: var(--saf-color-interactive-on-secondary-active);
+}
+
+.wj-control input[type="checkbox"]:checked::after,
+.wj-control input[type="radio"]:checked::after {
+	left: 50%;
+	position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.wj-control input[type="checkbox"]:checked::after {
+	content: '\f00c';
+	font-family: var(--saf-flexgrid-icon-font);
+	font-size: 16px;
+	font-weight: 900;
+}
+
+.wj-control input[type="radio"]:checked::after {
+	background: var(--saf-color-interactive-on-secondary-active);
+	border-radius: var(--saf-border-radius-circle);
+	content: '';
+	height: var(--saf-flexgrid-radio-icon-size);
+	width: var(--saf-flexgrid-radio-icon-size); 
+}
+
+.wj-control input[type="checkbox"]:hover,
+.wj-control input[type="radio"]:hover {
+	background: var(--saf-color-interactive-secondary-hover);
+    border: var(--saf-line-width-thick) solid var(--saf-color-interactive-on-secondary-hover);
+}
+
+.wj-control input[type="checkbox"]:hover {
+	color: var(--saf-color-interactive-on-secondary-hover);
+}
+
+.wj-control input[type="radio"]:hover::after {
+	background: var(--saf-color-interactive-on-secondary-hover);
+}
+
+.wj-control input[type="checkbox"]:focus,
+.wj-control input[type="radio"]:focus {
+	box-shadow: var(--saf-drop-shadow-focus);
+}
+
+.wj-flexgrid .wj-cell label input[type="checkbox"] {
+	// center checkbox in cell
+    margin: var(--saf-flexgrid-checkbox-margin);
+}
+
+/* Selection - styles are the same for showMarquee true/false to pass color contrast */
+.wj-cells .wj-cell.wj-state-multi-selected,
+.wj-flexsheet .wj-cell.wj-state-multi-selected {
+	background: var(--saf-flexgrid-color-background-marquee);
+	border-bottom-color: $wj-bdr-clr;
+	border-right-color: $wj-bdr-clr;
+	color: var(--saf-color-text-knockout);
+}
+
+.wj-cell.wj-state-multi-selected .wj-glyph-down::before,
+.wj-cell.wj-state-multi-selected .wj-glyph-up::before {
+	color: var(--saf-color-text-knockout);
+}
+
+.wj-cells .wj-cell.wj-state-selected {
+	background: var(--saf-color-interactive-background-default);
+	box-shadow: 0 0 0 1px var(--saf-color-interactive-secondary-active), inset 0 0 0 1px var(--saf-color-interactive-secondary-active);
+	color: var(--saf-color-interactive-secondary-active);
+}
+
+.wj-flexgrid .wj-cell.wj-state-multi-selected a,
+.wj-flexgrid .wj-cell.wj-state-multi-selected a:hover,
+.wj-flexgrid .wj-cell.wj-state-multi-selected a:active,
+.wj-flexgrid .wj-cell.wj-state-multi-selected a:visited {
+	color: var(--saf-color-text-knockout);
+}
+
+.wj-cell.wj-state-multi-selected input[type="checkbox"]:checked {
+    background: var(--saf-color-interactive-background-default);
+	border: var(--saf-line-width-thin) solid var(--saf-color-interactive-secondary-active);
+}
+
+.wj-cell.wj-state-multi-selected input[type="checkbox"]:checked::after {
+	color: var(--saf-color-interactive-secondary-active);
+}

@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MatterSidebarHeader Tests render should render 1`] = `
+<div
+  class="matter-body-header"
+  data-testid="matter-body-header"
+>
+  <div
+    class="new-folder-or-chat-button-container"
+    data-testid="new-folder-or-chat-button-container"
+  >
+    <button
+      appearance="primary"
+      data-testid="new-chat-button"
+    >
+      <div
+        class="new-folder-or-chat-button"
+      >
+        <div
+          iconname="plus"
+        />
+        New
+      </div>
+    </button>
+  </div>
+  <div
+    class="new-folder-or-chat-button-container"
+    data-testid="sort-option-container"
+  >
+    <button
+      appearance="tertiary"
+      data-testid="sort-option-button"
+    >
+      <div
+        class="new-folder-or-chat-button"
+      >
+        Sort by date
+        <div
+          iconname="angle-down"
+        />
+      </div>
+    </button>
+  </div>
+</div>
+`;

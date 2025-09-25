@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "Starting lint ⏳⏳⏳\n"
+npm run lint;
+npx pretty-quick --staged;
+exit 0;

@@ -1,0 +1,32 @@
+[flake8]
+# https://pypi.org/project/pytest-flake8/
+# https://flake8.pycqa.org/en/latest/user/configuration.html
+max-line-length = 120
+max-complexity = 15
+
+# https://gitlab.com/pycqa/flake8/-/issues/613
+format = %(path)s:%(row)d:%(col)d: %(code)s %(text)s: https://www.flake8rules.com/rules/%(code)s.html
+
+# https://gitlab.com/pycqa/flake8-docstrings
+# http://www.pydocstyle.org/en/latest/error_codes.html#default-conventions
+docstring-convention = google
+
+# https://github.com/psf/black/issues/315
+# https://github.com/psf/black/issues/52
+ignore =
+    E203
+    W503
+
+doctests = True
+filename = *.py
+
+per-file-ignores =
+	# ignore missing docstrings in tests
+	tests/*: D100, D101, D102, D103, D104
+	# ignore "imported by unused" in __init__.py files
+	__init__.py:F401
+	# ignore function calls in arg defaults for FastAPI routes
+	src/auth.py:B008
+    src/main.py:B008
+
+extend-immutable-calls = fastapi.Cookie, Cookie, fastapi.Depends, Depends

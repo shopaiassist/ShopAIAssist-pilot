@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main Header Tests render should render 1`] = `
+<header
+  class="olympus-main-header"
+  global-aria-label="Global"
+>
+  <div
+    slot="logo"
+  >
+    <a
+      href="/"
+    >
+      <div
+        appearance="full-color"
+        product-name="ShopAIAssist"
+      />
+    </a>
+  </div>
+  <div
+    slot="global"
+  >
+    <div>
+      <div>
+        <button
+          appearance="tertiary"
+          data-testid="user-btn"
+          icon-only=""
+          id="user-btn"
+        >
+          <div>
+            
+          </div>
+          <div>
+            Account menu: Signed in
+          </div>
+        </button>
+        <div
+          anchor="user-btn"
+          horizontalpositioningmode="dynamic"
+        />
+      </div>
+    </div>
+  </div>
+</header>
+`;

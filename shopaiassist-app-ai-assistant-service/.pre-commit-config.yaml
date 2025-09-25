@@ -1,0 +1,39 @@
+# See https://pre-commit.com for more information
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.1.0
+    hooks:
+      # https://pre-commit.com/hooks.html
+      - id: check-merge-conflict
+      - id: trailing-whitespace
+        exclude: .github/workflows
+      - id: end-of-file-fixer
+        exclude: .github/badges
+      - id: check-yaml
+      - id: check-json
+      - id: check-toml
+      - id: check-added-large-files
+      - id: detect-private-key
+  - repo: local
+    hooks:
+      - id: black
+        name: Black Code Formatter
+        language: system
+        entry: poetry run black
+        types: [python]
+        require_serial: true
+        exclude: docs/
+      - id: flake8
+        name: Flake8 Linter
+        language: system
+        entry: poetry run flake8 --tee --output-file reports/flake8-stats.txt
+        types: [python]
+        require_serial: true
+        exclude: .github/
+      - id: mypy
+        name: MyPy Static Type Checks
+        language: system
+        entry: poetry run mypy
+        types: [python]
+        require_serial: true

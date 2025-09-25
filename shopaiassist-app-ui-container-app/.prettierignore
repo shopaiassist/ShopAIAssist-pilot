@@ -1,0 +1,8 @@
+*.json
+*.scss
+*.pug
+*.md
+*.js
+**/node_modules
+/views
+**/.prettierrc

@@ -1,0 +1,29 @@
+@import "../../../../utils/styles/imports";
+
+.chat-list-container {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   overflow-y: auto;
+   overflow-x: hidden;
+   direction: rtl;
+
+   .chat-list {
+      direction: ltr;
+
+      .timeframe-text {
+         color: $saf-color-gray-400;
+         font-size: $saf-font-size-sm;
+         font-weight: 600;
+         margin: 0.75rem;
+      }
+   }
+}
+
+.empty-chat-list {
+   color: $saf-color-interactive-read-only-strong;
+   font: $saf-type-body-default-md-regular-standard;
+   display: flex;
+   align-self:flex-end;
+   margin-left: 1.5rem;
+}

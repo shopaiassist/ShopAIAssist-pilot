@@ -1,0 +1,23 @@
+@use 'sass:math';
+
+// remove any unit
+// strip-unit(20px) --> 20
+@function strip-unit($num) {
+  @return math.div($num, $num * 0 + 1);
+}
+
+// convert px values to rem
+// rem-calc(32px) --> 2rem
+// rem-calc(32, 4) --> 8rem
+@function rem-calc($size, $base: 16) {
+  $remSize: math.div(strip-unit($size), strip-unit($base));
+  @return $remSize * 1rem;
+}
+
+// convert rem values to px
+// px-calc(2) --> 32px
+// px-calc(8, 4) --> 32px
+@function px-calc($size, $base: 16) {
+  $pxSize: strip-unit($base) * strip-unit($size);
+  @return $pxSize * 1px;
+}

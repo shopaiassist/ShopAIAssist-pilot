@@ -1,0 +1,38 @@
+<!-- liquibase formatted sql changesets for the AI ASSISTANT DB for the asset Id: 208767-->
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.13.xsd">
+
+	<changeSet id="20" author="DevOps">
+        <sql>
+			ALTER TABLE ct_ai_assistantdb.tb_ticket 
+			ADD COLUMN ticket_code VARCHAR(100),
+			ADD COLUMN firm_id VARCHAR(50),
+			ADD COLUMN contact_first_name VARCHAR(250),
+			ADD COLUMN contact_last_name VARCHAR(250);
+        </sql>
+    </changeSet>
+
+    <changeSet id="21" author="DevOps">
+        <sql>	
+		CREATE INDEX tb_documents_multi_idx 
+                ON ct_ai_assistantdb.tb_documents (created_timestamp, org_id, tenant_id, user_id, document_id);
+        </sql>
+    </changeSet>
+	<changeSet id="22" author="DevOps">
+        <sql>
+            SELECT partman.create_parent(
+                p_parent_table => 'ct_ai_assistantdb.tb_documents',
+                p_control => 'created_timestamp',
+                p_type => 'range',
+                p_interval => '1 month',
+                p_premake => 24
+            );
+        </sql>
+    </changeSet>
+          
+</databaseChangeLog>
+

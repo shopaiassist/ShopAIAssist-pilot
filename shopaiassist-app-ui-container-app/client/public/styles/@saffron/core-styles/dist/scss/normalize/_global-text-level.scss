@@ -1,0 +1,17 @@
+/* Text level (GLOBAL) - normalize for text level elements based on normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css. */
+
+/* Remove the gray background on active links in IE 10. */
+a {
+	background-color: transparent;
+}
+
+/* Add the correct font weight in Chrome, Edge, and Safari. */
+b,
+strong {
+	font-weight: bolder;
+}
+
+/* Add the correct font size in all browsers. */
+small {
+	font-size: 80%;
+}

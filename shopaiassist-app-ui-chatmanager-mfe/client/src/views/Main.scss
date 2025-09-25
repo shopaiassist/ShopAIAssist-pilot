@@ -1,0 +1,75 @@
+@import "../utils/styles/imports";
+
+.main-app-container {
+   display: flex;
+   // This is the key to making the ai assistant respect the bounds of the parent container
+   max-height: 100%;
+
+   .main-body-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+
+      .main-header {
+         display: flex;
+         box-sizing: border-box;
+         height: 3.688rem;
+         padding: 0 1.5rem;
+         align-items: center;
+         justify-content: space-between;
+         flex-shrink: 0;
+         border-bottom: 1px solid var(--gray-gray-300-dedede, #DEDEDE);
+         font-size: 1rem;
+
+         .main-header-actions {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+         }
+      }
+
+      saf-breadcrumb-item {
+         saf-icon {
+            margin-right: 0.5rem;
+         }
+
+         align-self: center;
+         &::part(control) {
+            font-size: 1rem;
+         }
+         &:last-child::part(control) {
+            pointer-events: none;
+            cursor: default;
+            text-decoration: none;
+            color: black;
+            font: $saf-type-body-default-md-strong-standard;
+         }
+      }
+
+      .matters-ai-assistant-container {
+         width: 100%;
+         height: calc(100% - rem-calc(60));
+      }
+   }
+
+   // // This selector is probably not really what we want.
+   // & > div {
+   //    height: 100%;
+   // }
+
+   .delete-dialog-footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+   }
+
+   .matter-body-container {
+      flex: 1;
+   }
+
+   .chat-title {
+      margin-top: 0;
+      margin-bottom: 0;
+   }
+}

@@ -1,0 +1,19 @@
+@import "../../utils/styles/imports";
+
+.editable-item {
+   display: flex;
+   flex-direction: row;
+   gap: 1rem;
+
+   .button-container {
+      display: flex;
+      flex-direction: row;
+      gap: .25rem;
+      .editable-item-button::part(control) {
+         padding: .5rem
+      }
+   }
+}
+
+
+

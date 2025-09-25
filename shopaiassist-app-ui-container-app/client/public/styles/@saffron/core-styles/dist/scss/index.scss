@@ -1,0 +1,16 @@
+/* Global stylesheet for @/core-components library */
+@forward './normalize/global-elements.scss';
+@forward './normalize/global-hidden.scss';
+@forward './normalize/global-text-level.scss';
+@forward './fonts.scss';
+@forward './typography.scss';
+@forward './z-index';
+@forward '../tokens/variables.css';
+
+@use './normalize/global-elements.scss';
+@use './normalize/global-hidden.scss';
+@use './normalize/global-text-level.scss';
+@use './fonts.scss';
+@use './typography.scss';
+@use './z-index';
+@use '../tokens/variables.css';

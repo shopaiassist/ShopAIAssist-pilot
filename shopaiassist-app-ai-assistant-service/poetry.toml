@@ -1,0 +1,6 @@
+[virtualenvs]
+in-project = true
+
+[repositories]
+[repositories.tr]
+url = "https://npm/api/pypi/pypi-local"

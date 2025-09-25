@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChatOrFolderItem Tests render should render 1`] = `
+<div
+  class="chat-or-folder-item-container"
+>
+  <div
+    class="selectable-item"
+    data-testid="folder-9a4144e0-65ea-4f6c-8cd5-43a0a6d1e634-selectable"
+  >
+    <div
+      appearance="light"
+      class="chat-or-folder-icon"
+      iconname="folder"
+      size="16"
+    />
+    <span
+      appearance="body-strong-md"
+      id="chat-text-9a4144e0-65ea-4f6c-8cd5-43a0a6d1e634"
+    >
+      Test Folder For Created At 2
+    </span>
+  </div>
+  <div
+    class="chat-or-folder-menu"
+  >
+    <div
+      class="selectable-item selectable-icon"
+      data-testid="folder-9a4144e0-65ea-4f6c-8cd5-43a0a6d1e634-option-menu"
+    >
+      <div
+        iconname="ellipsis-vertical"
+        size="24"
+      />
+    </div>
+  </div>
+</div>
+`;

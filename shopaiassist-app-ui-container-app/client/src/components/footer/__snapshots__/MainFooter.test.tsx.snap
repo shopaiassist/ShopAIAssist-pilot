@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main Footer Tests render should render 1`] = `
+<footer
+  class="main-footer"
+>
+  <span
+    appearance="body-default-xs"
+    class="copyright"
+  >
+    © 2024 SHOPAIASSISTReuters.
+    <br />
+     
+    All rights reserved.
+  </span>
+</footer>
+`;

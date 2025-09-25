@@ -1,0 +1,26 @@
+{
+  "Header": {
+    "AuthenticationToken": null,
+    "ContextualInformation": null,
+    "ProductIdentifier": "ShopAIAssist",
+    "SessionToken": null,
+    "SlideInformation": "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ",
+    "UserHostIpAddress": "10.155.0.43",
+    "Version": "3"
+  },
+  "ServiceStatus": {
+    "ElapsedTime": 0,
+    "StartTime": "/Date(1714052223507-0500)/",
+    "StatusCode": 0,
+    "StatusDescription": ""
+  },
+  "Trace": {
+    "ParentGuid": "c0c6c1b0891c4a7a9e06bbbea0ca104b",
+    "Product": "ShopAIAssist",
+    "RootGuid": "c0c6c1b0891c4a7a9e06bbbea0ca104b",
+    "ServerInformation": "EC2AMAZ-PETJSSU/43/28882",
+    "SessionGuid": "b222b6e52d8e46ccae02f6848fe0f7e2",
+    "TransactionGuid": "da87f7ee37d745f8b432e5cbd3db6ccb"
+  },
+  "Token": "fake-149742cfef42b3ffa909eb3b417c79b52d02db72"
+}

@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MatterDetailsDialog Tests render should render archive matter 1`] = `
+<div
+  class="matter-details-dialog"
+  dialogtitle="Archive matter?"
+  isfooter="true"
+>
+  <div
+    class="matter-details-dialog-body"
+  >
+    <span
+      appearance="heading-md"
+    >
+      * indicates required field
+    </span>
+    <textarea
+      data-testid="matter-dialog-name-field"
+      disabled=""
+      label="Name*"
+      maxlength="128"
+    >
+      fakeMatter
+    </textarea>
+    <textarea
+      data-testid="matter-dialog-description-field"
+      disabled=""
+      label="Description"
+      maxlength="2000"
+      resize="vertical"
+    >
+      This is a fake matter
+    </textarea>
+    <textarea
+      data-testid="matter-dialog-id-field"
+      disabled=""
+      label="Matter ID"
+      maxlength="128"
+    >
+      fake-custom-matter-id
+    </textarea>
+  </div>
+  <div
+    class="matter-details-dialog-footer"
+    slot="footer"
+  >
+    <button
+      appearance="secondary"
+      data-testid="matter-dialog-close"
+    >
+      Cancel
+    </button>
+    <button
+      appearance="primary"
+      data-testid="matter-dialog-confirm"
+    >
+      Archive matter
+    </button>
+  </div>
+</div>
+`;
+
+exports[`MatterDetailsDialog Tests render should render delete matter 1`] = `
+<div
+  class="matter-details-dialog"
+  dialogtitle="Delete matter?"
+  isfooter="true"
+>
+  <div
+    class="matter-details-dialog-body"
+  >
+    <span
+      appearance="error"
+    >
+      All chats and files in the matter will be lost. This can't be undone.
+    </span>
+    <span
+      appearance="heading-md"
+    >
+      * indicates required field
+    </span>
+    <textarea
+      data-testid="matter-dialog-name-field"
+      disabled=""
+      label="Name*"
+      maxlength="128"
+    >
+      fakeMatter
+    </textarea>
+    <textarea
+      data-testid="matter-dialog-description-field"
+      disabled=""
+      label="Description"
+      maxlength="2000"
+      resize="vertical"
+    >
+      This is a fake matter
+    </textarea>
+    <textarea
+      data-testid="matter-dialog-id-field"
+      disabled=""
+      label="Matter ID"
+      maxlength="128"
+    >
+      fake-custom-matter-id
+    </textarea>
+  </div>
+  <div
+    class="matter-details-dialog-footer"
+    slot="footer"
+  >
+    <button
+      appearance="secondary"
+      data-testid="matter-dialog-close"
+    >
+      Cancel
+    </button>
+    <button
+      appearance="primary"
+      data-testid="matter-dialog-confirm"
+    >
+      Delete matter
+    </button>
+  </div>
+</div>
+`;
+
+exports[`MatterDetailsDialog Tests render should render new matter 1`] = `
+<div
+  class="matter-details-dialog"
+  dialogtitle="Create matter folder"
+  isfooter="true"
+>
+  <div
+    class="matter-details-dialog-body"
+  >
+    <span
+      appearance="heading-md"
+    >
+      * indicates required field
+    </span>
+    <textarea
+      data-testid="matter-dialog-name-field"
+      label="Name*"
+      maxlength="128"
+    />
+    <textarea
+      data-testid="matter-dialog-description-field"
+      label="Description"
+      maxlength="2000"
+      resize="vertical"
+    />
+    <textarea
+      data-testid="matter-dialog-id-field"
+      label="Matter ID"
+      maxlength="128"
+    />
+  </div>
+  <div
+    class="matter-details-dialog-footer"
+    slot="footer"
+  >
+    <button
+      appearance="secondary"
+      data-testid="matter-dialog-close"
+    >
+      Cancel
+    </button>
+    <button
+      appearance="primary"
+      data-testid="matter-dialog-confirm"
+      disabled=""
+    >
+      Create matter folder
+    </button>
+  </div>
+</div>
+`;

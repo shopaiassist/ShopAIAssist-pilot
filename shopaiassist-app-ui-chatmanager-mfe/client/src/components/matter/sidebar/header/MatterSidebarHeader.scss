@@ -1,0 +1,26 @@
+@import "../../../../utils/styles/imports";
+
+.matter-sidebar-header {
+   .new-folder-or-chat-button-container {
+      position: relative;
+
+      .new-folder-or-chat-button {
+         display: flex;
+         gap: 0.5rem;
+      }
+
+      .new-folder-or-chat-menu {
+         display: flex;
+         flex-direction: column;
+         margin-top: 0.5rem;
+         z-index: map-get($z-index-map, 'default');
+
+         .new-folder-or-chat-menu-item {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5rem;
+            align-items: baseline;
+         }
+      }
+   }
+}

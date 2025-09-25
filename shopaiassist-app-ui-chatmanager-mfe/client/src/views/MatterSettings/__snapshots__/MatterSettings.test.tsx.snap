@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MatterSettings Tests render should render 1`] = `
+<div
+  class="matter-settings-container"
+>
+  <span
+    appearance="heading-2xl"
+    class="matter-settings-title"
+  >
+    Matter settings
+  </span>
+  <div
+    class="matter-settings-fields"
+  >
+    <span
+      appearance="body-default-md"
+    >
+      * indicates required field
+    </span>
+    <textarea
+      data-testid="matter-settings-name-field"
+      label="Name"
+      maxlength="128"
+      required=""
+      validationmessage="This field is required"
+    >
+      fakeMatter
+    </textarea>
+    <textarea
+      data-testid="matter-settings-description-field"
+      label="Description"
+      maxlength="2000"
+      resize="vertical"
+    >
+      This is a fake matter
+    </textarea>
+    <textarea
+      data-testid="matter-settings-id-field"
+      label="Matter ID"
+      maxlength="128"
+    >
+      fake-custom-matter-id
+    </textarea>
+    <button
+      data-testid="matter-settings-update"
+    >
+      Update matter
+    </button>
+  </div>
+  <div
+    class="matter-settings-bottom"
+  >
+    <button
+      appearance="secondary"
+      data-testid="matter-settings-archive"
+    >
+      <div
+        iconname="box-archive"
+        slot="start"
+      />
+      Archive matter
+    </button>
+    <button
+      appearance="secondary"
+      data-testid="matter-settings-delete"
+    >
+      <div
+        iconname="trash-can"
+        slot="start"
+      />
+      Delete matter
+    </button>
+  </div>
+</div>
+`;

@@ -1,0 +1,32 @@
+@import "../../../../utils/styles/imports";
+
+.chat-or-folder-item-container {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   row-gap: 1.5rem;
+   column-gap: 1rem;
+   padding: 0.25rem;
+   justify-content: center;
+
+   .chat-or-folder-item-menu {
+      margin-left: auto;
+      margin-right: 1rem;
+   }
+
+   .chat-or-folder-menu {
+      position: relative;
+
+      .chat-or-folder-saf-menu {
+         display: flex;
+         flex-direction: column;
+         position: fixed;
+         width: fit-content;
+         z-index: map-get($z-index-map, "default");
+      }
+   }
+
+   .chat-or-folder-icon::part(fa-icon) {
+      padding-top: 0.15rem;
+   }
+}

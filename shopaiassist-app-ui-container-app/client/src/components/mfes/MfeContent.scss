@@ -1,0 +1,8 @@
+@import '../../App';
+
+// TODO: TEST VALUES - Update with values from designs
+.ai-assistant-container {
+    height: calc(100vh - $header-height - $matters-header-height);
+    width: 100%;
+    margin: auto;
+}

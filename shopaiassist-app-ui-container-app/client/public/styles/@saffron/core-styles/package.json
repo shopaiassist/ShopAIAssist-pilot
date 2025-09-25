@@ -1,0 +1,109 @@
+{
+	"name": "@/core-styles",
+	"version": "2.1.1",
+	"main": "./dist/index.css",
+	"sideEffects": false,
+	"description": "Saffron Design System core styles",
+	"author": "SHOPAIASSISTReuters - Saffron Design System Team",
+	"publishConfig": {
+		"registry": "https://tr1.jfrog.io/artifactory/api/npm/npm/"
+	},
+	"files": [
+		"dist"
+	],
+	"license": "SEE LICENSE IN LICENSE",
+	"repository": {
+		"url": "https://github.com//saffron_design_system/tree/main/core-packages/core-styles"
+	},
+	"homepage": "https://github.com//saffron_design_system/core-packages/core-styles/README.md",
+	"bugs": {
+		"url": "https://github.com//FECoE_central/issues"
+	},
+	"keywords": [
+		"",
+		"saffron",
+		"design",
+		"system",
+		"styles",
+		"tokens"
+	],
+	"engines": {
+		"node": ">= 14.14.22"
+	},
+	"exports": {
+		"./index.css": "./dist/index.css",
+		"./fonts": "./dist/fonts.css",
+		"./wijmo.css": "./dist/wijmo.css",
+		"./font-awesome.css": "./dist/font-awesome.css",
+		"./fonts/index.ts": "./dist/scss/fonts/index.ts",
+		"./types": "./dist/scss/fonts/fonts.d.ts",
+		"./typography.css": "./dist/typography.css",
+		"./tokens/_variables.scss": "./dist/tokens/_variables.scss",
+		"./tokens/variables.css": "./dist/tokens/variables.css",
+		"./fonts.scss": "./dist/scss/fonts.scss",
+		"./index.scss": "./dist/scss/index.scss",
+		"./wijmo.scss": "./dist/scss/wijmo.scss",
+		"./typography.scss": "./dist/scss/typography.scss",
+		"./normalize/_embedded-content.scss": "./dist/scss/normalize/_embedded-content.scss",
+		"./normalize/_form.scss": "./dist/scss/normalize/_form.scss",
+		"./normalize/_global-elements.scss": "./dist/scss/normalize/_global-elements.scss",
+		"./normalize/_global-hidden.scss": "./dist/scss/normalize/_global-hidden.scss",
+		"./normalize/_global-text-level.scss": "./dist/scss/normalize/_global-text-level.scss",
+		"./tokens.js": "./dist/tokens/tokens.js",
+		"./tokens/tier1/colors.js": "./dist/tokens/tier1/colors.tokens.js",
+		"./tokens/tier1/core-colors.js": "./dist/tokens/tier1/core-colors.tokens.js",
+		"./tokens/tier1/core-opacity.js": "./dist/tokens/tier1/core-opacity.tokens.js",
+		"./tokens/tier1/core-font-family.js": "./dist/tokens/tier1/core-font-family.tokens.js",
+		"./tokens/tier1/core-font-weight.js": "./dist/tokens/tier1/core-font-weight.tokens.js",
+		"./tokens/tier1/core-paragraph-spacing.js": "./dist/tokens/tier1/core-paragraph-spacing.tokens.js",
+		"./tokens/tier1/core-text-case.js": "./dist/tokens/tier1/core-text-case.tokens.js",
+		"./tokens/tier1/core-text-decoration.js": "./dist/tokens/tier1/core-text-decoration.tokens.js",
+		"./tokens/tier1/core-line-height.js": "./dist/tokens/tier1/core-line-height.tokens.js",
+		"./tokens/tier1/core-paragraph-indent.js": "./dist/tokens/tier1/core-paragraph-indent.tokens.js",
+		"./tokens/tier1/core-grid.js": "./dist/tokens/tier1/core-grid.tokens.js",
+		"./tokens/tier1/core-spacing.js": "./dist/tokens/tier1/core-spacing.tokens.js",
+		"./tokens/tier1/core-letter-spacing.js": "./dist/tokens/tier1/core-letter-spacing.tokens.js",
+		"./tokens/tier1/brand-colors.js": "./dist/tokens/tier1/brand-colors.tokens.js",
+		"./tokens/tier2/common.js": "./dist/tokens/tier2/common.tokens.js",
+		"./tokens/tier2/interactive.js": "./dist/tokens/tier2/interactive.tokens.js",
+		"./tokens/tier2/anchor.js": "./dist/tokens/tier2/anchor.tokens.js",
+		"./tokens/tier2/text.js": "./dist/tokens/tier2/text.tokens.js",
+		"./tokens/tier2/status.js": "./dist/tokens/tier2/status.tokens.js",
+		"./tokens/tier2/drop-shadow.js": "./dist/tokens/tier2/drop-shadow.tokens.js",
+		"./tokens/tier2/font-size.js": "./dist/tokens/tier2/font-size.tokens.js",
+		"./tokens/tier2/line-height.js": "./dist/tokens/tier2/line-height.tokens.js",
+		"./tokens/tier2/border-radius.js": "./dist/tokens/tier2/border-radius.tokens.js",
+		"./tokens/tier2/line-width.js": "./dist/tokens/tier2/line-width.tokens.js",
+		"./tokens/tier2/type.js": "./dist/tokens/tier2/type.tokens.js",
+		"./tokens/tier2/space.js": "./dist/tokens/tier2/space.tokens.js"
+	},
+	"scripts": {
+		"build": "yarn run build-tokens && yarn run build:css && yarn run build:scss && yarn run copy-fonts && yarn run copy-tokens",
+		"node-tokens": "ts-node src/tokens/style-dictionary/build.ts",
+		"build-tokens": "run-s transform-tokens node-tokens",
+		"build:css": "sass --style compressed src/scss:dist/ --load-path=dist",
+		"build:scss": "ncp src/scss dist/scss",
+		"lint": "echo 1",
+		"transform-tokens": "token-transformer ./src/tokens/input.json ./src/tokens/output.json",
+		"build:typescript": "tsc",
+		"build:sass": "sass src/tokens:dist/tokens",
+		"copy-fonts": "yarn copy-fonts:1 && yarn copy-fonts:storybook",
+		"copy-fonts:1": "ncp 'src/scss/fonts' dist/fonts",
+		"copy-fonts:storybook": "ncp src/scss/fonts ../core-components/assets/fonts",
+		"copy-tokens": "yarn copy-token-files:1 && yarn copy-token-files:2",
+		"copy-token-files:1": "ncp src/tokens/_variables.scss dist/tokens/_variables.scss",
+		"copy-token-files:2": "ncp src/tokens/variables.css dist/tokens/variables.css",
+		"test": "NODE_NO_WARNINGS=1 npx playwright install && playwright test",
+		"lint:ts": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"@grapecity/wijmo.styles": "5.20232.939",
+		"@playwright/test": "1.40.1",
+		"ncp": "2.0.0",
+		"npm-run-all": "4.1.5",
+		"sass": "1.70.0",
+		"style-dictionary": "3.9.2",
+		"token-transformer": "0.0.33",
+		"ts-node": "10.9.2"
+	}
+}

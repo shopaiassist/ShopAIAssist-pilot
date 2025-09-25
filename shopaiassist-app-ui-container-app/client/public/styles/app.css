@@ -1,0 +1,139 @@
+/**
+ * App
+ */
+
+/* Layout */
+.container {
+  --saf-body-max-width: 488px;
+
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--saf-body-max-width);
+  padding-left: var(--saf-spacing-4);
+  padding-right: var(--saf-spacing-4);
+}
+
+/* Header */
+.header {
+  --saf-header-height: 56px;
+
+  align-items: center;
+  background-color: var(--saf-color-interactive-background-default);
+  border-bottom: var(--saf-line-width-thin) solid var(--saf-color-line-subtle);
+  box-sizing: border-box;
+  display: flex;
+  min-height: var(--saf-header-height);
+  padding: var(--saf-spacing-2) var(--saf-spacing-4);
+
+  @media (min-width: 768px) {
+    padding-left: var(--saf-spacing-8);
+    padding-right: var(--saf-spacing-8);
+  }
+}
+.logo {
+  --saf-logo-min-width: 221px;
+
+  align-items: center;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-wrap: wrap;
+  font: var(--saf-logo-type-default);
+  min-width: var(--saf-logo-min-width);
+  position: relative;
+  width: 100%;
+}
+.logo .svg {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: initial;
+  }
+}
+.product-name {
+  --saf-space-logo-alignment: 2px;
+
+  color: var(--saf-color-orange-400);
+
+  @media (min-width: 768px) {
+    margin-left: var(--saf-spacing-4);
+    margin-top: var(--saf-space-logo-alignment);
+  }
+}
+
+/* Message */
+.message-title {
+  font: var(--saf-type-heading-default-xl-strong-standard);
+  margin-bottom: var(--saf-space-stack-lg);
+  margin-top: var(--saf-space-stack-lg);
+
+  @media (min-width: 768px) {
+    margin-top: var(--saf-space-stack-xl);
+  }
+}
+.message-body {
+  font: var(--saf-type-body-default-md-regular-standard);
+}
+.message-body ul {
+  padding-inline-start: var(--saf-space-inset-xl);
+}
+.message-body ul li {
+  margin-bottom: var(--saf-space-stack-lg);
+  margin-top: var(--saf-space-stack-lg);
+}
+
+/* Action */
+.button {
+  --saf-button-padding: var(--saf-space-inset-squish-md);
+  --saf-button-iconOnly-padding: var(--saf-space-inset-sm);
+  --saf-button-iconOnly-size: 42px;
+  --saf-button-font: var(--saf-type-body-default-md-strong-standard);
+  --saf-button-border: #fff0;
+
+  align-items: center;
+  background: var(--saf-color-interactive-primary-default);
+  border: var(--saf-line-width-thin) solid var(--saf-button-border);
+  border-radius: var(--saf-border-radius-xs);
+  box-sizing: border-box;
+  color: var(--saf-color-interactive-on-primary-default);
+  display: inline-flex;
+  font: var(--saf-button-font);
+  padding: var(--saf-button-padding);
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+}
+.button::before {
+  border: var(--saf-line-width-thick) solid var(--saf-color-interactive-on-primary-hover);
+  border-radius: var(--saf-border-radius-xs);
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  position: absolute;
+}
+.button:hover {
+  background: var(--saf-color-interactive-primary-hover);
+  color: var(--saf-color-interactive-on-primary-hover);
+}
+.button:hover::before {
+  content: '';
+}
+.button:focus {
+  box-shadow: var(--saf-drop-shadow-focus);
+}
+.button .content {
+  display: inline-flex;
+  padding: 0 var(--saf-spacing-1);
+}
+.button .icon {
+  align-self: flex-start;
+  color: inherit;
+  display: inline-block;
+  flex: none;
+  font-family: var(--saf-font-family-font-awesome-6-pro, 'Font Awesome 6 Pro');
+  font-size: var(--saf-icon-size, inherit);
+  line-height: var(--saf-icon-size, inherit);
+  padding: var(--saf-icon-padding, 0);
+  padding-inline-start: var(--saf-spacing-1);
+  text-align: center;
+}

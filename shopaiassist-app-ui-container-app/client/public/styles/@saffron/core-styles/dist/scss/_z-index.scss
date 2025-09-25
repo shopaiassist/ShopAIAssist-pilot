@@ -1,0 +1,36 @@
+// z-index map for components and in component use.
+$z-index-map: (
+	'deep-dive': -9999,
+	// hide
+	'z-index-auto': auto,
+	'default': 1,
+	'hover': 2,
+	'active': 3,
+	'focus': 4,
+	'dropdown': 1000,
+	// listbox, menu, menu-item, select, combobox, flyout,
+	'sticky': 1100,
+	'fixed': 1200,
+	// product-header, back-to-top
+	'backdrop-side-nav': 1300,
+	'side-nav': 1400,
+	'overlay': 1500,
+	// dialog, drawer
+	'dialog': 1800,
+	// dialog, drawer
+	'tooltip': 1900,
+	'loader-progress-ring': 2000,
+	'alert-toast': 2100,
+);
+
+// Mixin to declare CSS custom properties (Variables)
+@mixin declare-css-variables($map) {
+	:root {
+		@each $key, $value in $map {
+			--saf-z-index-#{$key}: #{$value};
+		}
+	}
+}
+
+// call the mixin to declare the CSS custom properties
+@include declare-css-variables($z-index-map);

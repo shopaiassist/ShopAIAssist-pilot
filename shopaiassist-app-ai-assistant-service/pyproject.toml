@@ -1,0 +1,103 @@
+[build-system]
+requires = ["poetry-core>=1.0.8"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "ai-assistant-service"
+version = "0.1.0"
+description = "ShopAIAssist Assistant's API"
+packages = [
+    { include = "src" },
+]
+authors = [""]
+license = "Proprietary"
+readme = "README.md"
+repository = "https://github.com/shopaiasssit-app-ai-assistant-service"
+keywords = ["labs"]
+# Add relevant classifiers from https://pypi.org/classifiers/
+# poetry adds "Programming Language :: Python :: 3", etc. by default, so those can be skipped.
+classifiers = []
+
+[tool.poetry.dependencies]
+python = "~3.12.5"
+fastapi = "^0.115.5"
+uvicorn = "^0.32.1"
+boto3 = "^1.35.72"
+openai = "^1.55.3"
+tenacity = "^9.0.0"
+tiktoken = "^0.8.0"
+pandas = "^2.2.3"
+pyyaml = "^6.0.2"
+fastparquet = "^2024.11.0"
+loguru = "^0.7.3"
+psycopg = {extras = ["pool", "binary"], version = "^3.2.6"}
+sse-starlette = "^2.3.3"
+python-docx = "^1.1.0"
+python-multipart = "^0.0.20"
+langchain-text-splitters = "^0.3.8"
+PyPDF2 = "^3.0.1"
+
+[tool.poetry.group.dev.dependencies]
+poethepoet = "^0.24.0"
+pre-commit = "^3.4.0"
+pytest = "^8.3.5"
+pytest-cov = "^6.1.1"
+pytest-html = "^4.1.1"
+pytest-asyncio = "^0.26.0"
+mockito = "^1.4.0"
+black = "^23.9.1"
+flake8 = "^6.1.0"
+flake8-bugbear = "^23.9.16"
+flake8-docstrings = "^1.7.0"
+mypy = "^1.5.1"
+genbadge = {extras = ["tests", "coverage", "flake8"], version = "^1.1.0"}
+pdoc3 = "^0.10.0"
+
+[[tool.poetry.source]]
+# https://python-poetry.org/docs/repositories/
+# NOTE: poetry search doesn't work with private repos but you can use pip search, then poetry add|install
+name = "tr"
+url = "https://artifactory/api/pypi/pypi/simple"
+priority = "primary"
+
+[tool.black]
+# See other configurations available at https://pypi.org/project/black/
+line-length = 120
+target-version = ["py310"]
+
+[tool.poe.tasks]
+# Checks and testing
+pre-commit-checks = "pre-commit run --all-files"
+test = ["pre-commit-checks", "pytest", "generate-badges"]
+pytest = "pytest --cache-clear --junitxml=reports/pytest_junit.xml --html=reports/pytest.html --self-contained-html --cov-report=html:reports/coverage_html --cov-report=xml:reports/coverage.xml"
+pytest-unit = "pytest tests/unit/ --cache-clear --junitxml=reports/pytest_junit.xml --html=reports/pytest.html --self-contained-html --cov-report=html:reports/coverage_html --cov-report=xml:reports/coverage.xml"
+pytest-integration = "pytest tests/integration/ --no-cov --cache-clear --junitxml=reports/pytest_junit-integration.xml --html=reports/pytest-integration.html --self-contained-html"
+# Badges and reporting
+generate-num-tests-badge = "genbadge tests -i reports/pytest_junit.xml -o .github/badges/num-tests-badge.svg"
+generate-test-coverage-badge = "genbadge coverage -i reports/coverage.xml -o .github/badges/test-coverage-badge.svg"
+generate-flake8-badge = "genbadge flake8 -i reports/flake8-stats.txt -o .github/badges/flake8-badge.svg"
+generate-badges = [
+    "generate-num-tests-badge",
+    "generate-test-coverage-badge",
+    "generate-flake8-badge"
+]
+view-test-coverage = "open reports/coverage_html/index.html" # Needs work
+# Documentation
+build-package-docs = { shell = "pdoc --html ai_assistant_service -o docs/ --force && cp -r docs/ai_assistant_service/* docs/ && rm -rf docs/ai_assistant_service" }
+serve-package-docs = "pdoc src/ai_assistant_service --http localhost:7999"
+# Building, publishing, releasing
+build-wheel = "poetry build --format wheel"  # sdist is outdated and typically unnecessary.
+publish = "poetry publish --repository"
+release = ["build-package-docs", "build-wheel", "publish"]
+
+[tool.poe.tasks.clean]
+default_item_type = "script"
+ignore_fail = true
+sequence = [
+    "os:remove('.coverage')",
+    "shutil:rmtree('.mypy_cache')",
+    "shutil:rmtree('.pytest_cache')",
+    "shutil:rmtree('dist/*')",
+    "shutil:rmtree('reports/*')",
+    "shutil:rmtree('docs/*')",
+]

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditableItem Tests render should render 1`] = `
+<div
+  class="editable-item"
+>
+  <textarea
+    data-testid="editable-text-field"
+    initialvalue="Hello"
+  />
+  <div
+    class="button-container"
+  >
+    <button
+      class="editable-item-button"
+      data-testid="editable-item-submit"
+    >
+      <div
+        iconname="check"
+      />
+    </button>
+    <button
+      appearance="secondary"
+      class="editable-item-button"
+      data-testid="editable-item-cancel"
+    >
+      <div
+        iconname="close"
+      />
+    </button>
+  </div>
+</div>
+`;

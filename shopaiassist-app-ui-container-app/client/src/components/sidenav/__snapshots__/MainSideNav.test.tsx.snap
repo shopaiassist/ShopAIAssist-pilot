@@ -1,0 +1,234 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainSideNav render should render 1`] = `
+<div
+  aria-label="Main navigation"
+  class="olympus-side-nav main-side-nav expanded"
+  closearialabel="Collapse main navigation"
+  closesvgname="arrow-left-from-line"
+  id="main-side-nav"
+  openarialabel="Expand main navigation"
+  opensvgname="arrow-right-from-line"
+  state="open"
+>
+  <div
+    class="main-nav-container"
+  >
+    <div
+      class="nav-group"
+    >
+      <div
+        class="nav-menu-item"
+        id="my-work-nav-item"
+        target="_blank"
+      >
+        <div
+          appearance="light"
+          icon-name="sparkles"
+          size="16"
+          slot="start"
+          style="align-items: center;"
+        />
+        <div
+          class="nav-item-content"
+        >
+          <span
+            appearance="body-strong-md"
+          >
+            My work
+          </span>
+        </div>
+        <div
+          hidden=""
+          slot="submenu"
+        />
+      </div>
+      <div
+        anchor="my-work-nav-item"
+        placement="right"
+      >
+        My work
+      </div>
+      <div
+        class="nav-menu-item"
+        id="matters-nav-item"
+        target="_blank"
+      >
+        <div
+          appearance="light"
+          icon-name="database"
+          size="16"
+          slot="start"
+          style="align-items: center;"
+        />
+        <div
+          class="nav-item-content"
+        >
+          <span
+            appearance="body-strong-md"
+          >
+            Databases
+          </span>
+        </div>
+      </div>
+      <div
+        anchor="matters-nav-item"
+        placement="right"
+      >
+        Databases
+      </div>
+      <div
+        class="nav-menu-item"
+        id="manage-nav-item"
+        target="_blank"
+      >
+        <div
+          appearance="light"
+          icon-name="gear"
+          size="16"
+          slot="start"
+          style="align-items: center;"
+        />
+        <div
+          class="nav-item-content"
+        >
+          <span
+            appearance="body-strong-md"
+          >
+            Manage ShopAIAssist
+          </span>
+        </div>
+        <div
+          hidden=""
+          slot="submenu"
+        />
+      </div>
+      <div
+        anchor="manage-nav-item"
+        placement="right"
+      >
+        Manage ShopAIAssist
+      </div>
+    </div>
+    <div
+      class="nav-group"
+    >
+      <div
+        class="nav-menu-item"
+        id="whats-new-nav-item"
+        target="_blank"
+        url="https://www.example.com/en/release-notes.html"
+      >
+        <div
+          appearance="light"
+          icon-name="bell"
+          size="16"
+          slot="start"
+          style="align-items: center;"
+        />
+        <div
+          class="nav-item-content"
+        >
+          <span
+            appearance="body-strong-md"
+          >
+            What's new
+          </span>
+          <div
+            style="position: absolute; right: 0.5rem;"
+          >
+            <div
+              appearance="light"
+              icon-name="external-link"
+              size="16"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        anchor="whats-new-nav-item"
+        placement="right"
+      >
+        What's new
+      </div>
+      <div
+        class="nav-menu-item"
+        id="support-nav-item"
+        target="_blank"
+      >
+        <div
+          appearance="light"
+          icon-name="circle-question"
+          size="16"
+          slot="start"
+          style="align-items: center;"
+        />
+        <div
+          class="nav-item-content"
+        >
+          <span
+            appearance="body-strong-md"
+          >
+            Support
+          </span>
+        </div>
+        <div
+          hidden=""
+          slot="submenu"
+        />
+      </div>
+      <div
+        anchor="support-nav-item"
+        placement="right"
+      >
+        Support
+      </div>
+      <div
+        class="nav-menu-item"
+        id="legal-nav-item"
+        target="_blank"
+      >
+        <div
+          appearance="light"
+          icon-name="shield"
+          size="16"
+          slot="start"
+          style="align-items: center;"
+        />
+        <div
+          class="nav-item-content"
+        >
+          <span
+            appearance="body-strong-md"
+          >
+            Legal information
+          </span>
+        </div>
+        <div
+          hidden=""
+          slot="submenu"
+        />
+      </div>
+      <div
+        anchor="legal-nav-item"
+        placement="right"
+      >
+        Legal information
+      </div>
+      <footer
+        class="main-footer"
+      >
+        <span
+          appearance="body-default-xs"
+          class="copyright"
+        >
+          © 2024 SHOPAIASSISTReuters.
+          <br />
+           
+          All rights reserved.
+        </span>
+      </footer>
+    </div>
+  </div>
+</div>
+`;
